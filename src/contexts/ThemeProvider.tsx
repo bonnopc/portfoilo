@@ -1,13 +1,15 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { KEY_LOCAL_STORAGE_CUSTOMIZED_THEME_PREF } from "@/config/keys";
+import useThemePreference from "@/hooks/useThemePreference";
+import { IThemeContext, ThemeScheme } from "@/types/common";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
-type Theme = "dark" | "light";
-
-interface IThemeContext {
-  theme: Theme;
-  setTheme?: (theme: Theme) => void;
-}
-
-const DEFAULT_THEME: Theme = "light";
+const DEFAULT_THEME: ThemeScheme = "light";
 
 const ThemeContext = createContext<IThemeContext>({
   theme: "light",
@@ -16,7 +18,19 @@ const ThemeContext = createContext<IThemeContext>({
 export const useTheme = () => useContext(ThemeContext);
 
 export default function ThemeProvider({ children }: any) {
-  const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
+  const prefferedTheme: ThemeScheme = useThemePreference();
+  const [theme, setTheme] = useState<ThemeScheme>(prefferedTheme);
+
+  const handleTheme = useCallback((theme: ThemeScheme): void => {
+    setTheme(theme);
+    if (localStorage?.setItem) {
+      localStorage.setItem(KEY_LOCAL_STORAGE_CUSTOMIZED_THEME_PREF, theme);
+    }
+  }, []);
+
+  useEffect(() => {
+    handleTheme(prefferedTheme);
+  }, [prefferedTheme]);
 
   useEffect(() => {
     if (typeof document === "undefined") return;
@@ -29,7 +43,7 @@ export default function ThemeProvider({ children }: any) {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, handleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

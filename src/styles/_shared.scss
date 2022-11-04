@@ -1,0 +1,89 @@
+/* ------ Colors -------- */
+$color-primary-blue: #003C5A;
+
+/* ------- Fonts ------- */
+$font-family: 'Lato', sans-serif;
+$font-family-heading: Dax;
+$font-size: 16px;
+$line-height-max: 1.56;
+$line-height: 1.5;
+$heading1-font-size: 3.75rem;
+$heading1-line-height: 1.17;
+$heading1-letter-spacing: normal;
+$heading2-font-size: 2.50rem;
+$heading2-line-height: 1.25;
+$heading2-letter-spacing: normal;
+$heading3-font-size: 1.88rem;
+$heading3-line-height: 1.2;
+$heading3-letter-spacing: normal;
+$heading4-font-size: 1.5rem;
+$heading4-line-height: 1.25;
+$heading4-letter-spacing: normal;
+$heading5-font-size: 1.13rem;
+$heading5-line-height: 1.33;
+$heading5-letter-spacing: 0.5px;
+$heading6-font-size: 0.75rem;
+$heading6-line-height: 1.5;
+$heading6-letter-spacing: 2px;
+
+/* ---- Break-points ---- */
+$media-large: 1280px;
+$media-medium: 768px;
+$media-small: 320px;
+
+$nav-height: 4.5rem;
+
+/* --- Z INDEX ---- */
+$z-index-navbar: 1100;
+$z-index-sidebar: 1110;
+$z-index-modal: 1300;
+
+/* ---- Mixins ---- */
+@mixin for-mobile {
+    @media screen and (max-width: #{$media-medium - 1px}) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media screen and (min-width: #{$media-medium}) and (max-width: #{$media-large - 1px}) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media screen and (min-width: #{$media-large}) {
+        @content;
+    }
+}
+
+@mixin for-tablet-and-desktop {
+    @media screen and (min-width: #{$media-medium}) {
+        @content;
+    }
+}
+
+@mixin for-mobile-and-tablet {
+    @media screen and (min-width: #{$media-small}) and (max-width: #{$media-large - 1px}) {
+        @content;
+    }
+}
+
+// CONTAINER
+$container-max-width-desktop: 1170px;
+$container-max-width-tablet: 720px;
+
+@mixin common-container {
+    @include for-desktop {
+        max-width: $container-max-width-desktop;
+    }
+
+    @include for-tablet {
+        max-width: $container-max-width-tablet;
+    }
+
+    @include for-tablet-and-desktop {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

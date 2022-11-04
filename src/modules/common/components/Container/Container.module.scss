@@ -1,0 +1,6 @@
+@import "../../../../styles/shared";
+
+.root {
+    @include common-container;
+    padding: 1rem;
+}

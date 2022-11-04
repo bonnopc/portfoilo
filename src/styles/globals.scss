@@ -1,0 +1,117 @@
+@import "./dark";
+@import "./light";
+
+:root {
+  --font-family-heading: #{$font-family-heading};
+}
+
+@font-face {
+  font-family: $font-family-heading;
+  src: url('/static/fonts/Dax-Medium.ttf');
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ------------------ Typography ------------------- */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 0.5rem;
+}
+
+p, ul, ol, button {
+  font-size: 1rem;
+  font-family: $font-family;
+}
+
+ul {
+  margin: 0 0 1rem 1.56rem;
+  list-style: none;
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  color: var(--color-text-heading);
+}
+
+h1 {
+  font-size: $heading1-font-size;
+  line-height: $heading1-line-height;
+  letter-spacing: $heading1-letter-spacing;
+}
+
+h2 {
+  font-size: $heading2-font-size;
+  line-height: $heading2-line-height;
+  letter-spacing: $heading2-letter-spacing;
+}
+
+h3 {
+  font-size: $heading3-font-size;
+  line-height: $heading3-line-height;
+  letter-spacing: $heading3-letter-spacing;
+}
+
+h4 {
+  font-size: $heading4-font-size;
+  line-height: $heading4-line-height;
+  letter-spacing: $heading4-letter-spacing;
+}
+
+h5 {
+  font-size: $heading5-font-size;
+  line-height: $heading5-line-height;
+  letter-spacing: $heading5-letter-spacing;
+}
+
+h6 {
+  font-size: $heading6-font-size;
+  line-height: $heading6-line-height;
+  letter-spacing: $heading6-letter-spacing;
+}
+
+@include for-desktop {
+  /* scrollbar */
+  ::-webkit-scrollbar{
+      width: 5px;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+      height: 5px;
+  }
+
+  ::-webkit-scrollbar-track{
+      background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb{
+      background: rgba(0, 60, 90, 0.4);
+  }
+
+  ::-webkit-scrollbar-thumb:hover{
+      background: rgba(0, 60, 90, 0.7);
+  }
+}
+

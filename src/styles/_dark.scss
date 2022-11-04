@@ -1,0 +1,19 @@
+@import "./shared";
+
+$color-dark-text-primary: rgba(255, 255, 255, 0.75);
+$color-dark-text-secondary: #ffffff;
+$color-dark-text-disabled: rgba(255, 255, 255, 0.5);
+$color-dark-text-hint: rgba(255, 255, 255, 0.25);
+$color-dark-text-heading: #ffffff;
+$color-bg-dark: #023d5a;
+$color-border-dark: #ccd8de;
+
+.dark {
+    --color-text-primary: #{$color-dark-text-primary};
+    --color-text-secondary: #{$color-dark-text-secondary};
+    --color-text-disabled: #{$color-dark-text-disabled};
+    --color-text-hint: #{$color-dark-text-hint};
+    --color-text-heading: #{$color-dark-text-heading};
+    --color-bg: #{$color-bg-dark};
+    --color-border: #{$color-border-dark};
+}

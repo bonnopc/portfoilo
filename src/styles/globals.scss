@@ -10,8 +10,8 @@
   src: url('/static/fonts/Dax-Medium.ttf');
   font-display: swap;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 html,
 body {
@@ -21,6 +21,7 @@ body {
   color: var(--color-text-primary);
   background: var(--color-bg);
   min-height: 100vh;
+  font-size: $font-size;
 }
 
 a {
@@ -60,30 +61,35 @@ h1 {
   font-size: $heading1-font-size;
   line-height: $heading1-line-height;
   letter-spacing: $heading1-letter-spacing;
+  margin-left: -5px;
 }
 
 h2 {
   font-size: $heading2-font-size;
   line-height: $heading2-line-height;
   letter-spacing: $heading2-letter-spacing;
+  margin-left: -3px;
 }
 
 h3 {
   font-size: $heading3-font-size;
   line-height: $heading3-line-height;
   letter-spacing: $heading3-letter-spacing;
+  margin-left: -2px;
 }
 
 h4 {
   font-size: $heading4-font-size;
   line-height: $heading4-line-height;
   letter-spacing: $heading4-letter-spacing;
+  margin-left: -1px;
 }
 
 h5 {
   font-size: $heading5-font-size;
   line-height: $heading5-line-height;
   letter-spacing: $heading5-letter-spacing;
+  margin-left: -0.5px;
 }
 
 h6 {

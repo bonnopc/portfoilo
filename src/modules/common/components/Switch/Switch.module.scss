@@ -2,77 +2,75 @@
 
 $thumb-size-sm: 1rem;
 $thumb-size-lg: 2rem;
-  
+
 .switch {
-    display: inline-block;
-    cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
 }
-  
+
 .slider {
-    width: calc(1.75rem + #{$thumb-size-sm});
-    height: calc(0.25rem + #{$thumb-size-sm});
-    background-color: #ccd8de;
-    border-radius: 30px;
-    padding: 2px;
-    transition: background-color 250ms ease 0s;
+  width: calc(1.75rem + #{$thumb-size-sm});
+  height: calc(0.25rem + #{$thumb-size-sm});
+  background-color: #ccd8de;
+  border-radius: 30px;
+  padding: 2px;
+  transition: background-color 250ms ease 0s;
+
+  .thumb {
+    width: $thumb-size-sm;
+    height: $thumb-size-sm;
+    background-color: var(--color-bg);
+    border-radius: 50%;
+    transition: transform 250ms ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      color: var(--color-text-heading);
+
+      path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  &.lg {
+    width: calc(1.75rem + #{$thumb-size-lg});
+    height: calc(0.25rem + #{$thumb-size-lg});
 
     .thumb {
-        width: $thumb-size-sm;
-        height: $thumb-size-sm;
-        background-color: var(--color-bg);
-        border-radius: 50%;
-        transition: transform 250ms ease 0s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        svg {
-            color: var(--color-text-heading);
-
-            path {
-                fill: currentColor;
-            }
-        }
+      width: $thumb-size-lg;
+      height: $thumb-size-lg;
     }
-
-    &.lg {
-        width: calc(1.75rem + #{$thumb-size-lg});
-        height: calc(0.25rem + #{$thumb-size-lg});
-
-        .thumb {
-            width: $thumb-size-lg;
-            height: $thumb-size-lg;
-        }
-    }
+  }
 }
-  
 
-  
 .checkbox {
-    /* visually hidden */
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+  /* visually hidden */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 
-    &:focus + .slider {
-        box-shadow: 0 0 0 3px lighten($color: $color-font-primary, $amount: 75%);
-    }
+  &:focus + .slider {
+    box-shadow: 0 0 0 3px lighten($color: $color-font-primary, $amount: 75%);
+  }
 
-    &:checked + .slider {
-        background-color: var(--color-text-heading);
-    }
+  &:checked + .slider {
+    background-color: var(--color-text-heading);
+  }
 
-    &:checked + .slider .thumb {
-        transform: translateX(1.5rem)
-    }
+  &:checked + .slider .thumb {
+    transform: translateX(1.5rem);
+  }
 
-    &:disabled + .slider {
-        opacity: 0.25;
-    }
+  &:disabled + .slider {
+    opacity: 0.25;
+  }
 }

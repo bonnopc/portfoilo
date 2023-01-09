@@ -16,14 +16,7 @@ interface ISwitchProps {
   icons?: ISwitchIcons;
 }
 
-function Switch({
-  disabled,
-  checked,
-  className,
-  onChange,
-  size = "sm",
-  icons,
-}: ISwitchProps) {
+function Switch({ disabled, checked, className, onChange, size = "sm", icons }: ISwitchProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange) onChange(event.target.checked);
   };
@@ -45,13 +38,7 @@ function Switch({
         aria-hidden="true"
       >
         <div className={styles.thumb}>
-          {checked && icons?.checked ? (
-            icons.checked
-          ) : icons?.unchecked ? (
-            icons.unchecked
-          ) : (
-            <div />
-          )}
+          {checked && icons?.checked ? icons.checked : icons?.unchecked ? icons.unchecked : <div />}
         </div>
       </div>
     </label>

@@ -1,10 +1,10 @@
 @import "../../../../styles/shared";
 
-.root{
-    @include common-container;
+.root {
+  @include common-container;
 
-    min-height: $nav-height;
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
+  min-height: $nav-height;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
 }

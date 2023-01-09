@@ -9,15 +9,17 @@ $color-bg: #ffffff;
 $color-border: #ccd8de;
 $color-bg-disabled: #f4f6f7;
 $color-disabled-element: #e6ecef;
+$color-secondary: #e17055;
 
 :root {
-    --color-text-primary: #{$color-text-primary};
-    --color-text-secondary: #{$color-text-secondary};
-    --color-text-disabled: #{$color-text-disabled};
-    --color-text-hint: #{$color-text-hint};
-    --color-text-heading: #{$color-text-heading};
-    --color-bg: #{$color-bg};
-    --color-border: #{$color-border};
-    --color-bg-disabled: #{$color-bg-disabled};
-    --color-disabled-element: #{$color-disabled-element};
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-text-disabled: #{$color-text-disabled};
+  --color-text-hint: #{$color-text-hint};
+  --color-text-heading: #{$color-text-heading};
+  --color-bg: #{$color-bg};
+  --color-border: #{$color-border};
+  --color-bg-disabled: #{$color-bg-disabled};
+  --color-disabled-element: #{$color-disabled-element};
+  --color-secondary: #{$color-secondary};
 }

@@ -1,13 +1,7 @@
 import { KEY_LOCAL_STORAGE_CUSTOMIZED_THEME_PREF } from "@/config/keys";
 import useThemePreference from "@/hooks/useThemePreference";
 import { IThemeContext, ThemeScheme } from "@/types/common";
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
 const DEFAULT_THEME: ThemeScheme = "light";
 
@@ -42,9 +36,5 @@ export default function ThemeProvider({ children }: any) {
     }
   }, [theme]);
 
-  return (
-    <ThemeContext.Provider value={{ theme, handleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, handleTheme }}>{children}</ThemeContext.Provider>;
 }

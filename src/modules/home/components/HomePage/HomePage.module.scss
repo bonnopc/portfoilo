@@ -1,0 +1,23 @@
+@import "../../../../styles/shared";
+
+.root {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin-top: -$nav-height;
+  padding-top: calc(380px + #{$nav-height});
+
+  @include for-tablet {
+    padding-top: calc(453px + #{$nav-height});
+  }
+
+  @include for-desktop {
+    padding-top: $nav-height;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

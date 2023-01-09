@@ -7,8 +7,7 @@ export default function useThemePreference(): ThemeScheme {
 
   const handleThemeChange = (): void => {
     setThemeShceme(
-      window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
+      window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light"
     );
@@ -28,9 +27,7 @@ export default function useThemePreference(): ThemeScheme {
     }
 
     // watch events for color scheme change
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", handleThemeChange);
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", handleThemeChange);
 
     () => {
       // remove event listener

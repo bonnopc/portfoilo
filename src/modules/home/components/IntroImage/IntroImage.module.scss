@@ -1,26 +1,90 @@
+@import 'src/styles/shared';
+
+$image-height: 425px;
+$image-height-sm: 407px;
+
 .root {
-    position: fixed;
-    top: 0;
-    right: 0;
-    .bg {
-        background-image: linear-gradient(45deg, #6303B1, #ff0099);
-    // transform: skewY(-45deg);
-    width: 0; 
-  height: 0; 
-  border-top: 100px solid transparent;
-  border-bottom: 100px solid transparent; 
-  
-  border-right:100px solid blue;
-        
+  position: absolute;
+  top: -10px;
+  right: -110px;
+
+  .container {
+    width: 482px;
+    height: 208px;
+    overflow: hidden;
+    border-bottom-left-radius: 20rem;
+    border-top-left-radius: 20rem;
+    transform: rotate(320deg);
+    background: var(--color-secondary);
+    position: absolute;
+    right: -45px;
+    bottom: -273px;
+
+    @include for-tablet {
+      width: 651px;
+    height: 206px;
+    right: 38px;
+    bottom: -320px;
     }
 
-    .avatarContainer {
+    @include for-desktop {
+      width: 801px;
+      height: 370px;
+      right: 0;
+      bottom: -400px;
+    }
+
+    &.transparent {
+      background: transparent;
+      z-index: 1;
+      height: 520px;
+      right: 55px;
+      bottom: -310px;
+      border-bottom-left-radius: 101px;
+
+      @include for-tablet {
+        right: 139px;
+        bottom: -357px;
+      }
+
+      @include for-desktop {
+        height: $image-height;
+        right: 18px;
+        bottom: -406px;
+        border-bottom-left-radius: 240px;
+      }
+    }
+  }
+
+  .avatarContainer {
     z-index: 10;
-    margin-left: -15.7vw;
+    -webkit-transform: scaleX(-1) rotate(320deg);
+    transform: scaleX(-1) rotate(320deg);
+    overflow: hidden;
+    position: absolute;
+    bottom: -17px;
+    left: -21px;
 
-        .avatar {
-            border-radius: 50%;
-        }
+    @include for-tablet {
+      bottom: -17px;
+      left: -26px;
     }
-    
+
+    @include for-desktop {
+      bottom: -5px;
+      left: -16px;
+    }
+
+    .avatar {
+      width: 277px;
+
+      @include for-tablet {
+        width: 300px;
+      }
+
+      @include for-desktop {
+        width: $image-height;
+      }
+    }
+  }
 }

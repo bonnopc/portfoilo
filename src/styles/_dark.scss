@@ -9,11 +9,11 @@ $color-bg-dark: #2d3436;
 $color-border-dark: #ccd8de;
 
 .dark {
-    --color-text-primary: #{$color-dark-text-primary};
-    --color-text-secondary: #{$color-dark-text-secondary};
-    --color-text-disabled: #{$color-dark-text-disabled};
-    --color-text-hint: #{$color-dark-text-hint};
-    --color-text-heading: #{$color-dark-text-heading};
-    --color-bg: #{$color-bg-dark};
-    --color-border: #{$color-border-dark};
+  --color-text-primary: #{$color-dark-text-primary};
+  --color-text-secondary: #{$color-dark-text-secondary};
+  --color-text-disabled: #{$color-dark-text-disabled};
+  --color-text-hint: #{$color-dark-text-hint};
+  --color-text-heading: #{$color-dark-text-heading};
+  --color-bg: #{$color-bg-dark};
+  --color-border: #{$color-border-dark};
 }

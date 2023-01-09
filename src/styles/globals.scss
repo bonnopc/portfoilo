@@ -7,10 +7,10 @@
 
 @font-face {
   font-family: $font-family-heading;
-  src: url('/static/fonts/Dax-Medium.ttf');
+  src: url("/static/fonts/Dax-Medium.ttf");
   font-display: swap;
 }
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 html,
@@ -22,6 +22,10 @@ body {
   background: var(--color-bg);
   min-height: 100vh;
   font-size: $font-size;
+
+  @include for-mobile-and-tablet {
+    font-size: $font-size-sm;
+  }
 }
 
 a {
@@ -34,11 +38,25 @@ a {
 }
 
 /* ------------------ Typography ------------------- */
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0 0 0.5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
-p, ul, ol, button {
+p {
+  margin-bottom: 0.5rem;
+}
+
+p,
+ul,
+ol,
+button {
   font-size: 1rem;
   font-family: $font-family;
 }
@@ -52,7 +70,12 @@ p {
   color: var(--color-text-secondary);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-family-heading;
   color: var(--color-text-heading);
 }
@@ -100,24 +123,23 @@ h6 {
 
 @include for-desktop {
   /* scrollbar */
-  ::-webkit-scrollbar{
-      width: 5px;
+  ::-webkit-scrollbar {
+    width: 5px;
   }
 
   ::-webkit-scrollbar:horizontal {
-      height: 5px;
+    height: 5px;
   }
 
-  ::-webkit-scrollbar-track{
-      background: transparent;
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
 
-  ::-webkit-scrollbar-thumb{
-      background: rgba(0, 60, 90, 0.4);
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 60, 90, 0.4);
   }
 
-  ::-webkit-scrollbar-thumb:hover{
-      background: rgba(0, 60, 90, 0.7);
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 60, 90, 0.7);
   }
 }
-

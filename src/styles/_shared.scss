@@ -2,15 +2,16 @@
 $color-font-primary: #2d3436;
 
 /* ------- Fonts ------- */
-$font-family: 'Jura', sans-serif;
-$font-family-heading: 'Jura', sans-serif;
+$font-family: "Jura", sans-serif;
+$font-family-heading: "Jura", sans-serif;
 $font-size: 16px;
+$font-size-sm: 14px;
 $line-height-max: 1.56;
 $line-height: 1.5;
 $heading1-font-size: 3.75rem;
 $heading1-line-height: 1.17;
 $heading1-letter-spacing: normal;
-$heading2-font-size: 2.50rem;
+$heading2-font-size: 2.5rem;
 $heading2-line-height: 1.25;
 $heading2-letter-spacing: normal;
 $heading3-font-size: 1.88rem;
@@ -40,33 +41,33 @@ $z-index-modal: 1300;
 
 /* ---- Mixins ---- */
 @mixin for-mobile {
-    @media screen and (max-width: #{$media-medium - 1px}) {
-        @content;
-    }
+  @media screen and (max-width: #{$media-medium - 1px}) {
+    @content;
+  }
 }
 
 @mixin for-tablet {
-    @media screen and (min-width: #{$media-medium}) and (max-width: #{$media-large - 1px}) {
-        @content;
-    }
+  @media screen and (min-width: #{$media-medium}) and (max-width: #{$media-large - 1px}) {
+    @content;
+  }
 }
 
 @mixin for-desktop {
-    @media screen and (min-width: #{$media-large}) {
-        @content;
-    }
+  @media screen and (min-width: #{$media-large}) {
+    @content;
+  }
 }
 
 @mixin for-tablet-and-desktop {
-    @media screen and (min-width: #{$media-medium}) {
-        @content;
-    }
+  @media screen and (min-width: #{$media-medium}) {
+    @content;
+  }
 }
 
 @mixin for-mobile-and-tablet {
-    @media screen and (min-width: #{$media-small}) and (max-width: #{$media-large - 1px}) {
-        @content;
-    }
+  @media screen and (max-width: #{$media-large - 1px}) {
+    @content;
+  }
 }
 
 // CONTAINER
@@ -74,16 +75,16 @@ $container-max-width-desktop: 1170px;
 $container-max-width-tablet: 720px;
 
 @mixin common-container {
-    @include for-desktop {
-        max-width: $container-max-width-desktop;
-    }
+  @include for-desktop {
+    max-width: $container-max-width-desktop;
+  }
 
-    @include for-tablet {
-        max-width: $container-max-width-tablet;
-    }
+  @include for-tablet {
+    max-width: $container-max-width-tablet;
+  }
 
-    @include for-tablet-and-desktop {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  @include for-tablet-and-desktop {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

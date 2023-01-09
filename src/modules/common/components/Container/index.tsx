@@ -1,5 +1,5 @@
 import styles from "./Container.module.scss";
 
-export default function Container({ children }: { children: any }) {
-  return <div className={styles.root}>{children}</div>;
+export default function Container({ children, className }: { children: any; className?: string }) {
+  return <div className={`${styles.root} ${className ? className : ""}`}>{children}</div>;
 }

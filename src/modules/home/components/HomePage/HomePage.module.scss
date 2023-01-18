@@ -7,11 +7,11 @@
   margin-top: -$nav-height;
   padding-top: calc(380px + #{$nav-height});
 
-  @include for-tablet {
-    padding-top: calc(453px + #{$nav-height});
-  }
+  // @include for-tablet {
+  //   padding-top: calc(453px + #{$nav-height});
+  // }
 
-  @include for-desktop {
+  @include for-tablet-and-desktop {
     padding-top: $nav-height;
   }
 
@@ -19,5 +19,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .skills {
+    margin-top: 4rem;
   }
 }

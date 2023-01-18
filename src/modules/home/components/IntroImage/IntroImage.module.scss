@@ -1,4 +1,4 @@
-@import 'src/styles/shared';
+@import "src/styles/shared";
 
 $image-height: 425px;
 $image-height-sm: 407px;
@@ -8,6 +8,11 @@ $image-height-sm: 407px;
   top: -10px;
   right: -110px;
 
+  @include for-tablet {
+    top: -146px;
+    right: -303px;
+  }
+
   .container {
     width: 482px;
     height: 208px;
@@ -15,16 +20,16 @@ $image-height-sm: 407px;
     border-bottom-left-radius: 20rem;
     border-top-left-radius: 20rem;
     transform: rotate(320deg);
-    background: var(--color-secondary);
+    background: var(--color-primary);
     position: absolute;
     right: -45px;
     bottom: -273px;
 
     @include for-tablet {
       width: 651px;
-    height: 206px;
-    right: 38px;
-    bottom: -320px;
+      height: 206px;
+      right: 38px;
+      bottom: -320px;
     }
 
     @include for-desktop {

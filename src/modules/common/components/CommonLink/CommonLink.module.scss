@@ -1,0 +1,5 @@
+.root {
+  &:not(.preventUnderLine):hover {
+    text-decoration: underline;
+  }
+}

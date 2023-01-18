@@ -1,3 +1,4 @@
+import Button from "@/modules/common/components/Button";
 import styles from "./IntroTexts.module.scss";
 
 export default function IntroTexts() {
@@ -10,6 +11,7 @@ export default function IntroTexts() {
         I am a professional programmer with passion and dedication, based in Dhaka, Bangladesh. I
         have been closely working in a SDLC for the last half decade!
       </p>
+      <Button className={styles.button}>Contact Me</Button>
     </div>
   );
 }

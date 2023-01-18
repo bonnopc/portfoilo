@@ -1,0 +1,342 @@
+@import "src/styles/shared";
+
+// @function hoverColor ($prev-color) {
+//     @return color.adjust($prev-color, $lightness: -30%, $alpha: -0.4);
+// }
+
+.container {
+  border-radius: 5px;
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+
+  outline: none;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: $font-family;
+  line-height: 23px;
+  padding: 0.25rem 1.5rem;
+  transition: background-color 0.3s, border-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  @include for-mobile {
+    &.xsFullWidth {
+      width: 100%;
+    }
+  }
+
+  .icon {
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    svg,
+    path {
+      fill: currentColor;
+    }
+  }
+
+  &.xsFixedOnBottom {
+    @include for-mobile {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      border-radius: 0;
+    }
+  }
+}
+
+.secondaryBtn {
+  &.contained {
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: #ffffff;
+
+    &:hover:not(:disabled) {
+      background-color: lighten($color-secondary, 8%);
+      border-color: lighten($color-secondary, 8%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: darken($color-secondary, 8%);
+      border-color: darken($color-secondary, 8%);
+    }
+
+    &:focus:not(:disabled) {
+      background-color: lighten($color-secondary, 8%);
+      border-color: lighten($color-secondary, 25%);
+    }
+
+    &:disabled {
+      color: var(--color-text-hint);
+      background-color: $color-gray-light;
+      border-color: $color-gray-light;
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border-color: $color-secondary;
+    color: $color-secondary;
+
+    &:hover:not(:disabled) {
+      background-color: lighten($color-secondary, 8%);
+      border-color: lighten($color-secondary, 8%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: darken($color-secondary, 8%);
+      border-color: darken($color-secondary, 8%);
+    }
+
+    &:focus:not(:disabled) {
+      background-color: lighten($color-secondary, 8%);
+      border-color: lighten($color-secondary, 25%);
+    }
+
+    &:disabled {
+      color: var(--color-text-hint);
+      background-color: $color-gray-light;
+      border-color: $color-gray-light;
+    }
+  }
+
+  &.link {
+    background-color: transparent;
+    border-color: transparent;
+    color: $color-secondary;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover:not(:disabled) {
+      color: lighten($color-secondary, 8%);
+      text-decoration: underline;
+    }
+
+    &:active:not(:disabled) {
+      color: darken($color-secondary, 8%);
+    }
+
+    &:focus:not(:disabled) {
+      color: lighten($color-secondary, 8%);
+    }
+
+    &:disabled {
+      color: var(--color-text-hint);
+      background-color: $color-gray-light;
+      border-color: $color-gray-light;
+    }
+  }
+}
+
+.primaryBtn {
+  &.contained {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: #ffffff;
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-primary, 8%);
+      border-color: darken($color-primary, 8%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: darken($color-primary, 16%);
+      border-color: darken($color-primary, 16%);
+    }
+
+    &:focus:not(:disabled) {
+      background-color: darken($color-primary, 8%);
+      border-color: lighten($color-primary, 25%);
+    }
+
+    &:disabled {
+      color: $color-gray-light;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border-color: $color-primary;
+    color: $color-primary;
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-primary, 8%);
+      border-color: darken($color-primary, 8%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: darken($color-primary, 16%);
+      border-color: darken($color-primary, 16%);
+    }
+
+    &:focus:not(:disabled) {
+      background-color: darken($color-primary, 8%);
+      border-color: lighten($color-primary, 25%);
+    }
+
+    &:disabled {
+      color: $color-gray-light;
+      background-color: transparent;
+      border-color: $color-gray-light;
+    }
+  }
+
+  &.link {
+    background-color: transparent;
+    border-color: transparent;
+    color: $color-primary;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover:not(:disabled) {
+      color: darken($color-primary, 8%);
+      text-decoration: underline;
+    }
+
+    &:active:not(:disabled) {
+      color: darken($color-primary, 16%);
+    }
+
+    &:focus:not(:disabled) {
+      color: darken($color-primary, 8%);
+    }
+
+    &:disabled {
+      color: $color-gray-light;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}
+
+.transparentBtn {
+  &.contained {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-text-primary);
+
+    &:hover:not(:disabled) {
+      background-color: darken(transparent, 8%);
+      border-color: darken(transparent, 8%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: darken(transparent, 8%);
+      border-color: darken(transparent, 8%);
+    }
+
+    &:focus:not(:disabled) {
+      background-color: darken(transparent, 8%);
+      border-color: darken(transparent, 25%);
+    }
+
+    &:disabled {
+      color: $color-gray-light;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-text-primary);
+
+    &:hover:not(:disabled) {
+      background-color: darken(transparent, 8%);
+      border-color: darken(transparent, 8%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: darken(transparent, 8%);
+      border-color: darken(transparent, 8%);
+    }
+
+    &:focus:not(:disabled) {
+      background-color: darken(transparent, 8%);
+      border-color: darken(transparent, 25%);
+    }
+
+    &:disabled {
+      color: $color-gray-light;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  &.link {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-text-primary);
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover:not(:disabled) {
+      color: var(--color-text-secondary);
+      text-decoration: underline;
+    }
+
+    &:active:not(:disabled) {
+      color: var(--color-text-secondary);
+    }
+
+    &:focus:not(:disabled) {
+      color: var(--color-text-hint);
+    }
+
+    &:disabled {
+      color: $color-gray-light;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}
+
+.small {
+  min-height: 2.25rem;
+}
+
+.medium {
+  min-height: 3.5rem;
+}
+
+.large {
+  min-height: 4.25rem;
+}
+
+.fullWidth {
+  width: 100%;
+}

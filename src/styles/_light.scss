@@ -6,10 +6,10 @@ $color-text-disabled: rgba(51, 51, 51, 0.5);
 $color-text-hint: rgba(51, 51, 51, 0.25);
 $color-text-heading: #2d3436;
 $color-bg: #ffffff;
+$color-bg-secondary: #eaeaea;
 $color-border: #ccd8de;
 $color-bg-disabled: #f4f6f7;
 $color-disabled-element: #e6ecef;
-$color-secondary: #e17055;
 
 :root {
   --color-text-primary: #{$color-text-primary};
@@ -18,8 +18,8 @@ $color-secondary: #e17055;
   --color-text-hint: #{$color-text-hint};
   --color-text-heading: #{$color-text-heading};
   --color-bg: #{$color-bg};
+  --color-bg-secondary: #{$color-bg-secondary};
   --color-border: #{$color-border};
   --color-bg-disabled: #{$color-bg-disabled};
   --color-disabled-element: #{$color-disabled-element};
-  --color-secondary: #{$color-secondary};
 }

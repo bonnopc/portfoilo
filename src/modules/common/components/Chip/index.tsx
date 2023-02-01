@@ -1,4 +1,5 @@
 import combineClassNames from "@/utils/combineClassNames";
+import Link from "next/link";
 import { MouseEventHandler, ReactNode } from "react";
 import styles from "./Chip.module.scss";
 
@@ -25,7 +26,7 @@ export default function Chip({
   url,
   disabled = false,
 }: ChipProps) {
-  return (
+  const renderChip = () => (
     <div
       className={combineClassNames(
         styles,
@@ -39,9 +40,12 @@ export default function Chip({
         },
         className
       )}
+      onClick={onClick}
     >
-      {icon && <span> {icon} </span>}
+      {icon && <span className={styles.icon}> {icon} </span>}
       {children}
     </div>
   );
+
+  return url ? <Link href={url}>{renderChip()}</Link> : renderChip();
 }

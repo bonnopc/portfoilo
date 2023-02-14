@@ -29,7 +29,7 @@ export default function HomePage() {
 
         <div className={styles.skills}>
           <Chip size="large">Large Sized</Chip>
-          <Chip>Medium sized</Chip>
+          <Chip size="large">Medium sized</Chip>
           <Chip size="small">Small sized</Chip>
           <Chip url="/hello">Clickable</Chip>
           <Chip url="/hello" color="transparent">

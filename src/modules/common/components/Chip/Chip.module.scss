@@ -1,3 +1,4 @@
+@import "src/styles/dark";
 @import "src/styles/shared";
 
 .root {
@@ -38,11 +39,12 @@
 
     &.primaryColor.contained {
         background-color: $color-primary;
+        color: $color-gray-light;
     }
 
     &.secondaryColor.contained {
         background-color: $color-secondary;
-        color: var(--color-bg);
+        color: $color-bg-dark;
     }
 
     &.primaryColor.outlined {
@@ -55,6 +57,7 @@
 
     &:not(:first-child) {
         margin-left: 0.5rem;
+        margin-top: 0.5rem;
     }
 
     .icon {

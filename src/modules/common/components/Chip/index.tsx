@@ -3,10 +3,27 @@ import Link from "next/link";
 import { MouseEventHandler, ReactNode } from "react";
 import styles from "./Chip.module.scss";
 
+export type ChipColor =
+  | "primary"
+  | "secondary"
+  | "transparent"
+  | "white"
+  | "black"
+  | "gray"
+  | "red"
+  | "orange"
+  | "yellow"
+  | "green"
+  | "teal"
+  | "blue"
+  | "cyan"
+  | "purple"
+  | "pink";
+
 interface ChipProps {
   children: ReactNode;
   className?: string;
-  color?: "primary" | "secondary" | "transparent";
+  color?: ChipColor;
   size?: "small" | "medium" | "large";
   variant?: "contained" | "outlined";
   onClick?: MouseEventHandler<HTMLDivElement>;

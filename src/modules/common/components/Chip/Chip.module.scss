@@ -41,26 +41,113 @@
     border-radius: 1.5rem;
   }
 
+  /* ---- COLORS ---- */
+  --accent-color: #{$color-primary};
+
+  &.contained {
+    background-color: var(--accent-color);
+  }
+
+  &.primaryColor {
+    --accent-color: #{$color-primary};
+  }
+
   &.primaryColor.contained {
-    background-color: $color-primary;
     color: $color-gray-light;
   }
 
+  &.secondaryColor {
+    --accent-color: #{$color-secondary};
+  }
+
   &.secondaryColor.contained {
-    background-color: $color-secondary;
     color: $color-bg-dark;
   }
 
-  &.primaryColor.outlined {
-    border: 1px solid $color-primary;
+  &.whiteColor {
+    --accent-color: #{$color-gray-light};
   }
 
-  &.secondaryColor.outlined {
-    border: 1px solid $color-secondary;
+  &.whiteColor.contained {
+    color: $color-bg-dark;
+  }
+
+  &.blackColor {
+    --accent-color: #{$color-bg-card-dark};
+  }
+
+  &.blackColor.contained {
+    color: $color-gray-light;
+  }
+
+  &.grayColor {
+    --accent-color: #{$color-gray-dark};
+  }
+
+  &.grayColor.contained {
+    color: $color-bg-dark;
+  }
+
+  &.transparentColor {
+    --accent-color: transparent;
+  }
+
+  &.redColor {
+    --accent-color: #{$color-red};
+  }
+
+  &.orangeColor {
+    --accent-color: #f0932b;
+  }
+
+  &.yellowColor {
+    --accent-color: #f9ca24;
+  }
+
+  &.yellowColor.contained {
+    color: $color-bg-dark;
+  }
+
+  &.greenColor {
+    --accent-color: #6ab04c;
+  }
+
+  &.tealColor {
+    --accent-color: #22a6b3;
+  }
+
+  &.blueColor {
+    --accent-color: #4834d4;
+  }
+
+  &.cyanColor {
+    --accent-color: #22a6b3;
+  }
+
+  &.purpleColor {
+    --accent-color: #be2edd;
+  }
+
+  &.pinkColor {
+    --accent-color: #ff7979;
+  }
+
+  &.cyanColor.contained {
+    color: $color-bg-dark;
+  }
+
+  /* OUTLINED BUTTONS */
+  &.outlined {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--accent-color);
+  }
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
   }
 
   &:not(:first-child) {
-    margin-left: 0.5rem;
     margin-top: 0.5rem;
   }
 

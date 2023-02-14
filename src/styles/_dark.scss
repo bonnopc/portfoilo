@@ -6,6 +6,7 @@ $color-dark-text-disabled: rgba(255, 255, 255, 0.5);
 $color-dark-text-hint: rgba(255, 255, 255, 0.25);
 $color-dark-text-heading: #ffffff;
 $color-bg-dark: #2d3436;
+$color-bg-card-dark: lighten($color-bg-dark, $amount: 10%);
 $color-bg-secondary-dark: #363e40;
 $color-border-dark: #ccd8de;
 
@@ -16,6 +17,7 @@ $color-border-dark: #ccd8de;
   --color-text-hint: #{$color-dark-text-hint};
   --color-text-heading: #{$color-dark-text-heading};
   --color-bg: #{$color-bg-dark};
+  --color-bg-card: #{$color-bg-card-dark};
   --color-bg-secondary: #{$color-bg-secondary-dark};
   --color-border: #{$color-border-dark};
 }

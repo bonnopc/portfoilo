@@ -45,7 +45,7 @@ function Button({
           xsFullWidth,
           xsFixedOnBottom,
         },
-        className,
+        className
       )}
       disabled={disabled}
       onClick={!disabled ? onClick : () => {}}

@@ -32,6 +32,9 @@ export default function HomePage() {
           <Chip size="large">Medium sized</Chip>
           <Chip size="small">Small sized</Chip>
           <Chip url="/hello">Clickable</Chip>
+          <Chip url="/hello" variant="outlined">
+            Clickable
+          </Chip>
           <Chip url="/hello" color="transparent">
             Clickable
           </Chip>

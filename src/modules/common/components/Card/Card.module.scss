@@ -1,0 +1,13 @@
+.root {
+    padding: 1rem;
+    background-color: var(--color-bg-card);
+    border-radius: 0.5rem;
+
+    &.fullWidth {
+        width: 100%;
+    }
+
+    &.fullHeight {
+        height: 100%;
+    }
+}

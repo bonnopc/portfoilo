@@ -3,22 +3,25 @@ import Link from "next/link";
 import { MouseEventHandler, ReactNode } from "react";
 import styles from "./Chip.module.scss";
 
-export type ChipColor =
-  | "primary"
-  | "secondary"
-  | "transparent"
-  | "white"
-  | "black"
-  | "gray"
-  | "red"
-  | "orange"
-  | "yellow"
-  | "green"
-  | "teal"
-  | "blue"
-  | "cyan"
-  | "purple"
-  | "pink";
+export const CHIP_COLORS = [
+  "primary",
+  "secondary",
+  "transparent",
+  "white",
+  "black",
+  "gray",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "teal",
+  "blue",
+  "cyan",
+  "purple",
+  "pink",
+] as const;
+
+export type ChipColor = typeof CHIP_COLORS[number];
 
 interface ChipProps {
   children: ReactNode;
@@ -30,6 +33,7 @@ interface ChipProps {
   icon?: ReactNode;
   url?: string;
   disabled?: boolean;
+  isSelected?: boolean;
 }
 
 export default function Chip({
@@ -42,6 +46,7 @@ export default function Chip({
   icon,
   url,
   disabled = false,
+  isSelected = false,
 }: ChipProps) {
   const renderChip = () => (
     <div
@@ -54,6 +59,7 @@ export default function Chip({
           [size]: true,
           [`${color}Color`]: true,
           [variant]: true,
+          isSelected,
         },
         className
       )}

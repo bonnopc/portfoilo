@@ -11,6 +11,7 @@
 
   &.clickable {
     cursor: pointer;
+    user-select: none;
 
     &:hover:not(.disabled) {
       filter: brightness(0.9);
@@ -136,6 +137,10 @@
 
   &:not(:first-child) {
     margin-top: 0.5rem;
+  }
+
+  &.isSelected {
+    border: 2px solid darken($color-primary, 10%);
   }
 
   .icon {

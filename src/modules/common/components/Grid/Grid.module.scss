@@ -1,0 +1,306 @@
+@import "src/styles/shared";
+
+.root {
+  display: flex;
+}
+
+.container {
+  flex-wrap: wrap;
+
+  &.spacing0:not(.item) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &.spacing1:not(.item) {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+
+    .item {
+      padding: 0.25rem;
+    }
+  }
+
+  &.spacing2:not(.item) {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+
+    .item {
+      padding: 0.5rem;
+    }
+  }
+
+  &.spacing3:not(.item) {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+
+    .item {
+      padding: 0.75rem;
+    }
+  }
+
+  &.spacing4:not(.item) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    .item {
+      padding: 1rem;
+    }
+  }
+}
+
+.item {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+
+  &.xs1 {
+    flex: 0 0 8.33%;
+    max-width: 8.33%;
+  }
+
+  &.xs2 {
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+  }
+
+  &.xs3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  &.xs4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+
+  &.xs5 {
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+  }
+
+  &.xs6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  &.xs7 {
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+  }
+
+  &.xs8 {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+  }
+
+  &.xs9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  &.xs10 {
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+  }
+
+  &.xs11 {
+    flex: 0 0 91.66%;
+    max-width: 91.66%;
+  }
+
+  &.xs12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  @include for-mobile {
+    &.hiddenXs {
+      display: none;
+    }
+  }
+
+  @include for-tablet {
+    &.hiddenSm {
+      display: none;
+    }
+  }
+
+  @include for-desktop {
+    &.hiddenMd {
+      display: none;
+    }
+  }
+
+  @include for-tablet-and-desktop {
+    &.sm1 {
+      flex: 0 0 8.33%;
+      max-width: 8.33%;
+    }
+
+    &.sm2 {
+      flex: 0 0 16.66%;
+      max-width: 16.66%;
+    }
+
+    &.sm3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    &.sm4 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    &.sm5 {
+      flex: 0 0 41.66%;
+      max-width: 41.66%;
+    }
+
+    &.sm6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &.sm7 {
+      flex: 0 0 58.33%;
+      max-width: 58.33%;
+    }
+
+    &.sm8 {
+      flex: 0 0 66.66%;
+      max-width: 66.66%;
+    }
+
+    &.sm9 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    &.sm10 {
+      flex: 0 0 83.33%;
+      max-width: 83.33%;
+    }
+
+    &.sm11 {
+      flex: 0 0 91.66%;
+      max-width: 91.66%;
+    }
+
+    &.sm12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    &.smOffset6 {
+      margin-left: 50%;
+    }
+    &.smPush5 {
+      left: 41.66%;
+    }
+    &.smPull5 {
+      left: -41.66%;
+    }
+    &.smPush6 {
+      left: 50%;
+    }
+    &.smPull6 {
+      left: -50%;
+    }
+    &.smPush7 {
+      left: 58.33%;
+    }
+    &.smPull7 {
+      left: -58.33%;
+    }
+  }
+
+  @include for-desktop {
+    &.md1 {
+      flex: 0 0 8.33%;
+      max-width: 8.33%;
+    }
+
+    &.md2 {
+      flex: 0 0 16.66%;
+      max-width: 16.66%;
+    }
+
+    &.md3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    &.md4 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    &.md5 {
+      flex: 0 0 41.66%;
+      max-width: 41.66%;
+    }
+
+    &.md6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &.md7 {
+      flex: 0 0 58.33%;
+      max-width: 58.33%;
+    }
+
+    &.md8 {
+      flex: 0 0 66.66%;
+      max-width: 66.66%;
+    }
+
+    &.md9 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    &.md10 {
+      flex: 0 0 83.33%;
+      max-width: 83.33%;
+    }
+
+    &.md11 {
+      flex: 0 0 91.66%;
+      max-width: 91.66%;
+    }
+
+    &.md12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    &.mdOffset1 {
+      margin-left: 8.33%;
+    }
+    &.mdOffset2 {
+      margin-left: 16.66%;
+    }
+    &.mdOffset6 {
+      margin-left: 50%;
+    }
+    &.mdPush4 {
+      left: 33.33%;
+    }
+    &.mdPull4 {
+      left: -33.33%;
+    }
+    &.mdPush5 {
+      left: 41.66%;
+    }
+    &.mdPull5 {
+      left: -41.66%;
+    }
+    &.mdPush6 {
+      left: 50%;
+    }
+    &.mdPull6 {
+      left: -50%;
+    }
+  }
+}

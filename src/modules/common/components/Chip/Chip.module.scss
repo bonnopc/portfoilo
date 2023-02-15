@@ -15,7 +15,8 @@
     &:hover:not(.disabled) {
       filter: brightness(0.9);
 
-      &.transparentColor, &.outlined {
+      &.transparentColor,
+      &.outlined {
         background-color: $color-hover;
       }
     }
@@ -52,40 +53,20 @@
     --accent-color: #{$color-primary};
   }
 
-  &.primaryColor.contained {
-    color: $color-gray-light;
-  }
-
   &.secondaryColor {
     --accent-color: #{$color-secondary};
-  }
-
-  &.secondaryColor.contained {
-    color: $color-bg-dark;
   }
 
   &.whiteColor {
     --accent-color: #{$color-gray-light};
   }
 
-  &.whiteColor.contained {
-    color: $color-bg-dark;
-  }
-
   &.blackColor {
     --accent-color: #{$color-bg-card-dark};
   }
 
-  &.blackColor.contained {
-    color: $color-gray-light;
-  }
-
   &.grayColor {
     --accent-color: #{$color-gray-dark};
-  }
-
-  &.grayColor.contained {
-    color: $color-bg-dark;
   }
 
   &.transparentColor {
@@ -102,10 +83,6 @@
 
   &.yellowColor {
     --accent-color: #f9ca24;
-  }
-
-  &.yellowColor.contained {
-    color: $color-bg-dark;
   }
 
   &.greenColor {
@@ -132,8 +109,18 @@
     --accent-color: #ff7979;
   }
 
-  &.cyanColor.contained {
+  &.cyanColor.contained,
+  &.secondaryColor.contained,
+  &.whiteColor.contained,
+  &.grayColor.contained,
+  &.yellowColor.contained {
     color: $color-bg-dark;
+  }
+
+  &.blueColor.contained,
+  &.primaryColor.contained,
+  &.blackColor.contained {
+    color: $color-gray-light;
   }
 
   /* OUTLINED BUTTONS */

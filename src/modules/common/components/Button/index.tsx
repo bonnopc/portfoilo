@@ -1,6 +1,5 @@
 import React, { ButtonHTMLAttributes, memo, MouseEventHandler, ReactNode } from "react";
 import styles from "./Button.module.scss";
-import { motion } from "framer-motion";
 import combineClassNames from "@/utils/combineClassNames";
 import CommonLink from "../CommonLink";
 
@@ -31,7 +30,7 @@ function Button({
   url,
 }: ButtonProps) {
   const renderButton = () => (
-    <motion.button
+    <button
       className={combineClassNames(
         styles,
         {
@@ -49,13 +48,12 @@ function Button({
       )}
       disabled={disabled}
       onClick={!disabled ? onClick : () => {}}
-      whileTap={!disabled ? { scale: 0.97 } : {}}
     >
       <>
         {icon && <span className={styles.icon}> {icon} </span>}
         {children}
       </>
-    </motion.button>
+    </button>
   );
 
   return url ? (

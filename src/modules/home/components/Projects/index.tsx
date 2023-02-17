@@ -4,68 +4,54 @@ import Card from "@/modules/common/components/Card";
 import Grid from "@/modules/common/components/Grid";
 import { IProject, ISkill } from "@/types/projects";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { createRef, useMemo } from "react";
 import styles from "./Projects.module.scss";
-import { motion, Variants } from "framer-motion";
 import Typography from "@/modules/common/components/Typography";
-
-const MotionGrid = motion(Grid);
-
-const listVariants: Variants = {
-  hidden: {},
-  visible: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0, // this will set a delay before the children start animating
-      staggerChildren: 0.3, // this will set the time inbetween children animation
-    },
-  },
-};
-const itemVariants: Variants = {
-  hidden: {
-    y: 0,
-  },
-  visible: {
-    y: 10,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      mass: 0.3,
-      // remove delay: 0.3,
-    },
-  },
-};
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function ProjectList({ projects }: { projects: IProject[] }) {
+  const emptyListMsgRef = createRef<HTMLLIElement>();
+  const projectWithRefs = projects.map((project) => {
+    return {
+      ...project,
+      ref: createRef<HTMLLIElement>(),
+    };
+  });
+
   return (
-    <MotionGrid
-      container
-      className={styles.list}
-      variants={listVariants}
-      initial="hidden"
-      animate="visible"
-      as="ul"
-    >
-      {projects.map((project, i) => (
-        <MotionGrid
-          item
-          xs={12}
-          sm={6}
-          md={4}
-          key={project.title}
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          as="li"
-        >
-          <Card fullWidth fullHeight>
-            <Typography variant="h4">{project.title}</Typography>
-            <Typography>{project.description}</Typography>
-            <Typography>Skills: {project.skills.join(", ")}, etc</Typography>
-          </Card>
-        </MotionGrid>
-      ))}
-    </MotionGrid>
+    <Grid container className={styles.list} as="ul">
+      <TransitionGroup component={null} className="staggered-list">
+        {projectWithRefs.length ? (
+          projectWithRefs.map((project, i) => (
+            <CSSTransition
+              timeout={500}
+              nodeRef={project.ref}
+              key={project.title}
+              classNames="staggered-item"
+            >
+              <Grid item xs={12} sm={6} md={4} as="li" ref={project.ref}>
+                <Card fullWidth fullHeight>
+                  <Typography variant="h4">{project.title}</Typography>
+                  <Typography>{project.description}</Typography>
+                  <Typography>Skills: {project.skills.join(", ")}, etc</Typography>
+                </Card>
+              </Grid>
+            </CSSTransition>
+          ))
+        ) : (
+          <CSSTransition
+            timeout={500}
+            nodeRef={emptyListMsgRef}
+            key="no-projects"
+            classNames="staggered-item"
+          >
+            <Grid as="li" ref={emptyListMsgRef} item xs={12}>
+              <Typography variant="h4">No project found!</Typography>
+            </Grid>
+          </CSSTransition>
+        )}
+      </TransitionGroup>
+    </Grid>
   );
 }
 

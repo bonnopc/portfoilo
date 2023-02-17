@@ -1,5 +1,5 @@
 import styles from "./Grid.module.scss";
-import { createElement, memo } from "react";
+import { createElement, forwardRef, memo } from "react";
 import combineClassNames from "@/utils/combineClassNames";
 
 type GridSections = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
@@ -26,27 +26,30 @@ interface GridProps {
   as?: keyof JSX.IntrinsicElements;
 }
 
-function Grid({
-  children,
-  container,
-  item,
-  xs,
-  sm,
-  md,
-  smPush,
-  mdPush,
-  smPull,
-  mdPull,
-  smOffset,
-  mdOffset,
-  hiddenXs,
-  hiddenSm,
-  hiddenMd,
-  className,
-  spacing = 2,
-  as = "div",
-  ...restProps
-}: GridProps) {
+function GridComponent(
+  {
+    children,
+    item,
+    container = !item,
+    xs,
+    sm,
+    md,
+    smPush,
+    mdPush,
+    smPull,
+    mdPull,
+    smOffset,
+    mdOffset,
+    hiddenXs,
+    hiddenSm,
+    hiddenMd,
+    className,
+    spacing = 2,
+    as = "div",
+    ...restProps
+  }: GridProps,
+  ref: React.Ref<HTMLElement>
+) {
   return createElement(
     as,
     {
@@ -73,9 +76,12 @@ function Grid({
         className
       ),
       ...restProps,
+      ref,
     },
     children
   );
 }
+
+const Grid = forwardRef(GridComponent);
 
 export default memo(Grid);

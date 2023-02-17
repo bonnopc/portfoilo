@@ -145,3 +145,18 @@ h6 {
     background: rgba(0, 60, 90, 0.7);
   }
 }
+
+.staggered-item-enter {
+  opacity: 0;
+}
+.staggered-item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.staggered-item-exit {
+  opacity: 1;
+}
+.staggered-item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}

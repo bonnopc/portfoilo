@@ -15,7 +15,6 @@ export default function Skills() {
   }, [router.query.skill]);
 
   const getChipColor = (index: number): ChipColor => {
-    console.log(index, CHIP_COLORS.length, index % CHIP_COLORS.length);
     if (index > CHIP_COLORS.length - 1) {
       return CHIP_COLORS[index % CHIP_COLORS.length];
     } else {

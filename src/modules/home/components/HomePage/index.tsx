@@ -3,6 +3,7 @@ import IntroImage from "../IntroImage";
 import IntroTexts from "../IntroTexts";
 import Projects from "../Projects";
 import Skills from "../Skills";
+import Works from "../Works";
 import styles from "./HomePage.module.scss";
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
         <IntroTexts />
         <Skills />
         <Projects />
+        <Works />
       </Container>
     </div>
   );

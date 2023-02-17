@@ -1,5 +1,5 @@
 import styles from "./Grid.module.scss";
-import { memo } from "react";
+import { createElement, memo } from "react";
 import combineClassNames from "@/utils/combineClassNames";
 
 type GridSections = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
@@ -23,6 +23,7 @@ interface GridProps {
   hiddenMd?: boolean;
   className?: string;
   spacing?: 0 | 1 | 2 | 3 | 4;
+  as?: keyof JSX.IntrinsicElements;
 }
 
 function Grid({
@@ -43,11 +44,13 @@ function Grid({
   hiddenMd,
   className,
   spacing = 2,
+  as = "div",
   ...restProps
 }: GridProps) {
-  return (
-    <div
-      className={combineClassNames(
+  return createElement(
+    as,
+    {
+      className: combineClassNames(
         styles,
         {
           root: true,
@@ -67,12 +70,11 @@ function Grid({
           [`mdOffset${mdOffset}`]: Boolean(mdOffset),
           [`spacing${spacing}`]: true,
         },
-        className,
-      )}
-      {...restProps}
-    >
-      {children}
-    </div>
+        className
+      ),
+      ...restProps,
+    },
+    children
   );
 }
 

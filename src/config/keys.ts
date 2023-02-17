@@ -1,9 +1,9 @@
 export const KEY_APP_NAME: string = "Prosenjit Chowdhury";
 export const KEY_LOCAL_STORAGE_CUSTOMIZED_THEME_PREF: string = "customized-theme";
 export const KEY_SKILLS: readonly string[] = [
+  "React",
   "JavaScript",
   "TypeScript",
-  "React",
   "Redux",
   "Node.js",
   "Express.js",

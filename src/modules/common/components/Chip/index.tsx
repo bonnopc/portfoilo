@@ -1,6 +1,7 @@
 import combineClassNames from "@/utils/combineClassNames";
 import Link from "next/link";
-import { MouseEventHandler, ReactNode } from "react";
+import { createElement, MouseEventHandler, ReactNode } from "react";
+import { UrlObject } from "url";
 import styles from "./Chip.module.scss";
 
 export const CHIP_COLORS = [
@@ -31,9 +32,10 @@ interface ChipProps {
   variant?: "contained" | "outlined";
   onClick?: MouseEventHandler<HTMLDivElement>;
   icon?: ReactNode;
-  url?: string;
+  url?: UrlObject | string;
   disabled?: boolean;
   isSelected?: boolean;
+  as?: keyof JSX.IntrinsicElements;
 }
 
 export default function Chip({
@@ -47,28 +49,35 @@ export default function Chip({
   url,
   disabled = false,
   isSelected = false,
+  as = "div",
 }: ChipProps) {
-  const renderChip = () => (
-    <div
-      className={combineClassNames(
-        styles,
-        {
-          root: true,
-          clickable: Boolean(onClick || url),
-          disabled,
-          [size]: true,
-          [`${color}Color`]: true,
-          [variant]: true,
-          isSelected,
-        },
-        className
-      )}
-      onClick={onClick}
-    >
+  const elem = (
+    <>
       {icon && <span className={styles.icon}> {icon} </span>}
       {children}
-    </div>
+    </>
   );
+  const renderChip = () =>
+    createElement(
+      as,
+      {
+        className: combineClassNames(
+          styles,
+          {
+            root: true,
+            clickable: Boolean(onClick || url),
+            disabled,
+            [size]: true,
+            [`${color}Color`]: true,
+            [variant]: true,
+            isSelected,
+          },
+          className
+        ),
+        onClick: onClick,
+      },
+      elem
+    );
 
   return url ? <Link href={url}>{renderChip()}</Link> : renderChip();
 }

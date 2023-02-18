@@ -57,6 +57,7 @@ export default function Skills() {
             router.query.skill!.toString().toLowerCase() === skill.toLowerCase()
           }
           size="large"
+          as="a"
         >
           {skill}
         </Chip>

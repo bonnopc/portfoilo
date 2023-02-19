@@ -11,7 +11,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="description" content="Javascript dev" />
+          <meta
+            name="description"
+            content="Prosenjit Chowdhury (@bonnopc) is working as a software engineer for more than 5 years. He has a proven experience working with React.js, Flutter, Typescript, Javascript, Redux, etc. He is also a passionate open source contributor. He is currently working as a software engineer at Multiplyr, a DeFi protocol to earn yields."
+          />
           <meta name="keywords" content="portfolio, developer, software, javascript" />
           <meta name="robots" content="noindex, follow" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />

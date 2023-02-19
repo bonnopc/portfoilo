@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Prosenjit Chowdhury (@bonnopc) | Software Engineer</title>
       </Head>
       <HomePage />
     </>

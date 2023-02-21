@@ -1,5 +1,5 @@
 import combineClassNames from "@/utils/combineClassNames";
-import { CSSProperties, ReactNode, useMemo, useState } from "react";
+import { createRef, CSSProperties, ReactNode, useMemo, useState } from "react";
 import styles from "./Tabs.module.scss";
 
 interface Tab {
@@ -9,6 +9,10 @@ interface Tab {
   disabled?: boolean;
   className?: string;
   style?: CSSProperties;
+}
+
+interface TabWithRef extends Tab {
+  ref: React.RefObject<HTMLDivElement>;
 }
 
 interface TabsProps {
@@ -23,20 +27,30 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
   const [activeTab, setActiveTab] = useState<string>(
     tabs[defaultActiveTabIndex ?? DEFAULT_TAB_INDEX].label
   );
+  const tabsWithRefs = useMemo(() => {
+    return tabs.map((tab) => ({
+      ...tab,
+      ref: createRef<HTMLDivElement>(),
+    }));
+  }, [tabs]);
 
-  const handleTabHeaderClick = (tabLabel: string) => {
-    setActiveTab(tabLabel);
+  const handleTabHeaderClick = (tab: TabWithRef, index: number) => {
+    setActiveTab(tab.label);
+    tab.ref.current?.scrollIntoView({
+      behavior: "smooth",
+      ...(index !== 0 && index !== tabsWithRefs.length - 1 ? { inline: "center" } : {}),
+    });
   };
 
   const ActiveTabContent: ReactNode | undefined = useMemo(() => {
-    const _activeTab: Tab | undefined = tabs.find((tab) => tab.label === activeTab);
+    const _activeTab: Tab | undefined = tabsWithRefs.find((tab) => tab.label === activeTab);
     return _activeTab?.component;
   }, [activeTab]);
 
   return (
     <div className={`${styles.root} ${className ? className : ""}`}>
       <div className={styles.tabs}>
-        {tabs.map((tab) => (
+        {tabsWithRefs.map((tab, i) => (
           <div
             key={tab.label}
             className={combineClassNames(
@@ -48,7 +62,8 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
               },
               tab.className
             )}
-            onClick={() => handleTabHeaderClick(tab.label)}
+            onClick={() => handleTabHeaderClick(tab, i)}
+            ref={tab.ref}
           >
             <div className={styles.tabLabel}>
               {tab.icon}

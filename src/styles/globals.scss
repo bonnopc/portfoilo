@@ -24,6 +24,7 @@ body {
   background: var(--color-bg);
   min-height: 100vh;
   font-size: $font-size;
+  overflow: auto;
 
   @include for-mobile-and-tablet {
     font-size: $font-size-sm;

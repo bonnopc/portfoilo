@@ -1,0 +1,72 @@
+[
+    {
+        "shortName": "Multiplyr",
+        "name": "Multiplyr Inc.",
+        "url": "https://www.multiplyr.xyz/",
+        "description": "Multiplyr is a team working on to build the Affine, a decentralized protocol that enables cross-chain savings and investment.",
+        "startDate": "December 2021",
+        "endDate": "current",
+        "position":"Senior Frontend Engineer",
+        "keyRoles": [
+            "Leading the Frontend team to scope and build the dApp using Next.js and Redux-toolkit",
+            "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
+            "Developing APIs on the resolver built with FastAPI"
+        ]
+    },
+    {
+        "shortName": "Shikho",
+        "name": "Shikho Technologies Bangladesh Ltd.",
+        "url": "https://www.shikho.com/",
+        "description": "Shikho is a leading IT company in Bangladesh. I worked on the frontend of their flagship product, Shikho ERP.",
+        "startDate": "June 2020",
+        "endDate": "December 2021",
+        "position":"Frontend Engineer",
+        "keyRoles": [
+            "Leading the Frontend team to scope and build the ERP using Next.js and Redux-toolkit",
+            "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
+            "Developing APIs on the resolver built with FastAPI"
+        ]
+    },
+    {
+        "shortName": "Saimon Global",
+        "name": "Saimon Global Ltd.",
+        "url": "https://saimonglobal.com/",
+        "description": "Saimon Global is a leading IT company in Bangladesh. I worked on the frontend of their flagship product, Saimon ERP.",
+        "startDate": "June 2019",
+        "endDate": "June 2020",
+        "position":"Frontend Engineer",
+        "keyRoles": [
+            "Leading the Frontend team to scope and build the ERP using Next.js and Redux-toolkit",
+            "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
+            "Developing APIs on the resolver built with FastAPI"
+        ]
+    },
+    {
+        "shortName": "HungryNaki",
+        "name": "HungryNaki.com Ltd.",
+        "url": "https://hungrynaki.com/",
+        "description": "HungryNaki is a food delivery service in Bangladesh. I worked on the frontend of their flagship product, HungryNaki.com.",
+        "startDate": "June 2018",
+        "endDate": "June 2019",
+        "position":"Full Stack Engineer",
+        "keyRoles": [
+            "Leading the Frontend team to scope and build the ERP using Next.js and Redux-toolkit",
+            "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
+            "Developing APIs on the resolver built with FastAPI"
+        ]
+    },
+    {
+        "shortName": "Cliniva",
+        "name": "Cliniva Ltd.",
+        "url": "https://cliniva.com/",
+        "description": "Cliniva is a healthcare service provider in Bangladesh. I worked on the frontend of their flagship product, Cliniva.com.",
+        "startDate": "June 2017",
+        "endDate": "June 2018",
+        "position":"Full Stack Engineer",
+        "keyRoles": [
+            "Leading the Frontend team to scope and build the ERP using Next.js and Redux-toolkit",
+            "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
+            "Developing APIs on the resolver built with FastAPI"
+        ]
+    }
+]

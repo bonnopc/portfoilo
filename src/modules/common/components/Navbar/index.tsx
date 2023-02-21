@@ -3,8 +3,8 @@ import styles from "./Navbar.module.scss";
 
 export default function Navbar() {
   return (
-    <div className={styles.root}>
+    <nav className={styles.root}>
       <ThemeSwitch />
-    </div>
+    </nav>
   );
 }

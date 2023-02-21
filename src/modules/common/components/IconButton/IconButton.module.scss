@@ -4,7 +4,7 @@
   background-color: transparent;
   border-radius: 50%;
   padding: 0;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s;
@@ -24,6 +24,7 @@
   &.large {
     width: 3rem;
     height: 3rem;
+    padding: 0.15rem;
   }
 
   &:not(:disabled) {

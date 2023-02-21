@@ -15,7 +15,7 @@ function IconButton({
   children,
   className,
   size = "medium",
-  as,
+  as = "button",
   url,
   urlOpensInNewTab,
   ...restProps

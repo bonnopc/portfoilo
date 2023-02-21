@@ -7,7 +7,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s;
+  transition: var(--transition);
   margin: 0.15rem;
   color: var(--color-text-primary);
 

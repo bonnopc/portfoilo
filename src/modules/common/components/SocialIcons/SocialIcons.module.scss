@@ -16,7 +16,7 @@
             // width: 1.5rem;
             // height: 1.5rem;
             fill: var(--color-text-secondary);
-            transition: fill 0.2s ease-in-out;
+            transition: var(--transition);
     
             &:hover {
                 fill: var(--color-text-primary);

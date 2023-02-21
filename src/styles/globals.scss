@@ -5,6 +5,7 @@
   --font-family-heading: #{$font-family-heading};
   --color-primary: #{$color-primary};
   --color-secondary: #{$color-secondary};
+  --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
 // @font-face {

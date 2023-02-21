@@ -32,7 +32,9 @@ function Workplace({
       <Typography variant="h5">
         {position}{" "}
         {company.url ? (
-          <CommonLink href={company.url}>@ {company.name}</CommonLink>
+          <CommonLink href={company.url} target="_blank">
+            @ {company.name}
+          </CommonLink>
         ) : (
           `@ ${company.name}`
         )}

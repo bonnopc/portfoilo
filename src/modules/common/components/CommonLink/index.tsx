@@ -2,6 +2,7 @@ import combineClassNames from "@/utils/combineClassNames";
 import Link from "next/link";
 import { UrlObject } from "url";
 import styles from "./CommonLink.module.scss";
+import OpenInNewTabIcon from "@/assets/icons/open_in_new_tab.svg";
 
 interface CommonLinkProps {
   href: string | UrlObject;
@@ -11,6 +12,7 @@ interface CommonLinkProps {
   className?: string;
   preventUnderLine?: boolean; // default is false
   legacyBehavior?: boolean; // default is false
+  hideExternalLinkIcon?: boolean; // default is false
 }
 
 export default function CommonLink({
@@ -18,6 +20,7 @@ export default function CommonLink({
   className,
   preventUnderLine = false,
   legacyBehavior = false,
+  hideExternalLinkIcon = false,
   ...restProps
 }: CommonLinkProps) {
   return (
@@ -27,6 +30,9 @@ export default function CommonLink({
       {...restProps}
     >
       {children}
+      {restProps.target === "_blank" && !hideExternalLinkIcon && (
+        <OpenInNewTabIcon className={styles.openInNewTabIcon} />
+      )}
     </Link>
   );
 }

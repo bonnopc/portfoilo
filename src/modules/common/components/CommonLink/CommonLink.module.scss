@@ -1,5 +1,42 @@
+@import 'src/styles/shared';
+
 .root {
-  &:not(.preventUnderLine):hover {
-    text-decoration: underline;
+  color: $color-primary;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+
+  .openInNewTabIcon {
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+    width: 1rem;
+    height: 1rem;
+    color: $color-primary;
+    fill: currentColor;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  &:hover .openInNewTabIcon {
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // bottom: 0.37em;
+    background-color: $color-primary;
+    transition: var(--transition);
+    opacity: 0.5;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }

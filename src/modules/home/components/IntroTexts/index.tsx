@@ -5,8 +5,11 @@ import styles from "./IntroTexts.module.scss";
 export default function IntroTexts() {
   return (
     <div className={styles.root}>
+      <Typography variant="h5" className={styles.subHeading}>
+        Hello, I am
+      </Typography>
       <Typography variant="h1" className={styles.heading}>
-        <span className={styles.light}>My Name is</span> <br /> Prosenjit Chowdhury
+        Prosenjit Chowdhury
       </Typography>
       <Typography>
         I am a professional programmer with passion and dedication, based in Dhaka, Bangladesh. I

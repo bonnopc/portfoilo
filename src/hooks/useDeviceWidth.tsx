@@ -18,7 +18,7 @@ export default function useDeviceWidth(): IDeviceWidth {
       if (typeof window === "undefined") return;
       const { innerWidth } = window;
       const isMobile = innerWidth <= 768;
-      const isTablet = innerWidth <= 992;
+      const isTablet = innerWidth <= 1200;
       setDeviceWidth({ isMobile, isTablet });
     };
 

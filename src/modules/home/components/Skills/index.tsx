@@ -1,10 +1,13 @@
 import { KEY_SKILLS } from "@/config/keys";
 import Chip, { ChipColor, CHIP_COLORS } from "@/modules/common/components/Chip";
+import Typography from "@/modules/common/components/Typography";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import styles from "./Skills.module.scss";
 
-export default function Skills() {
+export const SECTION_ID_SKILLS = "skills";
+
+export default function Skills(props: React.HTMLAttributes<HTMLDivElement>) {
   const router = useRouter();
   const skillsDivRef = useRef<HTMLDivElement>(null);
 
@@ -46,22 +49,25 @@ export default function Skills() {
   };
 
   return (
-    <div ref={skillsDivRef} className={styles.root}>
-      {KEY_SKILLS.map((skill, i) => (
-        <Chip
-          color={getChipColor(i)}
-          key={skill}
-          onClick={() => handleSkillClick(skill)}
-          isSelected={
-            Boolean(router.query.skill) &&
-            router.query.skill!.toString().toLowerCase() === skill.toLowerCase()
-          }
-          size="large"
-          as="a"
-        >
-          {skill}
-        </Chip>
-      ))}
-    </div>
+    <section className={styles.root} {...props}>
+      <Typography variant="h2">Technologies I have used</Typography>
+      <div ref={skillsDivRef}>
+        {KEY_SKILLS.map((skill, i) => (
+          <Chip
+            color={getChipColor(i)}
+            key={skill}
+            onClick={() => handleSkillClick(skill)}
+            isSelected={
+              Boolean(router.query.skill) &&
+              router.query.skill!.toString().toLowerCase() === skill.toLowerCase()
+            }
+            size="large"
+            as="a"
+          >
+            {skill}
+          </Chip>
+        ))}
+      </div>
+    </section>
   );
 }

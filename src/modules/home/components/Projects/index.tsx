@@ -9,6 +9,8 @@ import styles from "./Projects.module.scss";
 import Typography from "@/modules/common/components/Typography";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
+export const SECTION_ID_PROJECTS = "projects";
+
 function ProjectList({ projects }: { projects: IProject[] }) {
   const emptyListMsgRef = createRef<HTMLLIElement>();
   const projectWithRefs = projects.map((project) => {
@@ -55,7 +57,7 @@ function ProjectList({ projects }: { projects: IProject[] }) {
   );
 }
 
-export default function Projects() {
+export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
   const router = useRouter();
   const { skill } = router.query;
   const selectedSkill: ISkill | undefined = useMemo(() => {
@@ -76,11 +78,11 @@ export default function Projects() {
   }, [selectedSkill]);
 
   return (
-    <div className={styles.root}>
+    <section className={styles.root} {...props}>
       <Typography variant="h2">
         {!selectedSkill ? "Recent " : ""} Projects {selectedSkill ? `using ${selectedSkill}` : ""}
       </Typography>
       <ProjectList projects={projects} />
-    </div>
+    </section>
   );
 }

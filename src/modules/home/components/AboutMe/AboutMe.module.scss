@@ -1,0 +1,14 @@
+@import 'src/styles/shared';
+
+.root{
+    max-width: 40rem;
+    padding-top: 5rem;
+
+    .heading {
+        margin-top: 0;
+    }
+
+    .button {
+        margin-top: 2rem;
+      }
+}

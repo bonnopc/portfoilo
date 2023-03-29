@@ -95,3 +95,8 @@ $container-max-width-tablet: 720px;
     margin-right: auto;
   }
 }
+
+@mixin common-section {
+  margin-top: 15rem;
+  padding-top: 5rem;
+}

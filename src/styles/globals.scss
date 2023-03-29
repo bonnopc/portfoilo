@@ -5,6 +5,7 @@
   --font-family-heading: #{$font-family-heading};
   --color-primary: #{$color-primary};
   --color-secondary: #{$color-secondary};
+  --easing: cubic-bezier(0.645,0.045,0.355,1);
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
@@ -15,6 +16,10 @@
 // }
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+html {
+  scroll-behavior: smooth !important;
+}
 
 html,
 body {
@@ -152,6 +157,7 @@ h6 {
   }
 }
 
+// Staggered List Transition
 .staggered-item-enter {
   opacity: 0;
 }
@@ -165,4 +171,20 @@ h6 {
 .staggered-item-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-in;
+}
+
+/* Fade */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms var(--easing);
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms var(--easing);
 }

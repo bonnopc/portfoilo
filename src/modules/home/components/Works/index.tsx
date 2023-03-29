@@ -19,6 +19,8 @@ interface WorkplaceProps {
   keyRoles: string[];
 }
 
+export const SECTION_ID_WORKS = "works";
+
 function Workplace({
   company,
   description,
@@ -48,9 +50,9 @@ function Workplace({
   );
 }
 
-export default function Works() {
+export default function Works(props: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={styles.root}>
+    <section className={styles.root} {...props}>
       <Typography variant="h2">Where I’ve Worked</Typography>
       <Tabs
         tabs={WORKPLACES.map((workplace) => ({
@@ -70,6 +72,6 @@ export default function Works() {
           ),
         }))}
       />
-    </div>
+    </section>
   );
 }

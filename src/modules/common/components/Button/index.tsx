@@ -2,6 +2,7 @@ import React, { ButtonHTMLAttributes, memo, MouseEventHandler, ReactNode } from 
 import styles from "./Button.module.scss";
 import combineClassNames from "@/utils/combineClassNames";
 import CommonLink from "../CommonLink";
+import { UrlObject } from "url";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "contained" | "outlined" | "link";
@@ -12,7 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   xsFullWidth?: boolean; // will be full width on mobile only
   icon?: ReactNode;
   xsFixedOnBottom?: boolean;
-  url?: string;
+  url?: UrlObject | string;
 }
 
 function Button({

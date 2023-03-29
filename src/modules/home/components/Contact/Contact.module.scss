@@ -1,0 +1,10 @@
+@import 'src/styles/shared';
+
+.root {
+    @include common-section;
+    max-width: 30rem;
+
+    .button {
+        margin-top: 2rem;
+    }
+}

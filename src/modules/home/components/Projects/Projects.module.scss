@@ -1,5 +1,7 @@
+@import "src/styles/shared";
+
 .root {
-    margin-top: 10rem;
+    @include common-section;
     overflow: hidden;
     position: relative;
 

@@ -1,6 +1,6 @@
-@import 'src/styles/shared';
+@import "src/styles/shared";
 
 .root {
-    @include common-section;
-    padding-bottom: 6rem;
+  @include common-section;
+  padding-bottom: 6rem;
 }

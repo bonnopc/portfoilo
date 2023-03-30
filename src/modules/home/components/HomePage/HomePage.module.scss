@@ -4,7 +4,7 @@
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
-  margin-top: -$nav-height;
+  // margin-top: -$nav-height;
   padding-top: calc(200px + #{$nav-height});
 
   @include for-tablet-and-desktop {

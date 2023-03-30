@@ -5,8 +5,8 @@
   --font-family-heading: #{$font-family-heading};
   --color-primary: #{$color-primary};
   --color-secondary: #{$color-secondary};
-  --easing: cubic-bezier(0.645,0.045,0.355,1);
-  --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 // @font-face {
@@ -50,7 +50,7 @@ a {
 h1,
 h2,
 h3,
-h4{
+h4 {
   margin-bottom: 2rem;
   margin-top: 0.5rem;
 }
@@ -79,7 +79,8 @@ ul {
   list-style: none;
 }
 
-p, li {
+p,
+li {
   color: var(--color-text-secondary);
 }
 

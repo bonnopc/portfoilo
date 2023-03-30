@@ -54,7 +54,8 @@ export default function Skills(props: React.HTMLAttributes<HTMLDivElement>) {
       <div ref={skillsDivRef}>
         {KEY_SKILLS.map((skill, i) => (
           <Chip
-            color={getChipColor(i)}
+            // color={getChipColor(i)}
+            variant="outlined"
             key={skill}
             onClick={() => handleSkillClick(skill)}
             isSelected={

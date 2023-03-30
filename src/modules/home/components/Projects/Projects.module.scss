@@ -1,15 +1,15 @@
 @import "src/styles/shared";
 
 .root {
-    @include common-section;
-    overflow: hidden;
-    position: relative;
+  @include common-section;
+  overflow: hidden;
+  position: relative;
 
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-        position: relative;
-        padding-left: 0;
-    }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    position: relative;
+    padding-left: 0;
+  }
 }

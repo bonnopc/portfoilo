@@ -1,120 +1,115 @@
 @import "src/styles/shared";
 
 .root {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 
-    .tabHeaderRoot {
+  .tabHeaderRoot {
+    position: relative;
+
+    .tabHeaderContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      .tab {
+        display: flex;
+        padding: 0.75rem 1.5rem;
         position: relative;
+        transition: background-color 0.3s ease;
+        font-size: 1.25rem;
 
-        .tabHeaderContainer {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 1.5rem;
-            width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-    
-            .tab {
-                display: flex;
-                padding: 0.75rem 1.5rem;
-                position:relative;
-                transition: background-color 0.3s ease;
-                font-size: 1.25rem;
-    
-                &.active {
-                    font-weight: 600;
-                }
-    
-                &:not(.disabled){
-                    cursor: pointer;
-                }
-    
-                &:hover:not(.disabled){
-                    background-color: #00000011;
-                }
-    
-                &:first-child {
-                    border-top-left-radius: 0.5rem;
-                }
-    
-                &:last-child {
-                    border-top-right-radius: 0.5rem;
-                }
-    
-                &:after{
-                    position:absolute;
-                    bottom:-100%;
-                    left:50%;
-                    display:block;
-                    content:"";
-                    width:0;
-                    height:0;
-                    border:10px solid transparent;
-                    transform:translateX(-50%);
-                    border-bottom-color: var(--color-text-secondary);
-                    transition:all .4s ease-out;
-                  }
-                  
-                  &.active{
-                    &:after{
-                     bottom:0;
-                    }
-                  }
-                
-        
-                .tabLabel {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0 10px;
-                    border-bottom: none;
-                    white-space: nowrap;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-        
-                    &.active {
-                        background-color: #eee;
-                    }
-                }
-            }
-    
-            
+        &.active {
+          font-weight: 600;
         }
 
-        @mixin floating-button {
-            position: absolute;
-            top: 0;
-            background-color: var(--color-bg);
-            margin: 0;
-            height: 100%;
-            border-radius: 2px;
-            padding: 0.25rem;
-
-            &.hidden {
-                display: none;
-            }
+        &:not(.disabled) {
+          cursor: pointer;
         }
 
-        .floatingBack {
-            @include floating-button;
-            left: -1px;
+        &:hover:not(.disabled) {
+          background-color: #00000011;
         }
 
-        .floatingFwd {
-            @include floating-button;
-            right: -1px;
+        &:first-child {
+          border-top-left-radius: 0.5rem;
         }
+
+        &:last-child {
+          border-top-right-radius: 0.5rem;
+        }
+
+        &:after {
+          position: absolute;
+          bottom: -100%;
+          left: 50%;
+          display: block;
+          content: "";
+          width: 0;
+          height: 0;
+          border: 10px solid transparent;
+          transform: translateX(-50%);
+          border-bottom-color: var(--color-text-secondary);
+          transition: all 0.4s ease-out;
+        }
+
+        &.active {
+          &:after {
+            bottom: 0;
+          }
+        }
+
+        .tabLabel {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 10px;
+          border-bottom: none;
+          white-space: nowrap;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &.active {
+            background-color: #eee;
+          }
+        }
+      }
     }
 
-    
+    @mixin floating-button {
+      position: absolute;
+      top: 0;
+      background-color: var(--color-bg);
+      margin: 0;
+      height: 100%;
+      border-radius: 2px;
+      padding: 0.25rem;
 
-    .tabContent {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        min-height: 10rem;
+      &.hidden {
+        display: none;
+      }
     }
+
+    .floatingBack {
+      @include floating-button;
+      left: -1px;
+    }
+
+    .floatingFwd {
+      @include floating-button;
+      right: -1px;
+    }
+  }
+
+  .tabContent {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    min-height: 10rem;
+  }
 }

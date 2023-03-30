@@ -4,7 +4,7 @@ import { UrlObject } from "url";
 import styles from "./CommonLink.module.scss";
 import OpenInNewTabIcon from "@/assets/icons/open_in_new_tab.svg";
 
-interface CommonLinkProps {
+interface CommonLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   href: string | UrlObject;
   as?: string;
   children: React.ReactNode;

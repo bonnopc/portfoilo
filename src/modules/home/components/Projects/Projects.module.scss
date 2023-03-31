@@ -12,4 +12,17 @@
     position: relative;
     padding-left: 0;
   }
+
+  // .grid {
+  //   transition: var(--transition);
+  // }
+
+  .item {
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:not(.selected):hover {
+      transform: translateY(-0.25rem);
+    }
+  }
 }

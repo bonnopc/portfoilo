@@ -51,7 +51,7 @@ export default function Navbar() {
         root: true,
         hidden: isNavHidden,
         // hide box-shadow when the navbar is on top
-        hideShadow: typeof window !== "undefined" && window.pageYOffset === 0,
+        hideShadow: typeof window !== "undefined" ? window.pageYOffset < 30 : true,
       })}
     >
       <input type="checkbox" id="navCheck" className={styles.navCheck} />

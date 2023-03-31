@@ -1,0 +1,157 @@
+[
+  {
+    "name": "PipeX CRM web app",
+    "responsibilities": [
+      "Successfully developed a fully functional CRM app using Laravel 5.6 and Vue.js.",
+      "Designed an optimized database schema with tables, relationships, and queries to handle data storage and retrieval.",
+      "Developed the backend of the CRM app using Laravel 5.6, creating APIs, controllers, models, and routes to handle requests from the front end and interact with the database.",
+      "Developed the front end of the CRM app using Vue.js, creating components, templates, and stylesheets to provide a user-friendly interface.",
+      "Integrated third-party APIs, such as payment gateways, social media platforms, or email marketing services to add additional features and functionalities to the CRM app.",
+      "Wrote automated tests to ensure the quality of the code and identified and fixed any bugs in the CRM app.",
+      "Deployed the CRM app to a production environment and ensured that it is properly maintained and updated.",
+      "Collaborated with other team members, such as designers and project managers, and communicated effectively to ensure that the CRM app met the requirements of the stakeholders."
+    ],
+    "technologies": [
+      "Laravel 5.6",
+      "Vue.js",
+      "MySQL",
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "Social Media APIs"
+    ]
+  },
+  {
+    "name": "HungryNaki - Food Delivery System",
+    "responsibilities": [
+      "Building reusable and functional components for the new software system",
+      "Contributing to front-end and back-end development",
+      "Using various technologies such as Nuxt.js, React.js, Vue.js, Hapi.js, GraphQL, SASS, Stylus, and other CSS frameworks",
+      "Creating customer support, delivery support, vendor workflow, and admin panel",
+      "Implementing real-time data flow using GraphQL Subscription (web socket connection) and other cutting-edge technologies",
+      "Working closely with the team to ensure a successful transition from the old system to the new microservice-based system",
+      "Maintaining the old system during the transition period"
+    ],
+    "technologies": [
+      "Nuxt.js",
+      "React.js",
+      "Vue.js",
+      "Hapi.js",
+      "GraphQL",
+      "SASS",
+      "Stylus",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "Docker",
+      "Google Cloud Platform",
+      "AWS"
+    ]
+  },
+  {
+    "name": "Tryotel - Travel app on Android, iOS & web",
+    "responsibilities": [
+      "Developing the front end of the Tryotel web application, admin panel, customer support panel, and mobile apps for Android and iOS using Next.js, React.js, Flutter, and Material UI, while ensuring cross-browser compatibility and responsiveness.",
+      "Implementing key features of the application such as flight search, booking, payment processing, and user account management, and integrating third-party APIs such as payment gateways and flight booking engines.",
+      "Collaborating with a team of developers, designers, and other stakeholders to plan, design, and develop the application, while participating in code reviews, testing, and debugging to ensure the quality of the application.",
+      "Creating and maintaining documentation for the various components and features of the application, including user guides, technical specifications, and code documentation.",
+      "Ensuring high performance and scalability of the application by optimizing its design, architecture, and code, and implementing caching and load balancing strategies.",
+      "Ensuring the security and privacy of user data by implementing appropriate measures such as encryption, authentication, and access controls, and complying with industry standards such as PCI-DSS and GDPR.",
+      "Providing technical support and troubleshooting assistance to users, and resolving any issues or bugs that arise, while ensuring timely and effective communication with customers and stakeholders."
+    ],
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "Flutter",
+      "Material UI",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "BLoC"
+    ]
+  },
+  {
+    "name": "Takemed telemedicine cross-platform app",
+    "responsibilities": [
+      "Developing the front-end of the patient app, doctor app, and admin panel using technologies such as Next.js, Material UI, and GraphQL.",
+      "Collaborating with other developers, designers, and stakeholders to ensure that the app meets the desired requirements and quality standards.",
+      "Designing and implementing video calling functionality to enable patients to consult with doctors remotely.",
+      "Developing a user-friendly interface for patients to find doctors based on their speciality and book appointments.",
+      "Implementing features for patients to upload their lab reports, receive prescriptions, and view their medical history.",
+      "Creating and maintaining efficient and scalable code that is easily maintainable and reusable.",
+      "Conducting thorough testing and debugging to ensure that the app is stable, secure, and user-friendly.",
+      "Staying up-to-date with the latest industry trends and technologies to ensure that the app remains competitive and innovative.",
+      "Troubleshooting issues and providing technical support to users as needed.",
+      "Ensuring that the app complies with all relevant laws and regulations related to telemedicine and data privacy."
+    ],
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "Material UI",
+      "GraphQL",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git"
+    ]
+  },
+  {
+    "name": "Cliniva - Patient Management System",
+    "responsibilities": [
+      "Built 2 web apps for both patients & doctors with React.js, Express.js & MonogDB.",
+      "Responsive designs have been employed to incorporate functionalities such as appointment management, prescription generation, schedule management, chamber management, and more.",
+      "Developing the backend server using Express.js and integrating it with MongoDB to store data & creating APIs and endpoints for managing appointments, prescriptions, schedules, chambers, etc.",
+      "Ensuring application security by implementing proper authentication and authorization mechanisms.",
+      "Collaborating with other team members, including designers and project managers, to ensure the timely completion of the project."
+    ],
+    "technologies": ["React.js", "Express.js", "MongoDB", "HTML", "CSS", "JavaScript", "Git"]
+  },
+  {
+    "name": "Priyo Class - an Ed-tech Flutter App on iOS & Android Store",
+    "responsibilities": [
+      "Developed and designed the Priyo Class app using Flutter and implemented BLoC for state management.",
+      "Integrated user authentication features using email and social login platforms.",
+      "Created functionality for users to register for upcoming exams, attend exams at specific times, and view their results.",
+      "Implemented a self-assessment feature for users to measure their skills.",
+      "Developed an in-app quiz feature that allows users to receive questions at specific times, see remaining time, and submit answers accordingly.",
+      "Contributed to the overall project strategy and worked closely with the team to ensure successful project delivery.",
+      "Collaborated with the UI/UX designers to ensure the app met the design specifications.",
+      "Conducted thorough testing and debugging to ensure high-quality app performance.",
+      "Assisted in the deployment of the app to both the iOS app store and Android play store.",
+      "Continued to provide support and maintenance for the app after the initial release."
+    ],
+    "technologies": ["Flutter", "Dart", "BLoC", "Firebase", "HTML", "CSS", "JavaScript", "Git"]
+  },
+  {
+    "name": "FlightLocal - A B2B app for managing flight bookings",
+    "responsibilities": [
+      "Developed a responsive and user-friendly Progressive Web Application (PWA) using React.js and Material UI for B2B agents to book flights, hotels, and other travel-related services.",
+      "Contributed to the development of the admin panel using React.js, which provided internal operators with a responsive and efficient interface to manage bookings, payments, and other operations.",
+      "Implemented Apollo Client and GraphQL to handle data fetching and state management in the front end, enabling real-time updates and reducing server loads.",
+      "Collaborated closely with the backend team to integrate the front end with the micro-service-based system built with Hapi.js and MongoDB, ensuring smooth communication and data exchange between the components.",
+      "Ensured high code quality and performance by following best practices, writing clean and maintainable code, and conducting thorough testing and debugging.",
+      "Worked efficiently under tight deadlines and with limited resources, demonstrating strong time-management and problem-solving skills.",
+      "Communicated effectively with team members, stakeholders, and clients, providing regular updates on progress, identifying issues, and proposing solutions.",
+      "Continuously improved skills and knowledge in frontend development, staying up-to-date with the latest technologies, tools, and trends, and sharing knowledge and experience with the team."
+    ],
+    "technologies": [
+      "React.js",
+      "Material UI",
+      "Apollo Client",
+      "GraphQL",
+      "Hapi.js",
+      "MongoDB",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git"
+    ]
+  }
+  
+]

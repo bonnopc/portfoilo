@@ -3,11 +3,12 @@ import Card from "@/modules/common/components/Card";
 import Grid from "@/modules/common/components/Grid";
 import { IProject, ISkill } from "@/types/projects";
 import { useRouter } from "next/router";
-import { createRef, useEffect, useMemo, useState } from "react";
+import { createRef, useEffect, useMemo } from "react";
 import styles from "./Projects.module.scss";
 import Typography from "@/modules/common/components/Typography";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import RECENT_PROJECTS from "@/config/recent-projects.json";
+import ProjectDescriptionModal from "../ProjectDescriptionModal";
 
 export const SECTION_ID_PROJECTS = "projects";
 
@@ -94,8 +95,7 @@ function ProjectList({
 
 export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
   const router = useRouter();
-  const { skill } = router.query;
-  const [selectedProject, setSelectedProject] = useState<IProject | undefined>(undefined);
+  const { skill, projectId } = router.query;
   const selectedSkill: ISkill | undefined = useMemo(() => {
     if (skill) {
       return KEY_SKILLS.find((s) => s.toLowerCase() === skill.toString().toLowerCase());
@@ -115,10 +115,36 @@ export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
     return RECENT_PROJECTS;
   }, [selectedSkill]);
 
+  const selectProject = (project: IProject) => {
+    router.push(
+      {
+        pathname: router.pathname,
+        query: {
+          ...router.query,
+          projectId: project.id,
+        },
+      },
+      undefined,
+      { shallow: true }
+    );
+  };
+
+  const unselectProject = () => {
+    const { projectId, ...query } = router.query;
+    router.push(
+      {
+        pathname: router.pathname,
+        query,
+      },
+      undefined,
+      { shallow: true }
+    );
+  };
+
   useEffect(() => {
     // reset selectedProject when skill changes
     if (selectedSkill) {
-      setSelectedProject(undefined);
+      unselectProject();
     }
   }, [selectedSkill]);
 
@@ -129,9 +155,12 @@ export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
       </Typography>
       <ProjectList
         projects={projects}
-        selectedProject={selectedProject}
-        setSelectedProject={setSelectedProject}
+        selectedProject={
+          projectId ? projects.find((project) => project.id === projectId.toString()) : undefined
+        }
+        setSelectedProject={selectProject}
       />
+      <ProjectDescriptionModal projects={RECENT_PROJECTS} />
     </section>
   );
 }

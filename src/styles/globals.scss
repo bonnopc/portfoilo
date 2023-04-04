@@ -35,6 +35,10 @@ body {
   @include for-mobile-and-tablet {
     font-size: $font-size-sm;
   }
+
+  &.noScroll {
+    overflow: hidden;
+  }
 }
 
 a {

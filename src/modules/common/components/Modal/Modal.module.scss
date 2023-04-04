@@ -1,0 +1,64 @@
+@import "src/styles/dark";
+
+.enter {
+  opacity: 0;
+}
+.enterActive {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.exit {
+  opacity: 1;
+}
+.exitActive {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color-bg-dark, 0.8);
+  z-index: $z-index-modal;
+
+  .container {
+    @include common-container;
+
+    @include for-tablet-and-desktop {
+      padding: 0 1rem;
+    }
+
+    .content {
+      &:not(.transparent) {
+        background-color: var(--color-bg);
+        box-shadow: 0 0.5rem 1rem 3px rgba($color-bg-dark, 0.15);
+      }
+
+      padding: 3rem 2rem;
+      border-radius: 0.38rem;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+
+      @include for-mobile {
+        width: 100%;
+      }
+
+      .closeBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  @include for-mobile {
+    align-items: flex-end;
+  }
+}

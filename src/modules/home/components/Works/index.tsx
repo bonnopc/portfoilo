@@ -4,31 +4,11 @@ import Tabs from "@/modules/common/components/Tabs";
 import Typography from "@/modules/common/components/Typography";
 import styles from "./Works.module.scss";
 import WORKPLACES from "@/config/workplaces.json";
-
-interface Company {
-  name: string;
-  url?: string;
-}
-
-interface WorkplaceProps {
-  company: Company;
-  position: string;
-  startDate: string;
-  endDate: string;
-  description: string;
-  keyRoles: string[];
-}
+import { Workplace } from "@/types/common";
 
 export const SECTION_ID_WORKS = "works";
 
-function Workplace({
-  company,
-  description,
-  endDate,
-  keyRoles,
-  position,
-  startDate,
-}: WorkplaceProps) {
+function Workplace({ company, description, endDate, keyRoles, position, startDate }: Workplace) {
   return (
     <div className={styles.workplaceRoot}>
       <Typography variant="h5">
@@ -55,21 +35,9 @@ export default function Works(props: React.HTMLAttributes<HTMLDivElement>) {
     <section className={styles.root} {...props}>
       <Typography variant="h2">Where I’ve Worked</Typography>
       <Tabs
-        tabs={WORKPLACES.map((workplace) => ({
+        tabs={WORKPLACES.map((workplace, i) => ({
           label: workplace.shortName,
-          component: (
-            <Workplace
-              company={{
-                name: workplace.name,
-                url: workplace.url,
-              }}
-              position={workplace.position}
-              startDate={workplace.startDate}
-              endDate={workplace.endDate}
-              description={workplace.description}
-              keyRoles={workplace.keyRoles}
-            />
-          ),
+          component: <Workplace key={i} {...workplace} />,
         }))}
       />
     </section>

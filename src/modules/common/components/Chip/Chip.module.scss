@@ -7,21 +7,7 @@
   justify-content: center;
   color: var(--color-text-primary);
   border-radius: 1rem;
-  transition: background-color 0.2s, filter 0.3s;
-
-  &.clickable {
-    cursor: pointer;
-    user-select: none;
-
-    &:hover:not(.disabled) {
-      filter: brightness(0.9);
-
-      &.transparentColor,
-      &.outlined {
-        background-color: $color-hover;
-      }
-    }
-  }
+  transition: var(--transition);
 
   &.medium {
     padding: 0.5rem 1rem;
@@ -141,6 +127,20 @@
 
   &.isSelected {
     border: 2px solid darken($color-primary, 10%);
+  }
+
+  &.clickable {
+    cursor: pointer;
+    user-select: none;
+
+    &:hover:not(.disabled) {
+      filter: brightness(0.9);
+
+      &.transparentColor,
+      &.outlined {
+        background-color: $color-hover;
+      }
+    }
   }
 
   .icon {

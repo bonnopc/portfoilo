@@ -1,5 +1,6 @@
 [
   {
+    "id": "pipex-crm",
     "name": "PipeX CRM web app",
     "responsibilities": [
       "Successfully developed a fully functional CRM app using Laravel 5.6 and Vue.js.",
@@ -24,6 +25,7 @@
     ]
   },
   {
+    "id": "hungrynaki",
     "name": "HungryNaki - Food Delivery System",
     "responsibilities": [
       "Building reusable and functional components for the new software system",
@@ -54,6 +56,7 @@
     ]
   },
   {
+    "id": "tryotel",
     "name": "Tryotel - Travel app on Android, iOS & web",
     "responsibilities": [
       "Developing the front end of the Tryotel web application, admin panel, customer support panel, and mobile apps for Android and iOS using Next.js, React.js, Flutter, and Material UI, while ensuring cross-browser compatibility and responsiveness.",
@@ -77,6 +80,7 @@
     ]
   },
   {
+    "id": "takemed",
     "name": "Takemed telemedicine cross-platform app",
     "responsibilities": [
       "Developing the front-end of the patient app, doctor app, and admin panel using technologies such as Next.js, Material UI, and GraphQL.",
@@ -102,6 +106,7 @@
     ]
   },
   {
+    "id": "cliniva",
     "name": "Cliniva - Patient Management System",
     "responsibilities": [
       "Built 2 web apps for both patients & doctors with React.js, Express.js & MonogDB.",
@@ -113,6 +118,7 @@
     "technologies": ["React.js", "Express.js", "MongoDB", "HTML", "CSS", "JavaScript", "Git"]
   },
   {
+    "id": "priyo-class",
     "name": "Priyo Class - an Ed-tech Flutter App on iOS & Android Store",
     "responsibilities": [
       "Developed and designed the Priyo Class app using Flutter and implemented BLoC for state management.",
@@ -129,6 +135,7 @@
     "technologies": ["Flutter", "Dart", "BLoC", "Firebase", "HTML", "CSS", "JavaScript", "Git"]
   },
   {
+    "id": "flight-local",
     "name": "FlightLocal - A B2B app for managing flight bookings",
     "responsibilities": [
       "Developed a responsive and user-friendly Progressive Web Application (PWA) using React.js and Material UI for B2B agents to book flights, hotels, and other travel-related services.",

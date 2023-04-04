@@ -126,7 +126,13 @@
   }
 
   &.isSelected {
-    border: 2px solid darken($color-primary, 10%);
+    &.contained {
+      border: 2px solid darken($color-primary, 10%);
+    }
+
+    &:not(.contained) {
+      background-color: darken($color-primary, 10%);
+    }
   }
 
   &.clickable {
@@ -138,7 +144,7 @@
 
       &.transparentColor,
       &.outlined {
-        background-color: $color-hover;
+        background-color: darken($color-primary, 5%);
       }
     }
   }

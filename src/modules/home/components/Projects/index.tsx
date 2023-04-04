@@ -9,6 +9,7 @@ import Typography from "@/modules/common/components/Typography";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import RECENT_PROJECTS from "@/config/recent-projects.json";
 import ProjectDescriptionModal from "../ProjectDescriptionModal";
+import Checkbox from "@/modules/common/components/Checkbox";
 
 export const SECTION_ID_PROJECTS = "projects";
 
@@ -141,6 +142,18 @@ export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
     );
   };
 
+  const showAllProjects = () => {
+    const { skill, ...query } = router.query;
+    router.push(
+      {
+        pathname: router.pathname,
+        query,
+      },
+      undefined,
+      { shallow: true }
+    );
+  };
+
   useEffect(() => {
     // reset selectedProject when skill changes
     if (selectedSkill) {
@@ -150,7 +163,17 @@ export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
 
   return (
     <section className={styles.root} {...props}>
-      <Typography variant="h2">
+      <Typography
+        variant="h2"
+        rightElement={
+          <Checkbox
+            label="Show all"
+            disabled={!selectedSkill}
+            checked={!selectedSkill}
+            onChange={showAllProjects}
+          />
+        }
+      >
         {!selectedSkill ? "Recent " : ""} Projects {selectedSkill ? `using ${selectedSkill}` : ""}
       </Typography>
       <ProjectList

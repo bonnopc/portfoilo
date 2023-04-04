@@ -2,4 +2,13 @@
 
 .root {
   @include common-section;
+
+  .tabs {
+
+    @include for-desktop {
+      button {
+        display: none;
+      }
+    }
+  }
 }

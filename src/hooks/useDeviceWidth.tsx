@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
 interface IDeviceWidth {
-  isMobile: boolean;
-  isTablet: boolean;
+  isMobileUp: boolean;
+  isTabletUp: boolean;
 }
 
 const DEFAULT_DEVICE_WIDTH = {
-  isMobile: false,
-  isTablet: false,
+  isMobileUp: false,
+  isTabletUp: false,
 };
 
 export default function useDeviceWidth(): IDeviceWidth {
@@ -17,9 +17,10 @@ export default function useDeviceWidth(): IDeviceWidth {
     const handleResize = () => {
       if (typeof window === "undefined") return;
       const { innerWidth } = window;
-      const isMobile = innerWidth <= 768;
-      const isTablet = innerWidth <= 1200;
-      setDeviceWidth({ isMobile, isTablet });
+      setDeviceWidth({
+        isMobileUp: innerWidth >= 768,
+        isTabletUp: innerWidth >= 1024,
+      });
     };
 
     handleResize();

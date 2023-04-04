@@ -3,4 +3,21 @@
     color: var(--color-text-primary);
     font-size: 0.81rem;
   }
+
+  &.preventMargin {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.headerWithRightElem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+
+  .rightElement {
+    margin-left: 1rem;
+  }
 }

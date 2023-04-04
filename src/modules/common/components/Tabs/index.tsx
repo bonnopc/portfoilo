@@ -5,6 +5,7 @@ import styles from "./Tabs.module.scss";
 import ArrowBackIcon from "@/assets/icons/arrow_back.svg";
 import ArrowForwardIcon from "@/assets/icons/arrow_forward.svg";
 import IconButton from "../IconButton";
+import useDeviceWidth from "@/hooks/useDeviceWidth";
 
 interface Tab {
   label: string; // this should be unique
@@ -47,15 +48,23 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
     shouldHideBackArrow: true,
     shouldHideFwdArrow: false,
   });
+  const { isTabletUp } = useDeviceWidth();
 
-  const handleTabHeaderClick = (tab: TabWithRef, index: number) => {
+  const handleTabHeaderClick = (tab: TabWithRef) => {
     setActiveTab(tab.label);
+
     // scroll to the tab header
-    tab.ref.current?.scrollIntoView({
-      behavior: "smooth",
-      inline: "nearest",
-      // ...(index !== 0 && index !== tabsWithRefs.length - 1 ? { inline: "center" } : {}),
-    });
+    // for tablet and desktop, we will only scroll horizontally
+    // scroll to the tab header and set it to the center
+    if (isTabletUp) {
+      tabHeaderParentRef.current?.scrollTo({
+        left: tab.ref.current?.offsetLeft! - tabHeaderParentRef.current?.offsetWidth! / 2,
+        behavior: "smooth",
+      });
+    } else {
+      // for mobile, we will scroll vertically
+      tab.ref.current?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const ActiveTabContent: ReactNode | undefined = useMemo(() => {
@@ -147,7 +156,7 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
                 },
                 tab.className
               )}
-              onClick={() => handleTabHeaderClick(tab, i)}
+              onClick={() => handleTabHeaderClick(tab)}
               ref={tab.ref}
             >
               <div className={styles.tabLabel}>

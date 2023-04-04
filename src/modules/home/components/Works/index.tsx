@@ -39,6 +39,7 @@ export default function Works(props: React.HTMLAttributes<HTMLDivElement>) {
           label: workplace.shortName,
           component: <Workplace key={i} {...workplace} />,
         }))}
+        className={styles.tabs}
       />
     </section>
   );

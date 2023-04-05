@@ -38,6 +38,27 @@ interface ChipProps {
   as?: keyof JSX.IntrinsicElements;
 }
 
+/**
+ * This component can be used to visualize a small piece of information.
+ * It can be used as a link by passing the url prop.
+ * It can be used as a button by passing the onClick prop.
+ * We can show it in any other html element by passing the as prop,
+ * but by default it will render as a div element.
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor Chip
+ * @example
+ * <Chip
+ *  color="primary"
+ *  size="medium"
+ *  variant="contained"
+ *  onClick={() => {}}
+ *  className="my-class"
+ *  icon={<Icon />}
+ * >
+ *  My Chip
+ * </Chip>
+ */
 export default function Chip({
   children,
   className,

@@ -16,6 +16,27 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   url?: UrlObject | string;
 }
 
+/**
+ * This component is a wrapper for the button element.
+ * It will render a button with the given props.
+ * It can be also used as a link/ NextLink by passing the url prop.
+ * @param props {ButtonProps}
+ * @returns {JSX.Element}
+ * @constructor Button
+ * @example
+ * <Button
+ *  variant="contained"
+ *  color="primary"
+ *  size="medium"
+ *  disabled={false}
+ *  fullWidth={false}
+ *  onClick={() => {}}
+ *  className="my-class"
+ *  icon={<Icon />}
+ * >
+ *  My Button
+ * </Button>
+ */
 function Button({
   size = "medium",
   variant = "contained",

@@ -1,9 +1,10 @@
 @import "src/styles/shared";
 
 .wrapper {
-    input, label {
-        transition: var(--transition);
-    }
+  input,
+  label {
+    transition: var(--transition);
+  }
 
   input {
     padding: 0;
@@ -11,9 +12,11 @@
     width: initial;
     margin-bottom: 0;
     display: none;
-    
-    &:not(:disabled), &:not(:disabled) + label, &:not(:disabled) + label:before {
-        cursor: pointer;
+
+    &:not(:disabled),
+    &:not(:disabled) + label,
+    &:not(:disabled) + label:before {
+      cursor: pointer;
     }
   }
 
@@ -24,9 +27,9 @@
     align-items: center;
 
     @include for-mobile {
-        span {
-            font-size: 0.9rem;
-        }
+      span {
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -61,15 +64,15 @@
 
   input:disabled + label {
     span {
-        color: var(--color-text-hint);
+      color: var(--color-text-hint);
     }
   }
 
   input:not(:disabled) {
     & ~ label {
-        &::before {
-            border-color: var(--color-text-primary);
-        }
+      &::before {
+        border-color: var(--color-text-primary);
+      }
     }
 
     &:checked + label::after {

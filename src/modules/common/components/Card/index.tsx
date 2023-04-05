@@ -10,6 +10,22 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: keyof JSX.IntrinsicElements;
 }
 
+/**
+ * This component will act as a wrapper for any other component.
+ * But default, it will render a div element. Can be changed by passing the as prop.
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor Card
+ * @example
+ * <Card
+ *  className="my-class"
+ *  fullWidth={false}
+ *  fullHeight={false}
+ *  as="section"
+ * >
+ *  <div>My Card</div>
+ * </Card>
+ */
 export default function Card({
   children,
   className,

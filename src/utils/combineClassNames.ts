@@ -1,3 +1,22 @@
+/**
+ * Returns a string of class names based on the styles and classes objects.
+ * This can be used to dynamically add class names to a component.
+ * It only works for class names that are defined in the styles object/ modular css file.
+ * @param styles
+ * @param classes
+ * @param classNameString
+ * @returns A string of class names.
+ * @example
+ * const styles = {
+ *  container: "container",
+ *  header: "header",
+ * };
+ * const classes = {
+ *  container: true,
+ *  header: false,
+ * };
+ * combineClassNames(styles, classes); // "container"
+ */
 const combineClassNames = (
   styles: { [key: string]: string },
   classes: { [key: string]: string | boolean },

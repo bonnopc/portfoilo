@@ -10,6 +10,24 @@ const DEFAULT_DEVICE_WIDTH = {
   isTabletUp: false,
 };
 
+/**
+ * This hook will return the device width
+ * it will return isMobileUp: true if the device width is >= 768px
+ * and isTabletUp: true if the device width is >= 1024px
+ * @returns {IDeviceWidth} device width
+ * @example
+ * const { isMobileUp, isTabletUp } = useDeviceWidth();
+ * if (isMobileUp) {
+ *  // do something for tablet and desktop
+ * } else {
+ *  // do something for mobile
+ * }
+ * if (isTabletUp) {
+ *  // do something for desktop
+ * } else {
+ *  // do something for tablet and mobile
+ * }
+ */
 export default function useDeviceWidth(): IDeviceWidth {
   const [deviceWidth, setDeviceWidth] = useState<IDeviceWidth>({ ...DEFAULT_DEVICE_WIDTH });
 

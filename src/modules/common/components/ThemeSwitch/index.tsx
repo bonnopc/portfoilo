@@ -1,5 +1,4 @@
 import { useTheme } from "@/contexts/ThemeProvider";
-import Switch from "../Switch";
 import DarkModeIcon from "@/assets/icons/dark_mode.svg";
 import LightModeIcon from "@/assets/icons/light_mode.svg";
 import IconButton from "../IconButton";

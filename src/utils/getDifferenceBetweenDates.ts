@@ -11,6 +11,5 @@ import roundToNearestIntegerOrPointFive from "./roundToNearestIntegerOrPointFive
  **/
 export default function getDifferenceBetweenDates(startDate: Date, endDate: Date): number {
   const difference = endDate.getTime() - startDate.getTime();
-  const differenceInDays = difference / (1000 * 60 * 60 * 24 * 365); // 365 days in a year
-  return roundToNearestIntegerOrPointFive(difference / differenceInDays);
+  return roundToNearestIntegerOrPointFive(difference / (1000 * 60 * 60 * 24 * 365)); // that's for a year in milliseconds
 }

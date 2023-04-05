@@ -13,35 +13,6 @@ import Checkbox from "@/modules/common/components/Checkbox";
 
 export const SECTION_ID_PROJECTS = "projects";
 
-interface IProjectCardProps {
-  isSelected?: boolean;
-  onSelect?: (name: IProject) => void;
-  project: IProject;
-}
-
-function ProjectCard({ project, onSelect, isSelected }: IProjectCardProps) {
-  const description: string = useMemo(() => {
-    return project.responsibilities.join(", ");
-  }, [project]);
-
-  return (
-    <Grid item xs={12} sm={6} md={4} as="li" className={styles.grid}>
-      <Card
-        fullWidth
-        fullHeight
-        className={`${styles.item} ${isSelected ? styles.selected : ""}`}
-        onClick={() => onSelect?.(project)}
-      >
-        <Typography variant="h4">{project.name}</Typography>
-        <Typography>
-          {description.length > 100 ? <>{description.substring(0, 100)}...</> : description}
-        </Typography>
-        <Typography variant="caption">{project.technologies.join(", ")}</Typography>
-      </Card>
-    </Grid>
-  );
-}
-
 function ProjectList({
   projects,
   selectedProject,
@@ -70,11 +41,34 @@ function ProjectList({
               key={project.name}
               classNames="staggered-item"
             >
-              <ProjectCard
-                project={project}
-                onSelect={setSelectedProject}
-                isSelected={selectedProject?.name === project.name}
-              />
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                as="li"
+                style={{ transitionDelay: `${i + 1}00ms` }}
+                ref={project.ref}
+              >
+                <Card
+                  fullWidth
+                  fullHeight
+                  className={`${styles.item} ${
+                    selectedProject?.id === project.id ? styles.selected : ""
+                  }`}
+                  onClick={() => setSelectedProject?.(project)}
+                >
+                  <Typography variant="h4">{project.name}</Typography>
+                  <Typography>
+                    {project.responsibilities.join(", ").length > 100 ? (
+                      <>{project.responsibilities.join(", ").substring(0, 100)}...</>
+                    ) : (
+                      project.responsibilities.join(", ")
+                    )}
+                  </Typography>
+                  <Typography variant="caption">{project.technologies.join(", ")}</Typography>
+                </Card>
+              </Grid>
             </CSSTransition>
           ))
         ) : (

@@ -132,6 +132,7 @@
 
     &:not(.contained) {
       background-color: darken($color-primary, 10%);
+      color: $color-dark-text-secondary;
     }
   }
 
@@ -145,6 +146,7 @@
       &.transparentColor,
       &.outlined {
         background-color: darken($color-primary, 5%);
+        color: $color-dark-text-secondary;
       }
     }
   }

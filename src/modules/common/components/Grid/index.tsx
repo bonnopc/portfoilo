@@ -5,7 +5,7 @@ import combineClassNames from "@/utils/combineClassNames";
 type GridSections = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 type GridOffsetOrPullCount = 1 | 2 | 3 | 4 | 5 | 6;
 
-interface GridProps {
+interface GridProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
   container?: boolean;
   item?: boolean;

@@ -55,7 +55,13 @@ function Modal({
   return (
     <div className={styles.backdrop} {...restProps}>
       <div className={styles.container}>
-        <CSSTransition nodeRef={contentRef} in={isOpen} timeout={300} classNames="fade">
+        <CSSTransition
+          unmountOnExit
+          nodeRef={contentRef}
+          in={isOpen}
+          timeout={300}
+          classNames="fade"
+        >
           <div
             ref={contentRef}
             className={combineClassNames(styles, {

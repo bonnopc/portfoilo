@@ -1,28 +1,28 @@
-@import 'src/styles/shared';
+@import "src/styles/shared";
 
 .root {
-    flex-direction: column-reverse;
+  flex-direction: column-reverse;
 
-    @include for-desktop {
-        flex-direction: row;
-        align-items: center;
+  @include for-desktop {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .list {
+    margin-top: 2rem;
+
+    .listItem {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
     }
+  }
 
-    .list {
-        margin-top: 2rem;
+  .techs {
+    margin-top: 2rem;
+  }
 
-        .listItem {
-            &:not(:last-child) {
-                margin-bottom: 0.5rem;
-            }
-        }
-    }
-
-    .techs {
-        margin-top: 2rem;
-    }
-
-    .image {
-        width: 100%;
-    }
+  .image {
+    width: 100%;
+  }
 }

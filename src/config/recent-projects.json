@@ -1,5 +1,64 @@
 [
   {
+    "id": "affine-defi",
+    "name": "Affine DeFi",
+    "responsibilities": [
+      "Developing and implementing the user interface design of the dApp using Next.js and Bootstrap.",
+      "Communicating with the blockchain using ethers.js and integrating various wallets to connect with the dApp.",
+      "Collaborating with the back-end team to ensure seamless integration of the front-end with the smart contracts.",
+      "Leading and managing a team of frontend developers to ensure timely delivery of the project.",
+      "Designing and implementing responsive and accessible web pages that work across various devices and browsers.",
+      "Conducting code reviews and ensuring code quality and consistency across the project.",
+      "Implementing and maintaining automated testing frameworks to ensure the reliability of the dApp."
+    ],
+    "technologies": [
+      "Next.js",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "ethers.js",
+      "React.js",
+      "Redux",
+      "Jest",
+      "Enzyme"
+    ],
+    "link": "https://affinedefi.com/",
+    "image": "https://affinedefi.com/social-preview.png",
+    "github": "https://github.com/AffineLabs/defi-sdk"
+  },
+  {
+    "id": "shikho",
+    "name": "Shikho - Online learning platform",
+    "responsibilities": [
+      "Developing the front end of the Shikho web application using Next.js, React.js, and Tailwind CSS, while ensuring cross-browser compatibility and responsiveness.",
+      "Implementing key features of the application such as course search, registration, payment processing, and user account management, and integrating third-party APIs such as payment gateways and course management systems.",
+      "Integrated video calling feature for live class perticipations for both students and teachers using WebRTC.",
+      "Collaborating with a team of developers, designers, and other stakeholders to plan, design, and develop the application, while participating in code reviews, testing, and debugging to ensure the quality of the application.",
+      "Creating and maintaining documentation for the various components and features of the application, including user guides, technical specifications, and code documentation.",
+      "Ensuring high performance and scalability of the application by optimizing its design, architecture, and code, and implementing caching and load balancing strategies.",
+      "Ensuring the security and privacy of user data by implementing appropriate measures such as encryption, authentication, and access controls, and complying with industry standards such as PCI-DSS and GDPR.",
+      "Deploying the application to a production environment and ensuring that it is properly maintained and updated."
+    ],
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "React.js",
+      "Redux",
+      "Jest",
+      "Enzyme",
+      "Docker",
+      "AWS"
+    ],
+    "link": "https://shikho.com/",
+    "image": "/static/images/projects/shikho.png"
+  },
+  {
     "id": "pipex-crm",
     "name": "PipeX CRM web app",
     "responsibilities": [
@@ -22,7 +81,9 @@
       "JavaScript",
       "Git",
       "Social Media APIs"
-    ]
+    ],
+    "link": "https://pipex.gainhq.com/admin/users/login",
+    "image": "/static/images/projects/pipex-crm.png"
   },
   {
     "id": "hungrynaki",
@@ -53,7 +114,9 @@
       "Docker",
       "Google Cloud Platform",
       "AWS"
-    ]
+    ],
+    "link": "https://hungrynaki.com/",
+    "image": "/static/images/projects/hungrynaki.png"
   },
   {
     "id": "tryotel",
@@ -80,6 +143,7 @@
     ],
     "link": "https://tryotel.com/",
     "image": "https://tryotel.com/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Ftryotel-app-mockup.d88b34995fa81e28690e85f26ac05806.png&w=1920&q=80"
+    
   },
   {
     "id": "takemed",
@@ -105,7 +169,9 @@
       "CSS",
       "JavaScript",
       "Git"
-    ]
+    ],
+    "link": "https://play.google.com/store/apps/details?id=bd.com.takemed.client.twa&hl=en_US",
+    "image": "/static/images/projects/takemed.png"
   },
   {
     "id": "cliniva",
@@ -117,7 +183,8 @@
       "Ensuring application security by implementing proper authentication and authorization mechanisms.",
       "Collaborating with other team members, including designers and project managers, to ensure the timely completion of the project."
     ],
-    "technologies": ["React.js", "Express.js", "MongoDB", "HTML", "CSS", "JavaScript", "Git"]
+    "technologies": ["React.js", "Express.js", "MongoDB", "HTML", "CSS", "JavaScript", "Git"],
+    "image": "/static/images/projects/cliniva.jpeg"
   },
   {
     "id": "priyo-class",
@@ -134,7 +201,9 @@
       "Assisted in the deployment of the app to both the iOS app store and Android play store.",
       "Continued to provide support and maintenance for the app after the initial release."
     ],
-    "technologies": ["Flutter", "Dart", "BLoC", "Firebase", "HTML", "CSS", "JavaScript", "Git"]
+    "technologies": ["Flutter", "Dart", "BLoC", "Firebase", "HTML", "CSS", "JavaScript", "Git"],
+    "link": "https://apps.apple.com/us/app/priyo-class/id1510785127",
+    "image": "/static/images/projects/priyo-class.png"
   },
   {
     "id": "flight-local",
@@ -160,6 +229,8 @@
       "CSS",
       "JavaScript",
       "Git"
-    ]
+    ],
+    "image": "/static/images/projects/flightlocal.jpg",
+    "link": "https://flightlocal.com/"
   }
 ]

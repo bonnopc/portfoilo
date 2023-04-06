@@ -10,23 +10,28 @@ import Typography from "../Typography";
 const SOCIAL_LINKS = [
   {
     href: "https://linkedin.com/in/bonnopc",
+    name: "LinkedIn",
     icon: LinkedInIcon,
   },
   {
     href: "https://twitter.com/bonnopc",
     icon: TwitterIcon,
+    name: "Twitter",
   },
   {
     href: "https://dev.to/bonnopc",
     icon: DevToIcon,
+    name: "Dev.to",
   },
   {
     href: "https://stackoverflow.com/users/7430118/bonnopc",
     icon: StackoverflowIcon,
+    name: "Stackoverflow",
   },
   {
     href: "https://github.com/pchy10",
     icon: GithubIcon,
+    name: "Github",
   },
 ];
 
@@ -35,8 +40,8 @@ export default function SocialIcons() {
     <div className={styles.root}>
       <Typography>Find me on these platforms</Typography>
       <div className={styles.container}>
-        {SOCIAL_LINKS.map(({ href, icon: Icon }) => (
-          <IconButton size="large" as="a" key={href} url={href} urlOpensInNewTab>
+        {SOCIAL_LINKS.map(({ href, icon: Icon, name }) => (
+          <IconButton aria-label={name} size="large" as="a" key={href} url={href} urlOpensInNewTab>
             <Icon width={24} height={24} />
           </IconButton>
         ))}

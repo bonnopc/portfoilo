@@ -9,6 +9,7 @@ interface IIconButtonProps extends React.ButtonHTMLAttributes<HTMLElement> {
   as?: "button" | "a";
   url?: string;
   urlOpensInNewTab?: boolean;
+  "aria-label": string;
 }
 
 function IconButton({

@@ -172,6 +172,7 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
             tabHeaderArrows.shouldHideBackArrow ? styles.hidden : ""
           }`}
           onClick={() => handleClickBackOrFwd("back")}
+          aria-label="Back"
         >
           <ArrowBackIcon />
         </IconButton>
@@ -180,6 +181,7 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
             tabHeaderArrows.shouldHideFwdArrow ? styles.hidden : ""
           }`}
           onClick={() => handleClickBackOrFwd("fwd")}
+          aria-label="Forward"
         >
           <ArrowForwardIcon />
         </IconButton>

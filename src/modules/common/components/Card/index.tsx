@@ -32,12 +32,18 @@ export default function Card({
   fullWidth = false,
   fullHeight = false,
   as = "div",
+  onClick,
   ...rest
 }: CardProps) {
   return createElement(
     as,
     {
-      className: combineClassNames(styles, { root: true, fullWidth, fullHeight }, className),
+      className: combineClassNames(
+        styles,
+        { root: true, fullWidth, fullHeight, clickable: Boolean(onClick) },
+        className
+      ),
+      onClick,
       ...rest,
     },
     children

@@ -13,10 +13,10 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Prosenjit Chowdhury (@bonnopc) is working as a software engineer for more than 5 years. He has a proven experience working with React.js, Flutter, Typescript, Javascript, Redux, etc. He is also a passionate open source contributor. He is currently working as a software engineer at Multiplyr, a DeFi protocol to earn yields."
+            content="Prosenjit Chowdhury (@bonnopc) is working as a software engineer for more than 5 years. He has a proven experience working with React.js, Flutter, Typescript, Javascript, Redux, etc. He is also a passionate open source contributor. He is currently working as a software engineer at Multiplyr, building Affine DeFi, a DeFi protocol to earn yields."
           />
           <meta name="keywords" content="portfolio, developer, software, javascript" />
-          <meta name="robots" content="noindex, follow" />
+          <meta name="robots" content="index, follow" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="language" content="English" />
           <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png" />

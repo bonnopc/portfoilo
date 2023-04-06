@@ -1,4 +1,5 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 const DESCRIPTION =
   "Prosenjit Chowdhury (@bonnopc) is working as a software engineer for more than 5 years. He has a proven experience working with React.js, Flutter, Typescript, Javascript, Redux, etc. He is also a passionate open source contributor. He is currently working as a software engineer at Multiplyr, building Affine DeFi, a DeFi protocol to earn yields.";
@@ -45,6 +46,21 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/icon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
           <link rel="manifest" href="/site.webmanifest" />
+
+          {/* Google tag for analytics */}
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-DP5C37S9RP" />
+          <Script
+            id="google-analytics"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-DP5C37S9RP');
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />

@@ -2,8 +2,6 @@ import Button from "@/modules/common/components/Button";
 import Typography from "@/modules/common/components/Typography";
 import styles from "./Contact.module.scss";
 
-export const SECTION_ID_CONTACT = "contact";
-
 export default function Contact(props: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <section className={styles.root} {...props}>

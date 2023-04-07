@@ -4,15 +4,13 @@ import Typography from "@/modules/common/components/Typography";
 import getDifferenceBetweenDates from "@/utils/getDifferenceBetweenDates";
 import { createRef, useEffect, useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { SECTION_ID_ABOUT_ME } from "../AboutMe";
 import styles from "./IntroTexts.module.scss";
+import { KEY_SECTION_IDS } from "@/config/keys";
 
 interface IntroElements {
   nodeRef: React.RefObject<HTMLDivElement>;
   component: React.ReactNode | JSX.Element;
 }
-
-export const SECTION_ID_INTRO = "intro";
 
 export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -63,7 +61,7 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
   const button = (
     <Button
       url={{
-        hash: `#${SECTION_ID_ABOUT_ME}`,
+        hash: `#${KEY_SECTION_IDS.ABOUT}`,
       }}
       className={styles.button}
     >

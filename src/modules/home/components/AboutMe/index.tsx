@@ -1,9 +1,7 @@
 import Button from "@/modules/common/components/Button";
 import Typography from "@/modules/common/components/Typography";
-import { SECTION_ID_PROJECTS } from "../../../projects/components/Projects";
 import styles from "./AboutMe.module.scss";
-
-export const SECTION_ID_ABOUT_ME = "about-me";
+import { KEY_SECTION_IDS } from "@/config/keys";
 
 export default function AboutMe(props: React.HTMLAttributes<HTMLDivElement>) {
   return (
@@ -38,7 +36,7 @@ export default function AboutMe(props: React.HTMLAttributes<HTMLDivElement>) {
       <Button
         className={styles.button}
         url={{
-          hash: `#${SECTION_ID_PROJECTS}`,
+          hash: `#${KEY_SECTION_IDS.PROJECTS}`,
         }}
       >
         Recent Projects

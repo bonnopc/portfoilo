@@ -11,8 +11,6 @@ import ProjectDescriptionModal from "../ProjectDescriptionModal";
 import Checkbox from "@/modules/common/components/Checkbox";
 import ProjectCard from "../ProjectCard";
 
-export const SECTION_ID_PROJECTS = "projects";
-
 function ProjectList({
   projects,
   selectedProject,

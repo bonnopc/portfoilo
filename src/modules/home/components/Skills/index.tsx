@@ -5,8 +5,6 @@ import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import styles from "./Skills.module.scss";
 
-export const SECTION_ID_SKILLS = "skills";
-
 export default function Skills(props: React.HTMLAttributes<HTMLDivElement>) {
   const router = useRouter();
   const skillsDivRef = useRef<HTMLDivElement>(null);

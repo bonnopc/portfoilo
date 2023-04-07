@@ -2,7 +2,8 @@
 
 .root {
   max-width: 30rem;
-  margin-top: 10rem;
+  margin-top: calc(10rem - #{$nav-height});
+  padding-top: $nav-height;
   min-height: calc(100vh - 200px - #{$nav-height} - 11rem);
 
   @include for-tablet-and-desktop {

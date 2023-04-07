@@ -6,8 +6,6 @@ import styles from "./Works.module.scss";
 import WORKPLACES from "@/config/workplaces.json";
 import { Workplace } from "@/types/common";
 
-export const SECTION_ID_WORKS = "works";
-
 function Workplace({ company, description, endDate, keyRoles, position, startDate }: Workplace) {
   return (
     <div className={styles.workplaceRoot}>

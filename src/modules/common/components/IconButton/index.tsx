@@ -4,7 +4,7 @@ import combineClassNames from "@/utils/combineClassNames";
 import isUndefined from "@/utils/isUndefined";
 import Link from "next/link";
 
-interface IIconButtonProps extends React.ButtonHTMLAttributes<HTMLElement> {
+export interface IIconButtonProps extends React.ButtonHTMLAttributes<HTMLElement> {
   size?: "small" | "medium" | "large";
   as?: "button" | "a";
   url?: string;

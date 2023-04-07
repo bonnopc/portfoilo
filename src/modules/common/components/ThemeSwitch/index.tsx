@@ -1,9 +1,11 @@
 import { useTheme } from "@/contexts/ThemeProvider";
 import DarkModeIcon from "@/assets/icons/dark_mode.svg";
 import LightModeIcon from "@/assets/icons/light_mode.svg";
-import IconButton from "../IconButton";
+import IconButton, { IIconButtonProps } from "../IconButton";
 
-export default function ThemeSwitch() {
+export interface IThemeSwitchProps extends Omit<IIconButtonProps, "aria-label"> {}
+
+export default function ThemeSwitch(props: IThemeSwitchProps) {
   const { theme, handleTheme } = useTheme();
 
   //   return (
@@ -23,6 +25,7 @@ export default function ThemeSwitch() {
         handleTheme!(theme === "light" ? "dark" : "light");
       }}
       aria-label="Toggle dark mode"
+      {...props}
     >
       {theme === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
     </IconButton>

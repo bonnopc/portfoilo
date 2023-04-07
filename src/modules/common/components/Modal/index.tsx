@@ -70,7 +70,12 @@ function Modal({
             })}
           >
             {!hideCloseIcon && !preventClose && onClose ? (
-              <IconButton aria-label="Close Modal" className={styles.closeBtn} onClick={onClose}>
+              <IconButton
+                size="large"
+                aria-label="Close Modal"
+                className={styles.closeBtn}
+                onClick={onClose}
+              >
                 <CloseIcon className={styles.closeIcon} />
               </IconButton>
             ) : (

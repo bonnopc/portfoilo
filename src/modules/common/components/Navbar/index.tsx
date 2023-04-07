@@ -4,6 +4,7 @@ import ThemeSwitch from "../ThemeSwitch";
 import styles from "./Navbar.module.scss";
 import useHideNavOnScroll from "./useHideNavOnScroll";
 import { KEY_SECTION_IDS } from "@/config/keys";
+import { cloneElement, isValidElement } from "react";
 
 interface NavbarLink {
   label?: string;
@@ -46,6 +47,17 @@ const NAVBAR_LINKS: NavbarLink[] = [
 export default function Navbar() {
   const isNavHidden = useHideNavOnScroll();
 
+  const collapseNavbarForMobile = () => {
+    // close the navbar when the user clicks on a link
+    // works only on mobile, when the navbar is collapsed
+    const navCheck: HTMLInputElement | null = document.getElementById(
+      "navCheck"
+    ) as HTMLInputElement;
+    if (navCheck) {
+      navCheck.checked = false;
+    }
+  };
+
   return (
     <nav
       className={combineClassNames(styles, {
@@ -65,9 +77,11 @@ export default function Navbar() {
       </div>
       <div className={styles.container}>
         <div className={styles.links}>
-          {NAVBAR_LINKS.map((link) =>
-            link.skipNavigation && link.component ? (
-              link.component
+          {NAVBAR_LINKS.map((link, i) =>
+            link.skipNavigation && isValidElement(link.component) ? (
+              cloneElement(link.component, {
+                key: i,
+              })
             ) : (
               <CommonLink
                 href={{
@@ -76,16 +90,7 @@ export default function Navbar() {
                 key={link.label}
                 as={link.hash}
                 className={styles.link}
-                onClick={() => {
-                  // close the navbar when the user clicks on a link
-                  // works only on mobile, when the navbar is collapsed
-                  const navCheck: HTMLInputElement | null = document.getElementById(
-                    "navCheck"
-                  ) as HTMLInputElement;
-                  if (navCheck) {
-                    navCheck.checked = false;
-                  }
-                }}
+                onClick={collapseNavbarForMobile}
               >
                 {link.label}
               </CommonLink>

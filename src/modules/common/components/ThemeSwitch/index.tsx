@@ -5,27 +5,17 @@ import IconButton, { IIconButtonProps } from "../IconButton";
 
 export interface IThemeSwitchProps extends Omit<IIconButtonProps, "aria-label"> {}
 
-export default function ThemeSwitch(props: IThemeSwitchProps) {
+export default function ThemeSwitch({ onClick, ...restProps }: IThemeSwitchProps) {
   const { theme, handleTheme } = useTheme();
-
-  //   return (
-  //     <Switch
-  //       checked={theme === "dark"}
-  //       onChange={(val) => {
-  //         handleTheme!(val ? "dark" : "light");
-  //       }}
-  //       size="lg"
-  //       icons={{ checked: <LightModeIcon />, unchecked: <DarkModeIcon /> }}
-  //     />
-  //   );
 
   return (
     <IconButton
-      onClick={() => {
+      onClick={(e) => {
         handleTheme!(theme === "light" ? "dark" : "light");
+        if (onClick) onClick(e);
       }}
       aria-label="Toggle dark mode"
-      {...props}
+      {...restProps}
     >
       {theme === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
     </IconButton>

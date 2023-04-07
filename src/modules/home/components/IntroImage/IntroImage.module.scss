@@ -69,27 +69,18 @@ $image-height-sm: 407px;
     position: absolute;
     bottom: -17px;
     left: -21px;
+    width: 277px;
 
     @include for-tablet {
       bottom: -17px;
       left: -26px;
+      width: 300px;
     }
 
     @include for-desktop {
       bottom: -5px;
       left: -16px;
-    }
-
-    .avatar {
-      width: 277px;
-
-      @include for-tablet {
-        width: 300px;
-      }
-
-      @include for-desktop {
-        width: $image-height;
-      }
+      width: $image-height;
     }
   }
 }

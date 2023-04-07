@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./IntroImage.module.scss";
+import Image from "next/image";
 
 const variants = {
   hidden: { opacity: 0, x: "100%", y: "-100%" },
@@ -12,12 +13,15 @@ export default function IntroImage() {
     <div className={styles.root}>
       <div className={styles.container + " " + styles.transparent}>
         <div className={styles.avatarContainer}>
-          <img
+          <Image
             className={styles.avatar}
             loading="lazy"
             src="/static/images/into-image.png"
             alt="Avatar"
             width={400}
+            height={400}
+            layout="responsive"
+            objectFit="contain"
           />
         </div>
       </div>

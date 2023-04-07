@@ -1,7 +1,7 @@
 import { SECTION_ID_ABOUT_ME } from "@/modules/home/components/AboutMe";
 import { SECTION_ID_CONTACT } from "@/modules/home/components/Contact";
 import { SECTION_ID_INTRO } from "@/modules/home/components/IntroTexts";
-import { SECTION_ID_PROJECTS } from "@/modules/home/components/Projects";
+import { SECTION_ID_PROJECTS } from "@/modules/projects/components/Projects";
 import { SECTION_ID_SKILLS } from "@/modules/home/components/Skills";
 import { SECTION_ID_WORKS } from "@/modules/home/components/Works";
 import combineClassNames from "@/utils/combineClassNames";

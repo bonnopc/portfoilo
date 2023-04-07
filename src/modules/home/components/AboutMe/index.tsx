@@ -1,6 +1,6 @@
 import Button from "@/modules/common/components/Button";
 import Typography from "@/modules/common/components/Typography";
-import { SECTION_ID_PROJECTS } from "../Projects";
+import { SECTION_ID_PROJECTS } from "../../../projects/components/Projects";
 import styles from "./AboutMe.module.scss";
 
 export const SECTION_ID_ABOUT_ME = "about-me";

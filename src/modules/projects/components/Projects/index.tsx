@@ -1,5 +1,4 @@
 import { KEY_SKILLS } from "@/config/keys";
-import Card from "@/modules/common/components/Card";
 import Grid from "@/modules/common/components/Grid";
 import { IProject, ISkill } from "@/types/projects";
 import { useRouter } from "next/router";
@@ -10,6 +9,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import RECENT_PROJECTS from "@/config/recent-projects.json";
 import ProjectDescriptionModal from "../ProjectDescriptionModal";
 import Checkbox from "@/modules/common/components/Checkbox";
+import ProjectCard from "../ProjectCard";
 
 export const SECTION_ID_PROJECTS = "projects";
 
@@ -50,24 +50,11 @@ function ProjectList({
                 style={{ transitionDelay: `${i + 1}00ms` }}
                 ref={project.ref}
               >
-                <Card
-                  fullWidth
-                  fullHeight
-                  className={`${styles.item} ${
-                    selectedProject?.id === project.id ? styles.selected : ""
-                  }`}
-                  onClick={() => setSelectedProject?.(project)}
-                >
-                  <Typography variant="h4">{project.name}</Typography>
-                  <Typography>
-                    {project.responsibilities.join(", ").length > 100 ? (
-                      <>{project.responsibilities.join(", ").substring(0, 100)}...</>
-                    ) : (
-                      project.responsibilities.join(", ")
-                    )}
-                  </Typography>
-                  <Typography variant="caption">{project.technologies.join(", ")}</Typography>
-                </Card>
+                <ProjectCard
+                  project={project}
+                  isSelected={selectedProject?.id === project.id}
+                  onSelect={setSelectedProject}
+                />
               </Grid>
             </CSSTransition>
           ))

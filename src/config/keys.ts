@@ -22,3 +22,11 @@ export const KEY_SKILLS: readonly string[] = [
   "FastAPI",
   "GraphQL",
 ] as const;
+export enum KEY_SECTION_IDS {
+  INTRO = "intro",
+  ABOUT = "about",
+  SKILLS = "skills",
+  PROJECTS = "projects",
+  WORKS = "works",
+  CONTACT = "contact",
+}

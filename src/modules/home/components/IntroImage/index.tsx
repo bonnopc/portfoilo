@@ -12,7 +12,13 @@ export default function IntroImage() {
     <div className={styles.root}>
       <div className={styles.container + " " + styles.transparent}>
         <div className={styles.avatarContainer}>
-          <img className={styles.avatar} src="/static/images/into-image.png" alt="Avatar" />
+          <img
+            className={styles.avatar}
+            loading="lazy"
+            src="/static/images/into-image.png"
+            alt="Avatar"
+            width={400}
+          />
         </div>
       </div>
 

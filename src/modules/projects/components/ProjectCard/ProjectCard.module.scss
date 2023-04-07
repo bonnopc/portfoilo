@@ -1,0 +1,10 @@
+@import "src/styles/shared";
+
+.root {
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:not(.selected):hover {
+    transform: translateY(-0.25rem);
+  }
+}

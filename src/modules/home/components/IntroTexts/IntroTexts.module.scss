@@ -4,10 +4,10 @@
   max-width: 30rem;
   margin-top: calc(10rem - #{$nav-height});
   padding-top: $nav-height;
-  min-height: calc(100vh - 200px - #{$nav-height} - 11rem);
+  min-height: calc(100vh - 200px - 11rem);
 
   @include for-tablet-and-desktop {
-    min-height: calc(100vh - #{$nav-height} - 11rem);
+    min-height: calc(100vh - 11rem);
   }
 
   .heading {

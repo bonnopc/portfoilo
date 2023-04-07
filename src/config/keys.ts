@@ -30,3 +30,4 @@ export enum KEY_SECTION_IDS {
   WORKS = "works",
   CONTACT = "contact",
 }
+export const KEY_NAV_DELAY: number = 1000;

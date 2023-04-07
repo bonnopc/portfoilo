@@ -45,6 +45,7 @@
       position: relative;
       max-height: 80vh;
       overflow-y: auto;
+      transition-delay: 300ms;
 
       @include for-mobile {
         width: 100%;

@@ -5,7 +5,8 @@ import getDifferenceBetweenDates from "@/utils/getDifferenceBetweenDates";
 import { createRef, useEffect, useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./IntroTexts.module.scss";
-import { KEY_SECTION_IDS } from "@/config/keys";
+import { KEY_NAV_DELAY, KEY_SECTION_IDS } from "@/config/keys";
+import useDeviceWidth from "@/hooks/useDeviceWidth";
 
 interface IntroElements {
   nodeRef: React.RefObject<HTMLDivElement>;
@@ -18,6 +19,7 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
   const startDateTime = new Date("2018-09-01T00:00:00.000Z");
   const endDateTime = new Date();
   const diff = getDifferenceBetweenDates(startDateTime, endDateTime);
+  const { isMobileUp } = useDeviceWidth();
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -25,12 +27,15 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
       return;
     }
 
-    const timeout = setTimeout(() => {
-      setIsMounted(true);
-    }, 100);
+    const timeout = setTimeout(
+      () => {
+        setIsMounted(true);
+      },
+      isMobileUp ? KEY_NAV_DELAY : 100
+    );
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, [isMobileUp]);
 
   const subHeading = (
     <Typography variant="h5" className={styles.subHeading}>
@@ -96,10 +101,10 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
             <CSSTransition
               nodeRef={introElement.nodeRef}
               key={index}
-              timeout={1000}
-              classNames="fade"
+              timeout={2000}
+              classNames="appear-from-bottom"
             >
-              <div ref={introElement.nodeRef} style={{ transitionDelay: `${index * 3 + 1}00ms` }}>
+              <div ref={introElement.nodeRef} style={{ transitionDelay: `${index + 1}00ms` }}>
                 {introElement.component}
               </div>
             </CSSTransition>

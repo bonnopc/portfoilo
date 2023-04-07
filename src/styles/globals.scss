@@ -194,3 +194,23 @@ h6 {
   opacity: 0;
   transition: opacity 300ms var(--easing);
 }
+
+/* Appear from bottom */
+.appear-from-bottom-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.appear-from-bottom-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+.appear-from-bottom-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.appear-from-bottom-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}

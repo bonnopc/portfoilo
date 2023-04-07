@@ -4,7 +4,9 @@ import ThemeSwitch from "../ThemeSwitch";
 import styles from "./Navbar.module.scss";
 import useHideNavOnScroll from "./useHideNavOnScroll";
 import { KEY_SECTION_IDS } from "@/config/keys";
-import { cloneElement, isValidElement } from "react";
+import { createRef, isValidElement, useEffect, useMemo, useState } from "react";
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 interface NavbarLink {
   label?: string;
@@ -39,13 +41,15 @@ const NAVBAR_LINKS: NavbarLink[] = [
     hash: `#${KEY_SECTION_IDS.CONTACT}`,
   },
   {
-    component: <ThemeSwitch className={styles.link} />,
+    component: <ThemeSwitch />,
     skipNavigation: true,
   },
 ];
 
 export default function Navbar() {
   const isNavHidden = useHideNavOnScroll();
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   const collapseNavbarForMobile = () => {
     // close the navbar when the user clicks on a link
@@ -56,6 +60,45 @@ export default function Navbar() {
     if (navCheck) {
       navCheck.checked = false;
     }
+  };
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      setIsMounted(true);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const navLinksWithRef = useMemo(() => {
+    return NAVBAR_LINKS.map((link) => ({
+      ...link,
+      nodeRef: createRef<HTMLDivElement>(),
+    }));
+  }, []);
+
+  const renderNavLink = (link: NavbarLink, i: number) => {
+    if (link.skipNavigation) {
+      return link.component;
+    }
+
+    return (
+      <CommonLink
+        href={{
+          hash: link.hash,
+        }}
+        key={link.label}
+        as={link.hash}
+        onClick={collapseNavbarForMobile}
+      >
+        {link.label}
+      </CommonLink>
+    );
   };
 
   return (
@@ -77,25 +120,36 @@ export default function Navbar() {
       </div>
       <div className={styles.container}>
         <div className={styles.links}>
-          {NAVBAR_LINKS.map((link, i) =>
-            link.skipNavigation && isValidElement(link.component) ? (
-              cloneElement(link.component, {
-                key: i,
-              })
-            ) : (
-              <CommonLink
-                href={{
-                  hash: link.hash,
-                }}
-                key={link.label}
-                as={link.hash}
-                className={styles.link}
-                onClick={collapseNavbarForMobile}
-              >
-                {link.label}
-              </CommonLink>
-            )
-          )}
+          <TransitionGroup component={null}>
+            {isMounted &&
+              navLinksWithRef.map((link, i) => (
+                <CSSTransition nodeRef={link.nodeRef} key={i} timeout={1000} classNames="fade">
+                  {link.skipNavigation && isValidElement(link.component) ? (
+                    <span
+                      ref={link.nodeRef}
+                      key={link.label}
+                      style={{ transitionDelay: `${i + 1}00ms` }}
+                    >
+                      {link.component}
+                    </span>
+                  ) : (
+                    <CommonLink
+                      href={{
+                        hash: link.hash,
+                      }}
+                      key={link.label}
+                      as={link.hash}
+                      className={styles.link}
+                      onClick={collapseNavbarForMobile}
+                      ref={link.nodeRef}
+                      style={{ transitionDelay: `${i + 1}00ms` }}
+                    >
+                      {link.label}
+                    </CommonLink>
+                  )}
+                </CSSTransition>
+              ))}
+          </TransitionGroup>
         </div>
       </div>
     </nav>

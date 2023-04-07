@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import styles from "./ProjectDescriptionModal.module.scss";
 import CommonLink from "@/modules/common/components/CommonLink";
 import Grid from "@/modules/common/components/Grid";
+import Image from "next/image";
 
 interface ProjectDescriptionModalProps {
   projects: IProject[];
@@ -69,7 +70,15 @@ export default function ProjectDescriptionModal({ projects }: ProjectDescription
         </Grid>
         {selectedProject?.image ? (
           <Grid item xs={12} sm={12} md={4}>
-            <img src={selectedProject?.image} alt={selectedProject.name} className={styles.image} />
+            <Image
+              src={selectedProject?.image}
+              alt={selectedProject.name}
+              className={styles.image}
+              width={400}
+              height={400}
+              layout="responsive"
+              objectFit="contain"
+            />
           </Grid>
         ) : (
           <div />

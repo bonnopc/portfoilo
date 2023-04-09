@@ -1,31 +1,60 @@
-import Card from "@/modules/common/components/Card";
 import Typography from "@/modules/common/components/Typography";
 import { IProject } from "@/types/projects";
 import styles from "./ProjectCard.module.scss";
+import Image from "next/image";
+import Card from "@/modules/common/components/Card";
+import { forwardRef } from "react";
 
-interface ProjectCardProps {
+interface ProjectCardProps extends React.HTMLAttributes<HTMLLIElement> {
   project: IProject;
   isSelected?: boolean;
-  onSelect?: (project: IProject) => void;
+  onSelectProject?: (project: IProject) => void;
 }
 
-export default function ProjectCard({ project, isSelected, onSelect }: ProjectCardProps) {
+function ProjectCardComponent(
+  { project, isSelected, onSelectProject, ...restProps }: ProjectCardProps,
+  ref: any
+) {
   return (
-    <Card
-      fullWidth
-      fullHeight
+    <li
       className={`${styles.root} ${isSelected ? styles.selected : ""}`}
-      onClick={() => onSelect?.(project)}
+      onClick={() => onSelectProject?.(project)}
+      ref={ref}
+      {...restProps}
     >
-      <Typography variant="h4">{project.name}</Typography>
-      <Typography>
-        {project.responsibilities.join(", ").length > 100 ? (
-          <>{project.responsibilities.join(", ").substring(0, 100)}...</>
-        ) : (
-          project.responsibilities.join(", ")
-        )}
-      </Typography>
-      <Typography variant="caption">{project.technologies.join(", ")}</Typography>
-    </Card>
+      {project.image && (
+        <div className={styles.imageContainer}>
+          <div className={styles.overlay} />
+          <Image
+            src={project.image}
+            alt={project.name}
+            width={400}
+            height={400}
+            layout="responsive"
+            objectFit="cover"
+            className={styles.image}
+          />
+        </div>
+      )}
+      <div className={styles.texts}>
+        <Typography variant="h4" className={styles.heading}>
+          {project.name}
+        </Typography>
+        <Card className={styles.card}>
+          <Typography>
+            {project.responsibilities.join(", ").length > 200 ? (
+              <>{project.responsibilities.join(", ").substring(0, 200)}...</>
+            ) : (
+              project.responsibilities.join(", ")
+            )}
+          </Typography>
+        </Card>
+        <Typography variant="caption">{project.technologies.join(", ")}</Typography>
+      </div>
+    </li>
   );
 }
+
+const ProjectCard = forwardRef(ProjectCardComponent);
+
+export default ProjectCard;

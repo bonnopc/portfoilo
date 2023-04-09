@@ -29,7 +29,7 @@ function ProjectList({
   });
 
   return (
-    <Grid container className={styles.list} as="ul">
+    <ul className={styles.list}>
       <TransitionGroup component={null} className="staggered-list">
         {projectWithRefs.length ? (
           projectWithRefs.map((project, i) => (
@@ -39,21 +39,13 @@ function ProjectList({
               key={project.name}
               classNames="staggered-item"
             >
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={4}
-                as="li"
-                style={{ transitionDelay: `${i + 1}00ms` }}
+              <ProjectCard
+                project={project}
+                isSelected={selectedProject?.id === project.id}
+                onSelectProject={setSelectedProject}
                 ref={project.ref}
-              >
-                <ProjectCard
-                  project={project}
-                  isSelected={selectedProject?.id === project.id}
-                  onSelect={setSelectedProject}
-                />
-              </Grid>
+                style={{ transitionDelay: `${i + 1}00ms` }}
+              />
             </CSSTransition>
           ))
         ) : (
@@ -69,7 +61,7 @@ function ProjectList({
           </CSSTransition>
         )}
       </TransitionGroup>
-    </Grid>
+    </ul>
   );
 }
 

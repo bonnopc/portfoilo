@@ -3,8 +3,106 @@
 .root {
   cursor: pointer;
   transition: var(--transition);
+  display: flex;
 
-  &:not(.selected):hover {
-    transform: translateY(-0.25rem);
+  &:hover, &:focus, &:active {
+    @include for-tablet-and-desktop {
+      .imageContainer > .overlay {
+        opacity: 0;
+      }
+    }
+  }
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 20rem;
+    border-radius: var(--border-radius);
+    background-color: var(--color-gray-200);
+    border-radius: 0.25rem;
+
+    @include for-tablet-and-desktop {
+      width: 60%;
+      height: 25rem;
+
+      // padding-right: 0.5rem;
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-hover, 90%);
+      opacity: 1;
+      transition: var(--transition);
+      border-radius: 0.25rem;
+      z-index: 1;
+    }
+  }
+
+  .texts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 2;
+
+    @include for-tablet-and-desktop {
+      width: 60%;
+      // padding-left: 1rem;
+      text-align: right;
+      right: 1rem;
+      margin-top: 4rem;
+
+      .heading {
+        width: 60%;
+        margin-left: auto;
+      }
+    }
+
+    @include for-mobile {
+      padding: 1rem;
+
+      .card {
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  // place the image on the right side for even items
+  &:nth-child(even) {
+    @include for-tablet-and-desktop {
+      flex-direction: row-reverse;
+
+      .texts {
+        text-align: left;
+        left: 1rem;
+        right: unset;
+
+        .heading {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+    }
   }
 }

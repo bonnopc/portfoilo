@@ -5,40 +5,55 @@
       "name": "Multiplyr Inc.",
       "url": "https://www.multiplyr.xyz/"
     },
-    "description": "Multiplyr is a team working on to build the Affine, a decentralized protocol that enables cross-chain savings and investment.",
+    "description": "Multiplyr is a web3-based company that is focused on building Affine DeFi, a decentralized finance platform designed to help users grow their money. The platform aims to create a more accessible and transparent financial system by utilizing blockchain technology to enable trustless transactions and avoid the need for intermediaries.",
     "startDate": "December 2021",
     "endDate": "current",
-    "position": "Senior Frontend Engineer",
+    "position": "Senior Engineer (Remote - Full Time)",
     "keyRoles": [
-      "Leading the Frontend team to scope and build the dApp using Next.js and Redux-toolkit",
-      "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
-      "Developing APIs on the resolver built with FastAPI"
+      "Collaborate with other engineers, designers, and product managers to develop the frontend interface of the Affine DeFi platform using Next.js, ethers.js, and react-bootstrap.",
+      "Contribute to defi-sdk, used to communicate between the frontend and blockchain.",
+      "Help develop and maintain authentication functionality for the platform.",
+      "Work on real-time data visualization for the platform, ensuring that data is displayed accurately and securely for authenticated users.",
+      "If needed, assist with backend tasks using FastAPI.",
+      "Stay up-to-date with the latest developments in DeFi and blockchain technology to ensure that the Affine DeFi platform is both secure and user-friendly.",
+      "Mentor and provide guidance to other frontend engineers on the team."
     ]
   },
   {
     "shortName": "Shikho",
     "company": { "name": "Shikho Technologies Bangladesh Ltd.", "url": "https://www.shikho.com/" },
-    "description": "Shikho is a leading IT company in Bangladesh. I worked on the frontend of their flagship product, Shikho ERP.",
+    "description": "Shikho is a Bangladeshi educational technology startup that provides a mobile application to help students from Class 6 to Class 12 with their studies. The app offers a range of study materials such as video lessons, quizzes, and an AI-based virtual assistant to answer students' questions and provide personalized feedback based on their performance. Shikho's mission is to make quality education accessible to all students in Bangladesh, regardless of their socioeconomic status or geographic location.",
     "startDate": "June 2020",
-    "endDate": "December 2021",
-    "position": "Frontend Engineer",
+    "endDate": "November 2021",
+    "position": "Frontend Developer (Contract)",
     "keyRoles": [
-      "Leading the Frontend team to scope and build the ERP using Next.js and Redux-toolkit",
-      "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
-      "Developing APIs on the resolver built with FastAPI"
+      "Developing the front end of the Shikho web application using Next.js, React.js, and Tailwind CSS, while ensuring cross-browser compatibility and responsiveness.",
+      "Implementing key features of the application such as course search, registration, payment processing, and user account management, and integrating third-party APIs such as payment gateways and course management systems.",
+      "Integrated video calling feature for live class perticipations for both students and teachers using WebRTC.",
+      "Collaborating with a team of developers, designers, and other stakeholders to plan, design, and develop the application, while participating in code reviews, testing, and debugging to ensure the quality of the application.",
+      "Creating and maintaining documentation for the various components and features of the application, including user guides, technical specifications, and code documentation.",
+      "Ensuring high performance and scalability of the application by optimizing its design, architecture, and code, and implementing caching and load balancing strategies.",
+      "Ensuring the security and privacy of user data by implementing appropriate measures such as encryption, authentication, and access controls, and complying with industry standards such as PCI-DSS and GDPR.",
+      "Deploying the application to a production environment and ensuring that it is properly maintained and updated."
     ]
   },
   {
     "shortName": "Saimon Global",
     "company": { "name": "Saimon Global Ltd.", "url": "https://saimonglobal.com/" },
-    "description": "Saimon Global is a leading IT company in Bangladesh. I worked on the frontend of their flagship product, Saimon ERP.",
-    "startDate": "June 2019",
-    "endDate": "June 2020",
-    "position": "Frontend Engineer",
+    "description": "Saimon Global is a travel-based company that provides various travel-related services such as booking, visa assistance, and air ticketing. Additionally, they have a product for healthcare that offers telemedicine services. They aim to provide innovative and reliable solutions to help their clients enjoy hassle-free travel experiences and access quality healthcare remotely.",
+    "startDate": "December 2019",
+    "endDate": "November 2020",
+    "position": "Frontend Engineer (Full Time)",
     "keyRoles": [
-      "Leading the Frontend team to scope and build the ERP using Next.js and Redux-toolkit",
-      "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
-      "Developing APIs on the resolver built with FastAPI"
+      "Developing and maintaining front-end applications for web and mobile using various technologies, such as Next.js, React.js, and Flutter, while ensuring cross-browser compatibility, responsiveness, and high performance.",
+      "Developing and publishing mobile apps for Android and iOS, ensuring that they meet the desired requirements and quality standards.",
+      "Implementing key features of the applications, such as search, booking, payment processing, and user account management, and integrating third-party APIs.",
+      "Collaborating with a team of developers, designers, and other stakeholders to plan, design, and develop the applications, while participating in code reviews, testing, and debugging to ensure the quality of the applications.",
+      "Creating and maintaining documentation for the various components and features of the applications, including user guides, technical specifications, and code documentation.",
+      "Ensuring the security and privacy of user data by implementing appropriate measures such as encryption, authentication, and access controls, and complying with industry standards.",
+      "Providing technical support and troubleshooting assistance to users, and resolving any issues or bugs that arise, while ensuring timely and effective communication with customers and stakeholders.",
+      "Staying up-to-date with the latest industry trends and technologies to ensure that the applications remain competitive and innovative.",
+      "Conducting thorough testing and debugging to ensure that the applications are stable, secure, and user-friendly."
     ]
   },
   {
@@ -47,30 +62,37 @@
       "name": "HungryNaki.com Ltd.",
       "url": "https://hungrynaki.com/"
     },
-    "description": "HungryNaki is a food delivery service in Bangladesh. I worked on the frontend of their flagship product, HungryNaki.com.",
-    "startDate": "June 2018",
-    "endDate": "June 2019",
-    "position": "Full Stack Engineer",
+    "description": "Hungrynaki has experienced significant market growth in recent years, becoming one of the leading food delivery services in Bangladesh. They offer a diverse selection of cuisines from a wide range of restaurants, with an easy-to-use platform that allows customers to place orders and track deliveries. Hungrynaki's focus on customer service and timely delivery has helped to solidify its position in the highly competitive online food delivery market in Bangladesh.",
+    "startDate": "February 2019",
+    "endDate": "November 2019",
+    "position": "Full Stack Developer (Full Time)",
     "keyRoles": [
-      "Leading the Frontend team to scope and build the ERP using Next.js and Redux-toolkit",
-      "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
-      "Developing APIs on the resolver built with FastAPI"
+      "Building reusable and functional components for the new software system",
+      "Contributing to front-end and back-end development",
+      "Using various technologies such as Nuxt.js, React.js, Vue.js, Hapi.js, GraphQL, SASS, Stylus, and other CSS frameworks",
+      "Creating customer support, delivery support, vendor workflow, and admin panel",
+      "Implementing real-time data flow using GraphQL Subscription (web socket connection) and other cutting-edge technologies",
+      "Working closely with the team to ensure a successful transition from the old system to the new microservice-based system",
+      "Maintaining the old system during the transition period"
     ]
   },
   {
-    "shortName": "Cliniva",
+    "shortName": "Gain Solutions",
     "company": {
-      "name": "Cliniva Ltd.",
-      "url": "https://cliniva.com/"
+      "name": "Gain Solutions Ltd",
+      "url": "https://gain.solutions"
     },
-    "description": "Cliniva is a healthcare service provider in Bangladesh. I worked on the frontend of their flagship product, Cliniva.com.",
-    "startDate": "June 2017",
-    "endDate": "June 2018",
-    "position": "Full Stack Engineer",
+    "description": "Gain Solutions is a professional services firm that specializes in providing cost-effective and efficient solutions to businesses across a variety of industries. Their services include consulting, outsourcing, and staffing solutions, with a focus on finance and accounting, technology, and human resources. The company prides itself on its personalized approach, tailoring their services to meet each client's unique needs and requirements. With a team of experienced professionals and a commitment to delivering results, Gain Solutions helps businesses achieve their goals and optimize their operations.",
+    "startDate": "September 2017",
+    "endDate": "January 2019",
+    "position": "Web developer",
     "keyRoles": [
-      "Leading the Frontend team to scope and build the ERP using Next.js and Redux-toolkit",
-      "Working on the defi-sdk, a JS open-source library for frontend to communicate with blockchain",
-      "Developing APIs on the resolver built with FastAPI"
+      "Developed backend APIs using Laravel 5.6",
+      "Built web applications with React.js, Vue.js, bootstrap, and other CSS frameworks",
+      "Contributed to the development of several web applications, including a CRM system for a client",
+      "Collaborated with senior developers and designers",
+      "Participated in code reviews",
+      "Learned important lessons in project management, communication, and teamwork"
     ]
   }
 ]

@@ -22,7 +22,7 @@ function Workplace({ company, description, endDate, keyRoles, position, startDat
       <Typography variant="caption">
         {startDate} - {endDate}
       </Typography>
-      <Typography variant="p">{description}</Typography>
+      <Typography>{description}</Typography>
       <List items={keyRoles.map((role) => ({ label: role }))} />
     </div>
   );

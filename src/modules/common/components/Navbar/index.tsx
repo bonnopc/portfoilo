@@ -82,25 +82,6 @@ export default function Navbar() {
     }));
   }, []);
 
-  const renderNavLink = (link: NavbarLink, i: number) => {
-    if (link.skipNavigation) {
-      return link.component;
-    }
-
-    return (
-      <CommonLink
-        href={{
-          hash: link.hash,
-        }}
-        key={link.label}
-        as={link.hash}
-        onClick={collapseNavbarForMobile}
-      >
-        {link.label}
-      </CommonLink>
-    );
-  };
-
   return (
     <nav
       className={combineClassNames(styles, {
@@ -129,6 +110,7 @@ export default function Navbar() {
                       ref={link.nodeRef}
                       key={link.label}
                       style={{ transitionDelay: `${i + 1}00ms` }}
+                      className={styles.link}
                     >
                       {link.component}
                     </span>

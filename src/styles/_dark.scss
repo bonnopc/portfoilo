@@ -9,6 +9,7 @@ $color-bg-dark: #2d3436;
 $color-bg-card-dark: lighten($color-bg-dark, $amount: 10%);
 $color-bg-secondary-dark: #363e40;
 $color-border-dark: #ccd8de;
+$color-hover-dark: rgba(45, 52, 54, 0.9);
 
 .dark {
   --color-text-primary: #{$color-dark-text-primary};
@@ -20,4 +21,5 @@ $color-border-dark: #ccd8de;
   --color-bg-card: #{$color-bg-card-dark};
   --color-bg-secondary: #{$color-bg-secondary-dark};
   --color-border: #{$color-border-dark};
+  --color-hover: #{$color-hover-dark};
 }

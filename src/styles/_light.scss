@@ -11,6 +11,7 @@ $color-bg-secondary: #eaeaea;
 $color-border: #ccd8de;
 $color-bg-disabled: #f4f6f7;
 $color-disabled-element: #e6ecef;
+$color-hover: rgba(255, 255, 255, 0.8);
 
 :root {
   --color-text-primary: #{$color-text-primary};
@@ -24,4 +25,5 @@ $color-disabled-element: #e6ecef;
   --color-border: #{$color-border};
   --color-bg-disabled: #{$color-bg-disabled};
   --color-disabled-element: #{$color-disabled-element};
+  --color-hover: #{$color-hover};
 }

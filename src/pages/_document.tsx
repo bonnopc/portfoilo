@@ -48,7 +48,10 @@ class MyDocument extends Document {
           <link rel="manifest" href="/site.webmanifest" />
 
           {/* Google tag for analytics */}
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-DP5C37S9RP" />
+          <Script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
+          />
           <Script
             id="google-analytics"
             strategy="afterInteractive"
@@ -57,7 +60,7 @@ class MyDocument extends Document {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-DP5C37S9RP');
+                gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');
               `,
             }}
           />

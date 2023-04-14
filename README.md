@@ -1,6 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  bonnopc.dev - v1
+</h1>
+<p align="center"><a href="https://bonnopc.dev" target="_blank">bonnopc.dev</a>'s first version was constructed using <a href="https://nextjs.org" target="_blank">Next.js</a> and is currently hosted on <a href="https://vercel.com" target="_blank">Vercel</a>.</p>
 
-## Getting Started
+## 🚨 Forking this repo (please read!)
+You can use this code for your own website with attribution.
+
+Maintaining an open-source website is important to me, but as you may be aware, plagiarism is unethical. It is always dispiriting when I discover that my website has been replicated without any acknowledgment. I invested a significant amount of time and energy into constructing and designing this current version of my website, and I take pride in it. Therefore, my only request to all of you is to refrain from taking credit for my hard work.
+
+
+## 🛠 Getting Started
 
 First, run the development server:
 

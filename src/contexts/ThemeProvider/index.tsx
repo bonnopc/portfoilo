@@ -3,10 +3,10 @@ import useThemePreference from "@/hooks/useThemePreference";
 import { IThemeContext, ThemeScheme } from "@/types/common";
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
-const DEFAULT_THEME: ThemeScheme = "light";
+export const DEFAULT_THEME: ThemeScheme = "light";
 
-const ThemeContext = createContext<IThemeContext>({
-  theme: "light",
+export const ThemeContext = createContext<IThemeContext>({
+  theme: DEFAULT_THEME,
 });
 
 export const useTheme = () => useContext(ThemeContext);

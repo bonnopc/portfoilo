@@ -5,7 +5,9 @@
   transition: var(--transition);
   display: flex;
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     @include for-tablet-and-desktop {
       .imageContainer > .overlay {
         opacity: 0;

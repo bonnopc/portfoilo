@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeProvider should render 1`] = `<div />`;
+
+exports[`ThemeProvider should render with children 1`] = `
+<div>
+  Test
+</div>
+`;
+
+exports[`ThemeProvider should render with children and theme 1`] = `
+<div>
+  Test
+</div>
+`;
+
+exports[`ThemeProvider should render with children and theme and handleTheme 1`] = `
+<div>
+  Test
+</div>
+`;
+
+exports[`ThemeProvider should render with children and theme and handleTheme and className 1`] = `
+<div>
+  Test
+</div>
+`;

@@ -10,7 +10,8 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "test": "jest --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "test:ci": "jest --ci --coverage",
     "postinstall": "husky install",
     "pre-commit": "lint-staged"

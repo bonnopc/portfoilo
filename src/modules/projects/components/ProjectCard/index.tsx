@@ -33,6 +33,7 @@ function ProjectCardComponent(
             layout="responsive"
             objectFit="cover"
             className={styles.image}
+            priority={false}
           />
         </div>
       )}

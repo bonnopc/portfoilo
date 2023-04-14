@@ -15,13 +15,13 @@ export default function IntroImage() {
         <div className={styles.avatarContainer}>
           <Image
             className={styles.avatar}
-            loading="lazy"
-            src="/static/images/into-image.png"
+            src="/static/images/intro-image.png"
             alt="Avatar"
             width={400}
             height={400}
             layout="responsive"
             objectFit="contain"
+            loading="lazy"
           />
         </div>
       </div>

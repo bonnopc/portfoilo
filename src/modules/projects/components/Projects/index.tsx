@@ -75,12 +75,12 @@ export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
     return;
   }, [skill]);
 
+  // filter projects by selected skill
   const projects: IProject[] = useMemo(() => {
     if (selectedSkill) {
+      // we will
       return RECENT_PROJECTS.filter((project) =>
-        project.technologies
-          .map((s) => s.toLowerCase())
-          .includes(selectedSkill.toString().toLowerCase())
+        project.technologies.map((s) => s.toLowerCase()).includes(selectedSkill.toLowerCase())
       );
     }
 

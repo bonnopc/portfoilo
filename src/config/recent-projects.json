@@ -22,7 +22,9 @@
       "React.js",
       "Redux",
       "Jest",
-      "Enzyme"
+      "Enzyme",
+      "FastAPI",
+      "Python"
     ],
     "link": "https://affinedefi.com/",
     "image": "/static/images/projects/affine.png",
@@ -139,7 +141,9 @@
       "CSS",
       "JavaScript",
       "Git",
-      "BLoC"
+      "BLoC",
+      "Redux",
+      "Dart"
     ],
     "link": "https://tryotel.com/",
     "image": "/static/images/projects/tryotel.webp"

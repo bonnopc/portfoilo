@@ -50,7 +50,9 @@ function ProjectCardComponent(
             )}
           </Typography>
         </Card>
-        <Typography variant="caption">{project.technologies.join(", ")}</Typography>
+        <Typography className={styles.techs} variant="caption">
+          {project.technologies.join(", ")}, etc.
+        </Typography>
       </div>
     </li>
   );

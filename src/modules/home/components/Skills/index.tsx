@@ -1,5 +1,5 @@
 import { KEY_SKILLS } from "@/config/keys";
-import Chip, { ChipColor, CHIP_COLORS } from "@/modules/common/components/Chip";
+import Chip from "@/modules/common/components/Chip";
 import Typography from "@/modules/common/components/Typography";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
@@ -14,14 +14,6 @@ export default function Skills(props: React.HTMLAttributes<HTMLDivElement>) {
       scrollToSkills();
     }
   }, [router.query.skill]);
-
-  const getChipColor = (index: number): ChipColor => {
-    if (index > CHIP_COLORS.length - 1) {
-      return CHIP_COLORS[index % CHIP_COLORS.length];
-    } else {
-      return CHIP_COLORS[index];
-    }
-  };
 
   const handleSkillClick = (skill: string) => {
     const { skill: currentSkill, ...rest } = router.query;

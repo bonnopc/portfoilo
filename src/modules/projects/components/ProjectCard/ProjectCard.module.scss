@@ -72,6 +72,11 @@
         width: 60%;
         margin-left: auto;
       }
+
+      .techs {
+        width: 60%;
+        margin-left: auto;
+      }
     }
 
     @include for-mobile {
@@ -99,6 +104,11 @@
         right: unset;
 
         .heading {
+          margin-left: 0;
+          margin-right: auto;
+        }
+
+        .techs {
           margin-left: 0;
           margin-right: auto;
         }

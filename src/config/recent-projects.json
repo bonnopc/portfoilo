@@ -61,31 +61,32 @@
     "image": "/static/images/projects/shikho.png"
   },
   {
-    "id": "pipex-crm",
-    "name": "PipeX CRM web app",
+    "id": "tryotel",
+    "name": "Tryotel - Travel app on Android, iOS & web",
     "responsibilities": [
-      "Successfully developed a fully functional CRM app using Laravel 5.6 and Vue.js.",
-      "Designed an optimized database schema with tables, relationships, and queries to handle data storage and retrieval.",
-      "Developed the backend of the CRM app using Laravel 5.6, creating APIs, controllers, models, and routes to handle requests from the front end and interact with the database.",
-      "Developed the front end of the CRM app using Vue.js, creating components, templates, and stylesheets to provide a user-friendly interface.",
-      "Integrated third-party APIs, such as payment gateways, social media platforms, or email marketing services to add additional features and functionalities to the CRM app.",
-      "Wrote automated tests to ensure the quality of the code and identified and fixed any bugs in the CRM app.",
-      "Deployed the CRM app to a production environment and ensured that it is properly maintained and updated.",
-      "Collaborated with other team members, such as designers and project managers, and communicated effectively to ensure that the CRM app met the requirements of the stakeholders."
+      "Developing the front end of the Tryotel web application, android & iOS app, admin panel, customer support panel, and mobile apps for Android and iOS using Next.js, React.js, Flutter, and Material UI, while ensuring cross-browser compatibility and responsiveness.",
+      "Implementing key features of the application such as flight search, booking, payment processing, and user account management, and integrating third-party APIs such as payment gateways and flight booking engines.",
+      "Collaborating with a team of developers, designers, and other stakeholders to plan, design, and develop the application, while participating in code reviews, testing, and debugging to ensure the quality of the application.",
+      "Creating and maintaining documentation for the various components and features of the application, including user guides, technical specifications, and code documentation.",
+      "Ensuring high performance and scalability of the application by optimizing its design, architecture, and code, and implementing caching and load balancing strategies.",
+      "Ensuring the security and privacy of user data by implementing appropriate measures such as encryption, authentication, and access controls, and complying with industry standards such as PCI-DSS and GDPR.",
+      "Providing technical support and troubleshooting assistance to users, and resolving any issues or bugs that arise, while ensuring timely and effective communication with customers and stakeholders."
     ],
     "technologies": [
-      "Laravel 5.6",
-      "Vue.js",
-      "MySQL",
-      "PHP",
+      "Next.js",
+      "React.js",
+      "Flutter",
+      "Material UI",
       "HTML",
       "CSS",
       "JavaScript",
       "Git",
-      "Social Media APIs"
+      "BLoC",
+      "Redux",
+      "Dart"
     ],
-    "link": "https://pipex.gainhq.com/admin/users/login",
-    "image": "/static/images/projects/pipex-crm.png"
+    "link": "https://tryotel.com/",
+    "image": "/static/images/projects/tryotel.webp"
   },
   {
     "id": "hungrynaki",
@@ -121,32 +122,31 @@
     "image": "/static/images/projects/hungrynaki.png"
   },
   {
-    "id": "tryotel",
-    "name": "Tryotel - Travel app on Android, iOS & web",
+    "id": "pipex-crm",
+    "name": "PipeX CRM web app",
     "responsibilities": [
-      "Developing the front end of the Tryotel web application, admin panel, customer support panel, and mobile apps for Android and iOS using Next.js, React.js, Flutter, and Material UI, while ensuring cross-browser compatibility and responsiveness.",
-      "Implementing key features of the application such as flight search, booking, payment processing, and user account management, and integrating third-party APIs such as payment gateways and flight booking engines.",
-      "Collaborating with a team of developers, designers, and other stakeholders to plan, design, and develop the application, while participating in code reviews, testing, and debugging to ensure the quality of the application.",
-      "Creating and maintaining documentation for the various components and features of the application, including user guides, technical specifications, and code documentation.",
-      "Ensuring high performance and scalability of the application by optimizing its design, architecture, and code, and implementing caching and load balancing strategies.",
-      "Ensuring the security and privacy of user data by implementing appropriate measures such as encryption, authentication, and access controls, and complying with industry standards such as PCI-DSS and GDPR.",
-      "Providing technical support and troubleshooting assistance to users, and resolving any issues or bugs that arise, while ensuring timely and effective communication with customers and stakeholders."
+      "Successfully developed a fully functional CRM app using Laravel 5.6 and Vue.js.",
+      "Designed an optimized database schema with tables, relationships, and queries to handle data storage and retrieval.",
+      "Developed the backend of the CRM app using Laravel 5.6, creating APIs, controllers, models, and routes to handle requests from the front end and interact with the database.",
+      "Developed the front end of the CRM app using Vue.js, creating components, templates, and stylesheets to provide a user-friendly interface.",
+      "Integrated third-party APIs, such as payment gateways, social media platforms, or email marketing services to add additional features and functionalities to the CRM app.",
+      "Wrote automated tests to ensure the quality of the code and identified and fixed any bugs in the CRM app.",
+      "Deployed the CRM app to a production environment and ensured that it is properly maintained and updated.",
+      "Collaborated with other team members, such as designers and project managers, and communicated effectively to ensure that the CRM app met the requirements of the stakeholders."
     ],
     "technologies": [
-      "Next.js",
-      "React.js",
-      "Flutter",
-      "Material UI",
+      "Laravel 5.6",
+      "Vue.js",
+      "MySQL",
+      "PHP",
       "HTML",
       "CSS",
       "JavaScript",
       "Git",
-      "BLoC",
-      "Redux",
-      "Dart"
+      "Social Media APIs"
     ],
-    "link": "https://tryotel.com/",
-    "image": "/static/images/projects/tryotel.webp"
+    "link": "https://pipex.gainhq.com/admin/users/login",
+    "image": "/static/images/projects/pipex-crm.png"
   },
   {
     "id": "takemed",

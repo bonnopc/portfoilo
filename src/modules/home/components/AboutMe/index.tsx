@@ -1,27 +1,32 @@
 import Button from "@/modules/common/components/Button";
 import Typography from "@/modules/common/components/Typography";
 import styles from "./AboutMe.module.scss";
-import { KEY_SECTION_IDS } from "@/config/keys";
+import { KEY_DESIGNATION, KEY_SECTION_IDS } from "@/config/keys";
+import getDifferenceBetweenDates from "@/utils/getDifferenceBetweenDates";
 
 export default function AboutMe(props: React.HTMLAttributes<HTMLDivElement>) {
+  const startDateTime = new Date("2017-09-01T00:00:00.000Z");
+  const endDateTime = new Date();
+  const diff = getDifferenceBetweenDates(startDateTime, endDateTime);
+
   return (
     <section className={styles.root} {...props}>
       <Typography variant="h2" className={styles.heading}>
         About Me
       </Typography>
       <Typography>
-        I am an experienced Senior Frontend Engineer with over 4 years of industry experience. I've
+        I am an experienced {KEY_DESIGNATION} with over {diff} years of industry experience. I've
         worked with various companies to improve my skills in building websites and applications. I
-        specialize in using modern tools and frameworks like React, Vue.js, Next.js, Nuxt.js,
-        Material UI, SASS, and Stylus.
+        specialize in using modern tools and frameworks like React, Node.js, Redux, Flutter, Vue.js,
+        Next.js, Nuxt.js, Express.js, Material UI, SASS, Tailwind CSS and Stylus.
       </Typography>
 
       <Typography>
         Currently, I am part of the team at Multipyr where we are building a web3 protocol that
         empowers people to grow their money. My passion for coding and working with microcontrollers
-        during my studies in Electrical & Electronics Engineering led me to explore the world of web
-        development, and I have been committed to staying at the forefront of industry developments
-        ever since.
+        during my studies in Electrical & Electronics Engineering led me to explore the world of
+        software engineering, and I have been committed to staying at the forefront of industry
+        developments ever since.
       </Typography>
 
       <Typography>

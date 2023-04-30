@@ -28,3 +28,4 @@ export enum KEY_SECTION_IDS {
   CONTACT = "contact",
 }
 export const KEY_NAV_DELAY: number = 1000;
+export const KEY_DESIGNATION: string = "Full Stack Engineer";

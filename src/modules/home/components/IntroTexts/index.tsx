@@ -18,7 +18,7 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
   const prefersReducedMotion = usePrefersReducedMotion();
   const startDateTime = new Date("2017-09-01T00:00:00.000Z");
   const endDateTime = new Date();
-  const diff = getDifferenceBetweenDates(startDateTime, endDateTime);
+  const diff = getDifferenceBetweenDates(startDateTime, endDateTime, 0);
   const { isMobileUp } = useDeviceWidth();
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
   const description = (
     <Typography>
       I pride myself on being a results-driven {KEY_DESIGNATION} based in Dhaka, Bangladesh. I have
-      over {diff} years of experience in creating cross-platform software applications for various
+      around {diff} years of experience in creating cross-platform software applications for various
       companies.
       {/* <br />
       <br /> My passion for technology and my commitment to staying up-to-date with the latest

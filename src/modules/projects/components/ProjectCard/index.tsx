@@ -4,6 +4,7 @@ import styles from "./ProjectCard.module.scss";
 import Image from "next/image";
 import Card from "@/modules/common/components/Card";
 import { forwardRef } from "react";
+import trimString from "@/utils/trimString";
 
 interface ProjectCardProps extends React.HTMLAttributes<HTMLLIElement> {
   project: IProject;
@@ -42,13 +43,7 @@ function ProjectCardComponent(
           {project.name}
         </Typography>
         <Card className={styles.card}>
-          <Typography>
-            {project.responsibilities.join(", ").length > 200 ? (
-              <>{project.responsibilities.join(", ").substring(0, 200)}...</>
-            ) : (
-              project.responsibilities.join(", ")
-            )}
-          </Typography>
+          <Typography>{trimString(project.responsibilities.join(", "), 200)}</Typography>
         </Card>
         <Typography className={styles.techs} variant="caption">
           {project.technologies.join(", ")}, etc.

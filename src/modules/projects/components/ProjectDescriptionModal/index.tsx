@@ -32,8 +32,25 @@ export default function ProjectDescriptionModal({ projects }: ProjectDescription
   return (
     <Modal isOpen={!!selectedProject?.id} onClose={handleClose}>
       <Grid container className={styles.root}>
-        <Grid item xs={12} sm={12} md={selectedProject?.image ? 8 : 12}>
+        <Grid item xs={12} sm={12} md={8} mdOffset={2}>
           <Typography variant="h2">{selectedProject?.name}</Typography>
+        </Grid>
+        {selectedProject?.image ? (
+          <Grid item xs={12} sm={12} md={8} mdOffset={2} className={styles.imgContainer}>
+            <Image
+              src={selectedProject?.image}
+              alt={selectedProject.name}
+              className={styles.image}
+              width={400}
+              height={400}
+              layout="responsive"
+              objectFit="contain"
+            />
+          </Grid>
+        ) : (
+          <div />
+        )}
+        <Grid item xs={12} sm={12} md={8} mdOffset={2}>
           <ul className={styles.list}>
             {selectedProject?.responsibilities.map((responsibility, i) => (
               <li className={styles.listItem} key={i}>
@@ -46,12 +63,23 @@ export default function ProjectDescriptionModal({ projects }: ProjectDescription
           </p>
 
           <div className={styles.links}>
-            {selectedProject?.link ? (
+            {selectedProject?.links?.length || selectedProject?.link ? (
               <div>
                 Visit:{" "}
-                <CommonLink href={selectedProject?.link} target="_blank">
-                  {selectedProject?.link}
-                </CommonLink>
+                {selectedProject?.links?.length ? (
+                  selectedProject?.links?.map(({ name, url }, i) => (
+                    <>
+                      <CommonLink hideExternalLinkIcon key={i} href={url} target="_blank">
+                        {name}
+                      </CommonLink>
+                      {i !== selectedProject?.links?.length! - 1 ? ", " : "."}
+                    </>
+                  ))
+                ) : selectedProject.link ? (
+                  <CommonLink href={selectedProject.link} target="_blank">
+                    {selectedProject.link}
+                  </CommonLink>
+                ) : null}
               </div>
             ) : (
               <div />
@@ -68,21 +96,6 @@ export default function ProjectDescriptionModal({ projects }: ProjectDescription
             )}
           </div>
         </Grid>
-        {selectedProject?.image ? (
-          <Grid item xs={12} sm={12} md={4}>
-            <Image
-              src={selectedProject?.image}
-              alt={selectedProject.name}
-              className={styles.image}
-              width={400}
-              height={400}
-              layout="responsive"
-              objectFit="contain"
-            />
-          </Grid>
-        ) : (
-          <div />
-        )}
       </Grid>
     </Modal>
   );

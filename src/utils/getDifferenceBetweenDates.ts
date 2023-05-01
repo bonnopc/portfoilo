@@ -9,7 +9,14 @@ import roundToNearestIntegerOrPointFive from "./roundToNearestIntegerOrPointFive
  * getDifferenceBetweenDates(new Date(2020, 0, 1), new Date(2021, 0, 1)); // 1
  * getDifferenceBetweenDates(new Date(2020, 0, 1), new Date(2021, 6, 1)); // 1.5
  **/
-export default function getDifferenceBetweenDates(startDate: Date, endDate: Date): number {
+export default function getDifferenceBetweenDates(
+  startDate: Date,
+  endDate: Date,
+  precision: number = 1
+): number | string {
   const difference = endDate.getTime() - startDate.getTime();
-  return roundToNearestIntegerOrPointFive(difference / (1000 * 60 * 60 * 24 * 365)); // that's for a year in milliseconds
+  const diffInYears = difference / (1000 * 60 * 60 * 24 * 365); // that's for a year in milliseconds
+  return precision === 1
+    ? roundToNearestIntegerOrPointFive(diffInYears)
+    : diffInYears.toFixed(precision); // that's for a year in milliseconds
 }

@@ -6,6 +6,7 @@
   align-items: center;
   text-decoration: none;
   position: relative;
+  transition: var(--transition);
 
   .openInNewTabIcon {
     margin-left: 0.25rem;
@@ -14,11 +15,13 @@
     height: 1rem;
     color: $color-primary;
     fill: currentColor;
+    display: none;
     opacity: 0;
     transition: var(--transition);
   }
 
   &:hover .openInNewTabIcon {
+    display: inline-block;
     opacity: 1;
   }
 

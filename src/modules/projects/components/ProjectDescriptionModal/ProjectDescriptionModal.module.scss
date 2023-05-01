@@ -1,7 +1,7 @@
 @import "src/styles/shared";
 
 .root {
-  flex-direction: column-reverse;
+  // flex-direction: column-reverse;
 
   @include for-desktop {
     flex-direction: row;
@@ -20,6 +20,14 @@
 
   .techs {
     margin-top: 2rem;
+  }
+
+  .imgContainer {
+    margin-top: 0;
+
+    @include for-desktop {
+      max-height: 55vh;
+    }
   }
 
   .image {

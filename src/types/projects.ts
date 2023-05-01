@@ -9,4 +9,8 @@ export interface IProject {
   link?: string;
   github?: string;
   image?: string;
+  links?: {
+    name: string;
+    url: string;
+  }[];
 }

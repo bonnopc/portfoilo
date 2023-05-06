@@ -7,13 +7,13 @@ import { forwardRef } from "react";
 
 interface CommonLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   href: string | UrlObject;
-  as?: string;
   children: React.ReactNode;
   target?: "_blank" | "_self" | "_parent" | "_top";
   className?: string;
   preventUnderLine?: boolean; // default is false
   legacyBehavior?: boolean; // default is false
   hideExternalLinkIcon?: boolean; // default is false
+  color?: "primary" | "textColor"; // default is "primary"
 }
 
 function CommonLinkComponent(
@@ -23,13 +23,18 @@ function CommonLinkComponent(
     preventUnderLine = false,
     legacyBehavior = false,
     hideExternalLinkIcon = false,
+    color = "primary",
     ...restProps
   }: CommonLinkProps,
   ref: any
 ) {
   return (
     <Link
-      className={combineClassNames(styles, { root: true, preventUnderLine }, className)}
+      className={combineClassNames(
+        styles,
+        { root: true, preventUnderLine, [color]: true },
+        className
+      )}
       legacyBehavior={legacyBehavior}
       {...restProps}
       ref={ref}

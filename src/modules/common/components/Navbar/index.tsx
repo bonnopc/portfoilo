@@ -120,7 +120,6 @@ export default function Navbar() {
                         hash: link.hash,
                       }}
                       key={link.label}
-                      as={link.hash}
                       className={styles.link}
                       onClick={collapseNavbarForMobile}
                       ref={link.nodeRef}

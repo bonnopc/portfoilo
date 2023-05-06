@@ -1,6 +1,6 @@
 import combineClassNames from "@/utils/combineClassNames";
 import isUndefined from "@/utils/isUndefined";
-import { createRef, CSSProperties, ReactNode, useMemo, useState } from "react";
+import { createRef, CSSProperties, ReactNode, useEffect, useMemo, useState } from "react";
 import styles from "./Tabs.module.scss";
 import ArrowBackIcon from "@/assets/icons/arrow_back.svg";
 import ArrowForwardIcon from "@/assets/icons/arrow_forward.svg";
@@ -49,6 +49,9 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
     shouldHideFwdArrow: false,
   });
   const { isTabletUp } = useDeviceWidth();
+  const tabContentRef = createRef<HTMLDivElement>();
+  const [touchStartX, setTouchStartX] = useState<number>(0);
+  const [touchEndX, setTouchEndX] = useState<number>(0);
 
   const handleTabHeaderClick = (tab: TabWithRef) => {
     setActiveTab(tab.label);
@@ -136,6 +139,39 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
     }
   };
 
+  const checkDirection = (e: TouchEvent) => {
+    if (touchStartX < touchEndX) {
+      console.log("swiped right");
+    } else if (touchStartX > touchEndX) {
+      console.log("swiped left");
+    }
+  };
+
+  const handleTouchStart = (e: TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: TouchEvent) => {
+    setTouchEndX(e.changedTouches[0].clientX);
+    checkDirection(e);
+  };
+
+  useEffect(() => {
+    const tabHeaderParent = tabHeaderParentRef.current;
+
+    if (!tabHeaderParent) {
+      return;
+    }
+
+    tabHeaderParent.addEventListener("touchstart", handleTouchStart);
+    tabHeaderParent.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      tabHeaderParent.removeEventListener("touchstart", handleTouchStart);
+      tabHeaderParent.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [tabContentRef.current, activeTab]);
+
   return (
     <div className={`${styles.root} ${className ? className : ""}`}>
       <div className={styles.tabHeaderRoot}>
@@ -186,7 +222,9 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
           <ArrowForwardIcon />
         </IconButton>
       </div>
-      <div className={styles.tabContent}>{ActiveTabContent ?? null}</div>
+      <div className={styles.tabContent} ref={tabContentRef}>
+        {ActiveTabContent ?? null}
+      </div>
     </div>
   );
 }

@@ -20,24 +20,6 @@
     ]
   },
   {
-    "shortName": "Shikho",
-    "company": { "name": "Shikho Technologies Bangladesh Ltd.", "url": "https://www.shikho.com/" },
-    "description": "Shikho is a Bangladeshi educational technology startup that provides a mobile application to help students from Class 6 to Class 12 with their studies. The app offers a range of study materials such as video lessons, quizzes, and an AI-based virtual assistant to answer students' questions and provide personalized feedback based on their performance. Shikho's mission is to make quality education accessible to all students in Bangladesh, regardless of their socioeconomic status or geographic location.",
-    "startDate": "June 2020",
-    "endDate": "November 2021",
-    "position": "Frontend Developer (Contract)",
-    "keyRoles": [
-      "Developing the front end of the Shikho web application using Next.js, React.js, and Tailwind CSS, while ensuring cross-browser compatibility and responsiveness.",
-      "Implementing key features of the application such as course search, registration, payment processing, and user account management, and integrating third-party APIs such as payment gateways and course management systems.",
-      "Integrated video calling feature for live class perticipations for both students and teachers using WebRTC.",
-      "Collaborating with a team of developers, designers, and other stakeholders to plan, design, and develop the application, while participating in code reviews, testing, and debugging to ensure the quality of the application.",
-      "Creating and maintaining documentation for the various components and features of the application, including user guides, technical specifications, and code documentation.",
-      "Ensuring high performance and scalability of the application by optimizing its design, architecture, and code, and implementing caching and load balancing strategies.",
-      "Ensuring the security and privacy of user data by implementing appropriate measures such as encryption, authentication, and access controls, and complying with industry standards such as PCI-DSS and GDPR.",
-      "Deploying the application to a production environment and ensuring that it is properly maintained and updated."
-    ]
-  },
-  {
     "shortName": "Saimon Global",
     "company": { "name": "Saimon Global Ltd.", "url": "https://saimonglobal.com/" },
     "description": "Saimon Global is a travel-based company that provides various travel-related services such as booking, visa assistance, and air ticketing. Additionally, they have a product for healthcare that offers telemedicine services. They aim to provide innovative and reliable solutions to help their clients enjoy hassle-free travel experiences and access quality healthcare remotely.",
@@ -77,12 +59,12 @@
     ]
   },
   {
-    "shortName": "Gain Solutions",
+    "shortName": "Regfire Solutions",
     "company": {
-      "name": "Gain Solutions Ltd",
+      "name": "Regfire Solutions Ltd.",
       "url": "https://gain.solutions"
     },
-    "description": "Gain Solutions is a professional services firm that specializes in providing cost-effective and efficient solutions to businesses across a variety of industries. Their services include consulting, outsourcing, and staffing solutions, with a focus on finance and accounting, technology, and human resources. The company prides itself on its personalized approach, tailoring their services to meet each client's unique needs and requirements. With a team of experienced professionals and a commitment to delivering results, Gain Solutions helps businesses achieve their goals and optimize their operations.",
+    "description": "Regfire Solutions Ltd. is a professional services firm that specializes in providing cost-effective and efficient solutions to businesses across a variety of industries. Their services include consulting, outsourcing, and staffing solutions, with a focus on finance and accounting, technology, and human resources. The company prides itself on its personalized approach, tailoring their services to meet each client's unique needs and requirements. With a team of experienced professionals and a commitment to delivering results, Gain Solutions helps businesses achieve their goals and optimize their operations.",
     "startDate": "September 2017",
     "endDate": "January 2019",
     "position": "Web developer",

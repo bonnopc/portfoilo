@@ -12,6 +12,8 @@
     margin-top: 2rem;
 
     .listItem {
+      text-align: justify;
+
       &:not(:last-child) {
         margin-bottom: 0.5rem;
       }

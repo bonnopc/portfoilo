@@ -29,3 +29,4 @@ export enum KEY_SECTION_IDS {
 }
 export const KEY_NAV_DELAY: number = 1000;
 export const KEY_DESIGNATION: string = "Full Stack Engineer";
+export const KEY_FIRST_JOB_START_DATE: Date = new Date("2017-09-01T00:00:00.000Z");

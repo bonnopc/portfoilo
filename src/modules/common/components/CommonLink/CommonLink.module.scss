@@ -43,11 +43,23 @@
     width: 100%;
   }
 
+  &.isInlined {
+    display: inline;
+  }
+
   &.primary {
     color: $color-primary;
 
     &::after {
       background-color: $color-primary;
+    }
+
+    &:hover {
+      color: darken($color-primary, 10%);
+
+      &::after {
+        background-color: darken($color-primary, 10%);
+      }
     }
   }
 

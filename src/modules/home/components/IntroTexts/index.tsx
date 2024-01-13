@@ -5,7 +5,12 @@ import getDifferenceBetweenDates from "@/utils/getDifferenceBetweenDates";
 import { createRef, useEffect, useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./IntroTexts.module.scss";
-import { KEY_DESIGNATION, KEY_NAV_DELAY, KEY_SECTION_IDS } from "@/config/keys";
+import {
+  KEY_DESIGNATION,
+  KEY_FIRST_JOB_START_DATE,
+  KEY_NAV_DELAY,
+  KEY_SECTION_IDS,
+} from "@/config/keys";
 import useDeviceWidth from "@/hooks/useDeviceWidth";
 
 interface IntroElements {
@@ -16,9 +21,8 @@ interface IntroElements {
 export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const prefersReducedMotion = usePrefersReducedMotion();
-  const startDateTime = new Date("2017-09-01T00:00:00.000Z");
   const endDateTime = new Date();
-  const diff = getDifferenceBetweenDates(startDateTime, endDateTime, 0);
+  const diff = getDifferenceBetweenDates(KEY_FIRST_JOB_START_DATE, endDateTime, 0);
   const { isMobileUp } = useDeviceWidth();
 
   useEffect(() => {
@@ -51,9 +55,9 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
 
   const description = (
     <Typography>
-      I pride myself on being a results-driven {KEY_DESIGNATION} based in Dhaka, Bangladesh. I have
-      around {diff} years of experience in creating cross-platform software applications for various
-      companies.
+      Embarking on a journey as a results-driven {KEY_DESIGNATION} rooted in Dhaka, Bangladesh. I
+      bring over {diff} years of expertise in crafting cross-platform software applications for
+      diverse organizations.
       {/* <br />
       <br /> My passion for technology and my commitment to staying up-to-date with the latest
       trends and best practices enable me to deliver top-quality solutions to meet the unique needs

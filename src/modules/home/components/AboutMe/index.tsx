@@ -1,14 +1,13 @@
 import Button from "@/modules/common/components/Button";
 import Typography from "@/modules/common/components/Typography";
 import styles from "./AboutMe.module.scss";
-import { KEY_DESIGNATION, KEY_SECTION_IDS } from "@/config/keys";
+import { KEY_DESIGNATION, KEY_FIRST_JOB_START_DATE, KEY_SECTION_IDS } from "@/config/keys";
 import getDifferenceBetweenDates from "@/utils/getDifferenceBetweenDates";
 import CommonLink from "@/modules/common/components/CommonLink";
 
 export default function AboutMe(props: React.HTMLAttributes<HTMLDivElement>) {
-  const startDateTime = new Date("2017-09-01T00:00:00.000Z");
   const endDateTime = new Date();
-  const diff = getDifferenceBetweenDates(startDateTime, endDateTime);
+  const diff = getDifferenceBetweenDates(KEY_FIRST_JOB_START_DATE, endDateTime, 0);
 
   return (
     <section className={styles.root} {...props}>
@@ -16,15 +15,12 @@ export default function AboutMe(props: React.HTMLAttributes<HTMLDivElement>) {
         About Me
       </Typography>
       <Typography>
-        I am an experienced {KEY_DESIGNATION} with about {diff} years of industry experience. I've
+        I am an experienced {KEY_DESIGNATION} with over {diff} years of industry experience. I've
         worked with various companies to improve or learn skills in building cross-platform
         applications as well as several web applications. I specialize in using modern tools and
         frameworks like React, Node.js, Redux, Flutter, Vue.js, Next.js, Nuxt.js, Express.js,
-        Material UI, SASS, Tailwind CSS, Stylus, etc. Currently, I am part of the team at{" "}
-        <CommonLink href={`https://multiplyr.xyz/`} target="_blank" hideExternalLinkIcon>
-          Multiplyr
-        </CommonLink>{" "}
-        where we are building a web3 protocol,{" "}
+        Material UI, SASS, Tailwind CSS, Stylus, etc. Currently, I am part of the team at Multiplyr
+        Inc. where we are building a web3 protocol,{" "}
         <CommonLink href={`https://affinedefi.com/`} target="_blank" hideExternalLinkIcon>
           Affine
         </CommonLink>
@@ -36,7 +32,11 @@ export default function AboutMe(props: React.HTMLAttributes<HTMLDivElement>) {
         Electronics Engineering led me to explore the world of software engineering, and I have been
         committed to staying at the forefront of industry developments ever since. So far, I have
         been part of multiple teams that have built some awesome products that I feel proud of. You
-        can get to know most of them <CommonLink href="#projects">from here</CommonLink>.
+        can{" "}
+        <CommonLink isInlined href="#projects">
+          get to know most of them from here
+        </CommonLink>
+        .
       </Typography>
 
       <Typography>

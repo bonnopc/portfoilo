@@ -9,8 +9,14 @@
   &:focus,
   &:active {
     @include for-tablet-and-desktop {
-      .imageContainer > .overlay {
-        opacity: 0;
+      .imageContainer {
+        .image {
+          filter: blur(0.1rem);
+        }
+
+        .overlay {
+          opacity: 0.75;
+        }
       }
     }
   }
@@ -37,6 +43,8 @@
       height: 100%;
       object-fit: cover;
       border-radius: 0.25rem;
+      filter: blur(0.25rem);
+      transition: var(--transition);
     }
 
     .overlay {

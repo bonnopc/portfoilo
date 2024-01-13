@@ -14,6 +14,7 @@ interface CommonLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   legacyBehavior?: boolean; // default is false
   hideExternalLinkIcon?: boolean; // default is false
   color?: "primary" | "textColor"; // default is "primary"
+  isInlined?: boolean; // default is false
 }
 
 function CommonLinkComponent(
@@ -24,6 +25,7 @@ function CommonLinkComponent(
     legacyBehavior = false,
     hideExternalLinkIcon = false,
     color = "primary",
+    isInlined = false,
     ...restProps
   }: CommonLinkProps,
   ref: any
@@ -32,7 +34,7 @@ function CommonLinkComponent(
     <Link
       className={combineClassNames(
         styles,
-        { root: true, preventUnderLine, [color]: true },
+        { root: true, preventUnderLine, [color]: true, isInlined },
         className
       )}
       legacyBehavior={legacyBehavior}

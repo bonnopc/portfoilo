@@ -57,7 +57,7 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
     <Typography>
       Embarking on a journey as a results-driven {KEY_DESIGNATION} rooted in Dhaka, Bangladesh. I
       bring over {diff} years of expertise in crafting cross-platform software applications for
-      diverse organizations.
+      diverse organizations serving millions of users.
       {/* <br />
       <br /> My passion for technology and my commitment to staying up-to-date with the latest
       trends and best practices enable me to deliver top-quality solutions to meet the unique needs
@@ -70,32 +70,20 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
   const button = (
     <Button
       url={{
-        hash: `#${KEY_SECTION_IDS.ABOUT}`,
+        hash: `#${KEY_SECTION_IDS.PROJECTS}`,
       }}
       className={styles.button}
     >
-      About Me
+      Recent Projects
     </Button>
   );
 
-  const introElements: IntroElements[] = [
-    {
+  const introElements: IntroElements[] = [subHeading, heading, description, button].map(
+    (component, index) => ({
       nodeRef: createRef(),
-      component: subHeading,
-    },
-    {
-      nodeRef: createRef(),
-      component: heading,
-    },
-    {
-      nodeRef: createRef(),
-      component: description,
-    },
-    {
-      nodeRef: createRef(),
-      component: button,
-    },
-  ];
+      component,
+    })
+  );
 
   return (
     <section className={`${styles.root} ${className ?? ""}`} {...rest}>

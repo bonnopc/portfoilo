@@ -2,6 +2,7 @@
   {
     "id": "affine-defi",
     "name": "Affine DeFi",
+    "description": "Affine is the world's first cross-chain investment and savings app. To date, our project has accrued over 3 million TVL, engages 4,000 active users, and has attracted 50,000 sign-ups.",
     "responsibilities": [
       "Developing and implementing the user interface design of the dApp using Next.js and Bootstrap.",
       "Communicating with the blockchain using ethers.js and integrating various wallets to connect with the dApp.",
@@ -33,6 +34,7 @@
   {
     "id": "shikho",
     "name": "Shikho - Online learning platform",
+    "description": "Shikho is a pioneering Bangladeshi education technology startup that has over 2 million registered users and 2.5 million monthly learners. 65% of registered users are from rural Bangladesh, where there are fewer resources and learning opportunities.",
     "responsibilities": [
       "Developing the front end of the Shikho web application using Next.js, React.js, and Tailwind CSS, while ensuring cross-browser compatibility and responsiveness.",
       "Implementing key features of the application such as course search, registration, payment processing, and user account management, and integrating third-party APIs such as payment gateways and course management systems.",
@@ -63,6 +65,7 @@
   {
     "id": "tryotel",
     "name": "Tryotel - Travel app on Android, iOS & web",
+    "description": "Tryotel is an online travel agency (OTA) based in Bangladesh. It offers domestic and international flights, packages, and more. Tryotel's mobile app has one of the fastest flight feed generation times in local markets. It also helps users fill out visa application forms and process visa files for many countries.",
     "responsibilities": [
       "Developing the front end of the Tryotel web app, Android and iOS app, admin panel, and customer support panel using Next.js, React.js, Flutter, BLoC, Redux, GraphQL, Material UI, etc while ensuring cross-browser or device compatibility and responsiveness.",
       "Implementing key features of the application such as flight search, booking, payment processing, and user account management, and integrating third-party APIs such as payment gateways and flight booking engines.",
@@ -108,6 +111,7 @@
   {
     "id": "hungrynaki",
     "name": "HungryNaki - Food Delivery System",
+    "description": "HungryNaki was the first online food delivery service in Bangladesh. It had over one million users and delivered more than 2.5 million orders. Partnering with 5000+ restaurants, cloud kitchens, home kitchens, and caterers across Bangladesh, it offered a wide range of food options.",
     "responsibilities": [
       "Building reusable and functional components for the new software system",
       "Contributing to front-end and back-end development",

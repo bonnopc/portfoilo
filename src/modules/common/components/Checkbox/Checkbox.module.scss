@@ -63,6 +63,9 @@
   }
 
   input:disabled + label {
+    cursor: not-allowed;
+    opacity: 0.5;
+
     span {
       color: var(--color-text-hint);
     }

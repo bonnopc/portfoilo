@@ -6,6 +6,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLHeadingElement> {
   variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "caption"; // default: p
   children: React.ReactNode;
   rightElement?: React.ReactNode;
+  preventMargin?: boolean;
 }
 
 export default function Typography({
@@ -13,6 +14,7 @@ export default function Typography({
   children,
   className,
   rightElement,
+  preventMargin,
   ...rest
 }: TypographyProps) {
   const specialElements: string[] = ["caption"];
@@ -27,7 +29,7 @@ export default function Typography({
           {
             root: true,
             caption: variant === "caption",
-            preventMargin: Boolean(rightElement),
+            preventMargin: Boolean(rightElement || preventMargin),
           },
           className
         ),

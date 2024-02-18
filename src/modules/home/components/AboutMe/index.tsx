@@ -51,10 +51,10 @@ export default function AboutMe(props: React.HTMLAttributes<HTMLDivElement>) {
       <Button
         className={styles.button}
         url={{
-          hash: `#${KEY_SECTION_IDS.PROJECTS}`,
+          hash: `#${KEY_SECTION_IDS.WORKS}`,
         }}
       >
-        Recent Projects
+        My workplaces
       </Button>
     </section>
   );

@@ -43,7 +43,11 @@ function ProjectCardComponent(
           {project.name}
         </Typography>
         <Card className={styles.card}>
-          <Typography>{trimString(project.responsibilities.join(", "), 200)}</Typography>
+          <Typography>
+            {project.description
+              ? trimString(project.description, 200)
+              : `Responsibilities: ${trimString(project.responsibilities.join(", "), 200)}`}
+          </Typography>
         </Card>
         <Typography className={styles.techs} variant="caption">
           {project.technologies.join(", ")}, etc.

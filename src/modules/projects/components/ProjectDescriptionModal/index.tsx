@@ -50,7 +50,16 @@ export default function ProjectDescriptionModal({ projects }: ProjectDescription
         ) : (
           <div />
         )}
+        {selectedProject?.description ? (
+          <Grid item xs={12} sm={12} md={8} mdOffset={2}>
+            <Typography>{selectedProject?.description}</Typography>
+          </Grid>
+        ) : null}
+
         <Grid item xs={12} sm={12} md={8} mdOffset={2}>
+          <Typography variant="h4" preventMargin>
+            My Responsibilities
+          </Typography>
           <ul className={styles.list}>
             {selectedProject?.responsibilities.map((responsibility, i) => (
               <li className={styles.listItem} key={i}>

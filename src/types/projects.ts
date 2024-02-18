@@ -4,6 +4,7 @@ export type ISkill = typeof KEY_SKILLS[number];
 export interface IProject {
   id: string;
   name: string;
+  description?: string;
   responsibilities: string[];
   technologies: (ISkill | string)[];
   link?: string;

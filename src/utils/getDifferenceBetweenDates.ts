@@ -16,7 +16,5 @@ export default function getDifferenceBetweenDates(
 ): number | string {
   const difference = endDate.getTime() - startDate.getTime();
   const diffInYears = difference / (1000 * 60 * 60 * 24 * 365); // that's for a year in milliseconds
-  return precision === 1
-    ? roundToNearestIntegerOrPointFive(diffInYears)
-    : diffInYears.toFixed(precision); // that's for a year in milliseconds
+  return precision === 1 ? roundToNearestIntegerOrPointFive(diffInYears) : Math.floor(diffInYears); // that's for a year in milliseconds
 }

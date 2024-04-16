@@ -9,7 +9,7 @@ export default function Contact(props: React.HTMLAttributes<HTMLDivElement>) {
       <Typography variant="h2">Get in Touch</Typography>
       <Typography>
         Let's connect! If you have any questions or would like to learn more about my experience and
-        skills as a {KEY_DESIGNATION}, please reach out to me via the contact form or email.
+        skills as a {KEY_DESIGNATION}, please reach out to me via the email.
       </Typography>
       <Button url="mailto:prosenjit.chy10@gmail.com" className={styles.button}>
         Contact Me

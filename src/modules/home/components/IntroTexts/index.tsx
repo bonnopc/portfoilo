@@ -1,10 +1,3 @@
-import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
-import Button from "@/modules/common/components/Button";
-import Typography from "@/modules/common/components/Typography";
-import getDifferenceBetweenDates from "@/utils/getDifferenceBetweenDates";
-import { createRef, useEffect, useState } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import styles from "./IntroTexts.module.scss";
 import {
   KEY_DESIGNATION,
   KEY_FIRST_JOB_START_DATE,
@@ -12,6 +5,13 @@ import {
   KEY_SECTION_IDS,
 } from "@/config/keys";
 import useDeviceWidth from "@/hooks/useDeviceWidth";
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+import Button from "@/modules/common/components/Button";
+import Typography from "@/modules/common/components/Typography";
+import getDifferenceBetweenDates from "@/utils/getDifferenceBetweenDates";
+import { createRef, useEffect, useState } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import styles from "./IntroTexts.module.scss";
 
 interface IntroElements {
   nodeRef: React.RefObject<HTMLDivElement>;
@@ -55,15 +55,9 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
 
   const description = (
     <Typography>
-      Embarking on a journey as a results-driven {KEY_DESIGNATION} rooted in Dhaka, Bangladesh. I
-      bring over {diff} years of expertise in crafting cross-platform software applications for
-      diverse organizations serving millions of users.
-      {/* <br />
-      <br /> My passion for technology and my commitment to staying up-to-date with the latest
-      trends and best practices enable me to deliver top-quality solutions to meet the unique needs
-      of each project. Whether I am working on a web application or a mobile app, I approach each
-      project with the same level of enthusiasm and attention to detail, ensuring that every aspect
-      of the project is executed to the highest standards. */}
+      {KEY_DESIGNATION} based in Dhaka, Bangladesh, crafting performant applications for the past{" "}
+      {diff}+ years across domains including crypto, e-commerce, ed-tech, and travel — powering
+      products for millions.
     </Typography>
   );
 

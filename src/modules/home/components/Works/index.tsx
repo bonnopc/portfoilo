@@ -1,10 +1,10 @@
+import WORKPLACES from "@/config/workplaces.json";
 import CommonLink from "@/modules/common/components/CommonLink";
 import List from "@/modules/common/components/List";
 import Tabs from "@/modules/common/components/Tabs";
 import Typography from "@/modules/common/components/Typography";
+import type { Workplace } from "@/types/common";
 import styles from "./Works.module.scss";
-import WORKPLACES from "@/config/workplaces.json";
-import { Workplace } from "@/types/common";
 
 function Workplace({ company, description, endDate, keyRoles, position, startDate }: Workplace) {
   return (

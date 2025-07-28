@@ -181,16 +181,19 @@
     &:hover:not(:disabled) {
       background-color: darken($color-primary, 8%);
       border-color: darken($color-primary, 8%);
+      color: #ffffff;
     }
 
     &:active:not(:disabled) {
       background-color: darken($color-primary, 16%);
       border-color: darken($color-primary, 16%);
+      color: #ffffff;
     }
 
     &:focus:not(:disabled) {
       background-color: darken($color-primary, 8%);
       border-color: lighten($color-primary, 25%);
+      color: #ffffff;
     }
 
     &:disabled {

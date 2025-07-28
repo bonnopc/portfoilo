@@ -1,15 +1,16 @@
 import { KEY_SKILLS } from "@/config/keys";
+import RECENT_PROJECTS from "@/config/recent-projects.json";
+import Button from "@/modules/common/components/Button";
+import Checkbox from "@/modules/common/components/Checkbox";
 import Grid from "@/modules/common/components/Grid";
+import Typography from "@/modules/common/components/Typography";
 import { IProject, ISkill } from "@/types/projects";
 import { useRouter } from "next/router";
-import { createRef, useEffect, useMemo } from "react";
-import styles from "./Projects.module.scss";
-import Typography from "@/modules/common/components/Typography";
+import { createRef, useEffect, useMemo, useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import RECENT_PROJECTS from "@/config/recent-projects.json";
-import ProjectDescriptionModal from "../ProjectDescriptionModal";
-import Checkbox from "@/modules/common/components/Checkbox";
 import ProjectCard from "../ProjectCard";
+import ProjectDescriptionModal from "../ProjectDescriptionModal";
+import styles from "./Projects.module.scss";
 
 function ProjectList({
   projects,
@@ -67,6 +68,7 @@ function ProjectList({
 
 export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
   const router = useRouter();
+  const [isShowingMore, setIsShowingMore] = useState<boolean>(false);
   const { skill, projectId } = router.query;
   const selectedSkill: ISkill | undefined = useMemo(() => {
     if (skill) {
@@ -82,10 +84,13 @@ export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
       return RECENT_PROJECTS.filter((project) =>
         project.technologies.map((s) => s.toLowerCase()).includes(selectedSkill.toLowerCase())
       );
+    } else if (!isShowingMore) {
+      // if no skill is selected, return only the first 6 projects
+      return RECENT_PROJECTS.slice(0, 6);
     }
 
     return RECENT_PROJECTS;
-  }, [selectedSkill]);
+  }, [selectedSkill, isShowingMore]);
 
   const selectProject = (project: IProject) => {
     router.push(
@@ -125,6 +130,10 @@ export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
     );
   };
 
+  const handleShowMore = () => {
+    setIsShowingMore(true);
+  };
+
   useEffect(() => {
     // reset selectedProject when skill changes
     if (selectedSkill) {
@@ -154,6 +163,14 @@ export default function Projects(props: React.HTMLAttributes<HTMLDivElement>) {
         }
         setSelectedProject={selectProject}
       />
+      {!isShowingMore && !selectedSkill ? (
+        <div className={styles.footer}>
+          <Button variant="outlined" onClick={handleShowMore}>
+            Show More
+          </Button>
+        </div>
+      ) : null}
+
       <ProjectDescriptionModal projects={RECENT_PROJECTS} />
     </section>
   );

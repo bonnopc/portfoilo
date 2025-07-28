@@ -1,5 +1,36 @@
 [
   {
+    "shortName": "BonkBot",
+    "company": { "name": "BonkBot", "url": "https://bonkbot.io/" },
+    "description": "BonkBot is a crypto trading platform that includes a high-speed Telegram bot and a browser-based terminal called Telemetry. The platform has processed over $10B in trading volume and served more than 450K users.",
+    "startDate": "November 2024",
+    "endDate": "Present",
+    "position": "Software Engineer (Remote - Full Time)",
+    "keyRoles": [
+      "Built the frontend of Telemetry using React with real-time TradingView integration",
+      "Handled websocket-driven live and historical data for low-latency trading performance",
+      "Developed backend features for the Telegram bot using Node.js and Telegraf.js",
+      "Implemented swap flows, trade commands, and session management with PostgreSQL and Redis",
+      "Deployed and monitored production systems using Google Cloud and Grafana",
+      "Collaborated with cross-functional teams to iterate quickly and maintain platform reliability"
+    ]
+  },
+  {
+    "shortName": "Cega",
+    "company": { "name": "Cega", "url": "https://app.cega.fi/" },
+    "description": "Cega was a decentralized finance (DeFi) protocol enabling users to invest in options, bonds, and structured products across Ethereum Mainnet, Arbitrum, and Solana. Before sunsetting in November 2024, the platform had processed over $500 million in trades.",
+    "startDate": "May 2024",
+    "endDate": "November 2024",
+    "position": "Frontend Engineer (Remote - Full Time)",
+    "keyRoles": [
+      "Developed and maintained the frontend interface of the Cega platform using React.js, TypeScript, and Tailwind CSS.",
+      "Implemented key features such as buy-selling products, managing portfolios, switching between networks, and connecting different wallets.",
+      "Maintained the internal trading platform, ensuring smooth operation and user experience.",
+      "Collaborated with the backend team to integrate smart contracts and ensure seamless communication between the frontend and blockchain.",
+      "Worked on real-time data visualization for the platform, ensuring that data is displayed accurately and securely for authenticated users."
+    ]
+  },
+  {
     "shortName": "Multiplyr",
     "company": {
       "name": "Multiplyr Inc.",
@@ -7,16 +38,16 @@
     },
     "description": "Multiplyr is a web3-based company that is focused on building Affine DeFi, a decentralized finance platform designed to help users grow their money. The platform aims to create a more accessible and transparent financial system by utilizing blockchain technology to enable trustless transactions and avoid the need for intermediaries.",
     "startDate": "December 2021",
-    "endDate": "current",
+    "endDate": "April 2024",
     "position": "Senior Engineer (Remote - Full Time)",
     "keyRoles": [
-      "Collaborate with other engineers, designers, and product managers to develop the frontend interface of the Affine DeFi platform using Next.js, ethers.js, and react-bootstrap.",
-      "Contribute to defi-sdk, used to communicate between the frontend and blockchain.",
-      "Help develop and maintain authentication functionality for the platform.",
-      "Work on real-time data visualization for the platform, ensuring that data is displayed accurately and securely for authenticated users.",
-      "If needed, assist with backend tasks using FastAPI.",
-      "Stay up-to-date with the latest developments in DeFi and blockchain technology to ensure that the Affine DeFi platform is both secure and user-friendly.",
-      "Mentor and provide guidance to other frontend engineers on the team."
+      "Collaborated with other engineers, designers, and product managers to develop the frontend interface of the Affine DeFi platform using Next.js, ethers.js, and react-bootstrap.",
+      "Contributed to defi-sdk, used to communicate between the frontend and blockchain.",
+      "Helped develop and maintain authentication functionality for the platform.",
+      "Worked on real-time data visualization for the platform, ensuring that data is displayed accurately and securely for authenticated users.",
+      "If needed, assisted with backend tasks using FastAPI.",
+      "Stayed up-to-date with the latest developments in DeFi and blockchain technology to ensure that the Affine DeFi platform is both secure and user-friendly.",
+      "Mentored and provided guidance to other frontend engineers on the team."
     ]
   },
   {

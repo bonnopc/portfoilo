@@ -1,5 +1,100 @@
 [
   {
+    "id": "telemetry",
+    "name": "Telemetry - Web Trading Platform",
+    "description": "Telemetry, a web terminal for BonkBot, is a trading platform that allows users to trade Solana-based tokens directly from their web browser.",
+    "responsibilities": [
+      "Developing the frontend with React.js, Vite, Tailwind CSS, and TypeScript.",
+      "Implementing features and managing states using Zustand",
+      "Developing reusable and custom components using Radix UI.",
+      "Handleing real-time data coming from the websocket and large data sets with performance in mind.",
+      "Handling TradingView charting library integration and custom indicators."
+    ],
+    "technologies": [
+      "React.js",
+      "Vite",
+      "Tailwind CSS",
+      "TypeScript",
+      "Zustand",
+      "Radix UI",
+      "WebSocket",
+      "JavaScript",
+      "Git"
+    ],
+    "link": "https://telemetry.io/",
+    "image": "/static/images/projects/telemetry.png"
+  },
+  {
+    "id": "bonkbot",
+    "name": "BonkBot - Telegram Bot",
+    "description": "BonkBot is a Telegram bot that enables users to trade solana-based tokens directly from their Telegram app. So far, it has processed over 69.3 million trades worth over $10.1 billion.",
+    "responsibilities": [
+      "Developing features for the Telegram bot using Node.js and Telegraf.js.",
+      "Integrating the bot with the Solana blockchain to enable users to trade tokens.",
+      "Implementing security measures to protect user data and transactions.",
+      "Collaborating with the team to design and implement new features.",
+      "Monitoring the bot performance and matrics with Grafana and deploying updates through Google Cloud Run"
+    ],
+    "technologies": [
+      "Node.js",
+      "Telegraf.js",
+      "Solana",
+      "JavaScript",
+      "Git",
+      "Redis",
+      "Docker",
+      "Google Cloud",
+      "Grafana",
+      "PostgreSQL",
+      "TypeScript"
+    ],
+    "link": "https://bonkbot.io",
+    "image": "/static/images/projects/bonkbot.png"
+  },
+  {
+    "id": "slate",
+    "name": "Slate - Social Media Content Creation Platform",
+    "description": "Slate is a content creation and collaboration tool used by leading social media teams to design and publish on-brand content across platforms like TikTok, Instagram, X, and YouTube Shorts.",
+    "responsibilities": [
+      "Developed and maintained frontend features using Angular and RxJS for state management",
+      "Implemented integrations with external services including Dropbox, Google Drive, and others for streamlined asset import",
+      "Contributed to building responsive UI components for Slate’s in-browser editor and content workflow tools",
+      "Collaborated with designers to ensure consistent user experience and alignment with evolving brand guidelines",
+      "Worked with backend teams to integrate REST APIs for asset handling, authentication, and third-party sync"
+    ],
+    "technologies": ["Angular", "RxJS", "TypeScript", "JavaScript", "Git", "PrimeNG"],
+    "link": "https://slateteams.com/",
+    "image": "/static/images/projects/slate.png"
+  },
+  {
+    "id": "cega",
+    "name": "Cega - DeFi structured investments protocol",
+    "description": "Cega was a decentralized finance (DeFi) protocol enabling users to invest in options, bonds, and structured products across Ethereum Mainnet, Arbitrum, and Solana. Before sunsetting in November 2024, the platform had processed over $500 million in trades.",
+    "responsibilities": [
+      "Built and maintained the frontend of both the customer-facing DeFi app and internal trading platform using React.js",
+      "Developed reusable design systems and implemented them using Storybook",
+      "Managed integration with multiple wallets including Metamask, Phantom, WalletConnect, and Coinbase Wallet",
+      "Ensured consistent UI/UX across Ethereum, Arbitrum, and Solana chains",
+      "Wrote unit and integration tests using React Testing Library and Jest",
+      "Collaborated with design and backend teams to ship and iterate on features quickly and reliably"
+    ],
+    "technologies": [
+      "React.js",
+      "TypeScript",
+      "Zustand",
+      "Tailwind CSS",
+      "Storybook",
+      "JavaScript",
+      "Git",
+      "React Testing Library",
+      "Jest",
+      "Ethers.js",
+      "PostgreSQL"
+    ],
+    "link": "https://app.cega.fi/",
+    "image": "/static/images/projects/cega.jpeg"
+  },
+  {
     "id": "affine-defi",
     "name": "Affine DeFi",
     "description": "Affine is the world's first cross-chain investment and savings app. To date, our project has accrued over 3 million TVL, engages 4,000 active users, and has attracted 50,000 sign-ups.",
@@ -245,7 +340,6 @@
     "technologies": [
       "React.js",
       "Material UI",
-      "Apollo Client",
       "GraphQL",
       "Hapi.js",
       "MongoDB",

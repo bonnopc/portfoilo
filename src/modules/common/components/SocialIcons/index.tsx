@@ -1,11 +1,11 @@
 import DevToIcon from "@/assets/icons/social-icons/dev-badge.svg";
-import LinkedInIcon from "@/assets/icons/social-icons/linkedin.svg";
-import TwitterIcon from "@/assets/icons/social-icons/twitter.svg";
 import GithubIcon from "@/assets/icons/social-icons/github.svg";
+import LinkedInIcon from "@/assets/icons/social-icons/linkedin.svg";
 import StackoverflowIcon from "@/assets/icons/social-icons/stackoverflow.svg";
+import TwitterIcon from "@/assets/icons/social-icons/twitter.svg";
 import IconButton from "../IconButton";
-import styles from "./SocialIcons.module.scss";
 import Typography from "../Typography";
+import styles from "./SocialIcons.module.scss";
 
 const SOCIAL_LINKS = [
   {
@@ -29,7 +29,7 @@ const SOCIAL_LINKS = [
     name: "Stackoverflow",
   },
   {
-    href: "https://github.com/pchy10",
+    href: "https://github.com/bonnopc",
     icon: GithubIcon,
     name: "Github",
   },

@@ -55,9 +55,9 @@ export default function IntroTexts({ className, ...rest }: React.HTMLAttributes<
 
   const description = (
     <Typography>
-      {KEY_DESIGNATION} based in Dhaka, Bangladesh, crafting performant applications for the past{" "}
-      {diff}+ years across domains including crypto, e-commerce, ed-tech, and travel — powering
-      products for millions.
+      {KEY_DESIGNATION} in Wedel, Germany, crafting performant applications for the past {diff}+
+      years across domains including crypto, e-commerce, ed-tech, and travel — powering products for
+      millions.
     </Typography>
   );
 

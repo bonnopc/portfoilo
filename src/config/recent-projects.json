@@ -7,7 +7,7 @@
       "Developing the frontend with React.js, Vite, Tailwind CSS, and TypeScript.",
       "Implementing features and managing states using Zustand",
       "Developing reusable and custom components using Radix UI.",
-      "Handleing real-time data coming from the websocket and large data sets with performance in mind.",
+      "Handling real-time data coming from the websocket and large data sets with performance in mind.",
       "Handling TradingView charting library integration and custom indicators."
     ],
     "technologies": [
@@ -33,7 +33,7 @@
       "Integrating the bot with the Solana blockchain to enable users to trade tokens.",
       "Implementing security measures to protect user data and transactions.",
       "Collaborating with the team to design and implement new features.",
-      "Monitoring the bot performance and matrics with Grafana and deploying updates through Google Cloud Run"
+      "Monitoring the bot performance and metrics with Grafana and deploying updates through Google Cloud Run"
     ],
     "technologies": [
       "Node.js",
@@ -133,7 +133,7 @@
     "responsibilities": [
       "Developing the front end of the Shikho web application using Next.js, React.js, and Tailwind CSS, while ensuring cross-browser compatibility and responsiveness.",
       "Implementing key features of the application such as course search, registration, payment processing, and user account management, and integrating third-party APIs such as payment gateways and course management systems.",
-      "Integrated live class feature to facilitate real-time perticipations for both students and teachers, and students to watch the recorded classes later.",
+      "Integrated live class feature to facilitate real-time perticipation for both students and teachers, and students to watch the recorded classes later.",
       "Collaborating with a team of developers, designers, and other stakeholders to plan, design, and develop the application, while participating in code reviews, testing, and debugging to ensure the quality of the application.",
       "Creating and maintaining documentation for the various components and features of the application, including user guides, technical specifications, and code documentation.",
       "Ensuring high performance and scalability of the application by optimizing its design, architecture, and code, and implementing caching and load balancing strategies.",
@@ -296,7 +296,7 @@
     "id": "cliniva",
     "name": "Cliniva - Patient Management System",
     "responsibilities": [
-      "Built 2 web apps for both patients & doctors with React.js, Express.js & MonogDB.",
+      "Built 2 web apps for both patients & doctors with React.js, Express.js & MongoDB.",
       "Responsive designs have been employed to incorporate functionalities such as appointment management, prescription generation, schedule management, chamber management, and more.",
       "Developing the backend server using Express.js and integrating it with MongoDB to store data & creating APIs and endpoints for managing appointments, prescriptions, schedules, chambers, etc.",
       "Ensuring application security by implementing proper authentication and authorization mechanisms.",

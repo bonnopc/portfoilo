@@ -33,6 +33,11 @@ export default function AboutMe(props: React.HTMLAttributes<HTMLDivElement>) {
       </Typography>
 
       <Typography>
+        To strengthen my career and focusing on other aspects of IT, I started my M.Sc. in IT
+        Engineering at FH Wedel, focusing on IT System and Security.
+      </Typography>
+
+      <Typography>
         Still learning. Still building. Still excited about what software can do when it’s done
         right.
       </Typography>

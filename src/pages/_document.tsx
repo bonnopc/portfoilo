@@ -1,9 +1,13 @@
 import { GOOGLE_ANALYTICS_ID } from "@/config/gtag";
+import { KEY_FIRST_JOB_START_DATE } from "@/config/keys";
+import getDifferenceBetweenDates from "@/utils/getDifferenceBetweenDates";
 import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
 import Script from "next/script";
 
-const DESCRIPTION =
-  "Prosenjit Chowdhury (@bonnopc) is working as a software engineer for more than 5 years. He has a proven experience working with React.js, Flutter, Typescript, Javascript, Redux, etc. He is also a passionate open source contributor. He is currently working as a software engineer at Multiplyr, building Affine DeFi, a DeFi protocol to earn yields.";
+const endDateTime = new Date();
+const diff = getDifferenceBetweenDates(KEY_FIRST_JOB_START_DATE, endDateTime, 0);
+
+const DESCRIPTION = `Prosenjit Chowdhury (@bonnopc) is working as a software engineer for more than ${diff} years. He has a proven experience working with React.js, Flutter, Typescript, Javascript, Redux, etc. He is also a passionate open source contributor. He is currently studying at FH Wedel for his M.Sc. in IT Engineering, focusing on IT System and Security.`;
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -25,7 +29,7 @@ class MyDocument extends Document {
           {/* Open Graph meta tags - Start */}
           <meta property="og:title" content="Prosenjit Chowdhury (@bonnopc) | Software Engineer" />
           <meta property="og:description" content={DESCRIPTION} />
-          <meta property="og:url" content="https://bonnopc.dev" />
+          <meta property="og:url" content="https://bonnopc.com" />
           <meta
             property="og:image"
             content="/static/images/bonnopc-prosenjit-chowdhury-social-preview.png"

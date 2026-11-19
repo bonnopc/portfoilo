@@ -22,11 +22,18 @@
         display: flex;
         padding: 0.75rem 1.5rem;
         position: relative;
-        transition: background-color 0.3s var(--easing);
+        transition: background-color 0.3s var(--easing), color 0.3s var(--easing);
         font-size: 1.25rem;
+        outline: none;
+        font-family: var(--font-family);
+        border: none;
+        background-color: transparent;
+        color: inherit;
+        user-select: none;
 
         &.active {
           font-weight: 600;
+          color: var(--color-text-heading);
         }
 
         &:not(.disabled) {
@@ -34,7 +41,8 @@
         }
 
         &:hover:not(.disabled) {
-          background-color: #00000011;
+          background-color: rgba(0, 0, 0, 0.1);
+          color: var(--color-text-heading);
         }
 
         &:first-child {

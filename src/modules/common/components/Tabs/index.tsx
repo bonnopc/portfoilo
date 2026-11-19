@@ -1,11 +1,11 @@
+import ArrowBackIcon from "@/assets/icons/arrow_back.svg";
+import ArrowForwardIcon from "@/assets/icons/arrow_forward.svg";
+import useDeviceWidth from "@/hooks/useDeviceWidth";
 import combineClassNames from "@/utils/combineClassNames";
 import isUndefined from "@/utils/isUndefined";
 import { createRef, CSSProperties, ReactNode, useMemo, useState } from "react";
-import styles from "./Tabs.module.scss";
-import ArrowBackIcon from "@/assets/icons/arrow_back.svg";
-import ArrowForwardIcon from "@/assets/icons/arrow_forward.svg";
 import IconButton from "../IconButton";
-import useDeviceWidth from "@/hooks/useDeviceWidth";
+import styles from "./Tabs.module.scss";
 
 interface Tab {
   label: string; // this should be unique
@@ -17,7 +17,7 @@ interface Tab {
 }
 
 interface TabWithRef extends Tab {
-  ref: React.RefObject<HTMLDivElement>;
+  ref: React.RefObject<HTMLButtonElement>;
 }
 
 interface TabsProps {
@@ -40,7 +40,7 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
   const tabsWithRefs = useMemo(() => {
     return tabs.map((tab) => ({
       ...tab,
-      ref: createRef<HTMLDivElement>(),
+      ref: createRef<HTMLButtonElement>(),
     }));
   }, [tabs]);
   const tabHeaderParentRef = createRef<HTMLDivElement>();
@@ -145,7 +145,7 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
           onScroll={handleTabHeaderParentScroll}
         >
           {tabsWithRefs.map((tab, i) => (
-            <div
+            <button
               key={tab.label}
               className={combineClassNames(
                 styles,
@@ -158,12 +158,13 @@ export default function Tabs({ tabs, defaultActiveTabIndex, className }: TabsPro
               )}
               onClick={() => handleTabHeaderClick(tab)}
               ref={tab.ref}
+              aria-label={tab.label}
             >
               <div className={styles.tabLabel}>
                 {tab.icon}
                 {tab.label}
               </div>
-            </div>
+            </button>
           ))}
         </div>
 

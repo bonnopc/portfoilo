@@ -104,7 +104,7 @@
   {
     "name": "Cliniva - Patient Management System",
     "responsibilities": [
-      "Built 2 web apps for both patients & doctors with React.js, Express.js & MonogDB.",
+      "Built 2 web apps for both patients & doctors with React.js, Express.js & MongoDB.",
       "Responsive designs have been employed to incorporate functionalities such as appointment management, prescription generation, schedule management, chamber management, and more.",
       "Developing the backend server using Express.js and integrating it with MongoDB to store data & creating APIs and endpoints for managing appointments, prescriptions, schedules, chambers, etc.",
       "Ensuring application security by implementing proper authentication and authorization mechanisms.",

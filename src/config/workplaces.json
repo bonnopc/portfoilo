@@ -1,10 +1,25 @@
 [
   {
+    "shortName": "Walton",
+    "company": { "name": "Walton Plaza", "url": "https://waltonplaza.com.bd/" },
+    "description": "Worked on a commerce platform supporting customer-facing features and internal administrative workflows, combining hands-on full-stack engineering with leadership of a four-person frontend team.",
+    "startDate": "November 2025",
+    "endDate": "September 2026",
+    "position": "Software Engineer (Remote - Full Time)",
+    "keyRoles": [
+      "Developed and maintained platform features using Next.js and TypeScript.",
+      "Worked with product, sales, and internal teams to translate business requirements into software features.",
+      "Led the frontend team and established shared coding standards and reusable components.",
+      "Mentored engineers through technical discussions and code reviews."
+    ],
+    "technologies": "Next.js, React, TypeScript, Hapi.js, MongoDB, Redis, GraphQL"
+  },
+  {
     "shortName": "BonkBot",
     "company": { "name": "BonkBot", "url": "https://bonkbot.io/" },
     "description": "BonkBot is a crypto trading platform that includes a high-speed Telegram bot and a browser-based terminal called Telemetry. The platform has processed over $10B in trading volume and served more than 450K users.",
     "startDate": "November 2024",
-    "endDate": "Present",
+    "endDate": "October 2025",
     "position": "Software Engineer (Remote - Full Time)",
     "keyRoles": [
       "Built the frontend of Telemetry using React with real-time TradingView integration",
@@ -13,7 +28,8 @@
       "Implemented swap flows, trade commands, and session management with PostgreSQL and Redis",
       "Deployed and monitored production systems using Google Cloud and Grafana",
       "Collaborated with cross-functional teams to iterate quickly and maintain platform reliability"
-    ]
+    ],
+    "technologies": "React, Node.js, Telegraf.js, PostgreSQL, Redis, Google Cloud, Grafana"
   },
   {
     "shortName": "Cega",
@@ -28,7 +44,8 @@
       "Maintained the internal trading platform, ensuring smooth operation and user experience.",
       "Collaborated with the backend team to integrate smart contracts and ensure seamless communication between the frontend and blockchain.",
       "Worked on real-time data visualization for the platform, ensuring that data is displayed accurately and securely for authenticated users."
-    ]
+    ],
+    "technologies": "React.js, TypeScript, Tailwind CSS, Smart Contracts"
   },
   {
     "shortName": "Multiplyr",
@@ -48,7 +65,8 @@
       "If needed, assisted with backend tasks using FastAPI.",
       "Stayed up-to-date with the latest developments in DeFi and blockchain technology to ensure that the Affine DeFi platform is both secure and user-friendly.",
       "Mentored and provided guidance to other frontend engineers on the team."
-    ]
+    ],
+    "technologies": "Next.js, ethers.js, react-bootstrap, FastAPI, Python, PostgreSQL"
   },
   {
     "shortName": "Saimon Global",
@@ -67,7 +85,8 @@
       "Providing technical support and troubleshooting assistance to users, and resolving any issues or bugs that arise, while ensuring timely and effective communication with customers and stakeholders.",
       "Staying up-to-date with the latest industry trends and technologies to ensure that the applications remain competitive and innovative.",
       "Conducting thorough testing and debugging to ensure that the applications are stable, secure, and user-friendly."
-    ]
+    ],
+    "technologies": "Flutter, React.js, Next.js, MongoDB, GraphQL"
   },
   {
     "shortName": "HungryNaki",
@@ -87,7 +106,8 @@
       "Implementing real-time data flow using GraphQL Subscription (web socket connection) and other cutting-edge technologies",
       "Working closely with the team to ensure a successful transition from the old system to the new microservice-based system",
       "Maintaining the old system during the transition period"
-    ]
+    ],
+    "technologies": "Nuxt.js, React.js, Vue.js, Hapi.js, GraphQL, SASS, Stylus"
   },
   {
     "shortName": "Regfire Solutions",
@@ -106,6 +126,7 @@
       "Collaborated with senior developers and designers",
       "Participated in code reviews",
       "Learned important lessons in project management, communication, and teamwork"
-    ]
+    ],
+    "technologies": "Laravel 5.6, React.js, Vue.js, Bootstrap"
   }
 ]

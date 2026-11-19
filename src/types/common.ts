@@ -5,17 +5,18 @@ export interface IThemeContext {
   handleTheme?: (theme: ThemeScheme) => void;
 }
 
-export interface WorkplaceCompany {
+export interface IWorkplaceCompany {
   name: string;
   url?: string;
 }
 
-export interface Workplace {
+export interface IWorkplace {
   id?: string;
-  company: WorkplaceCompany;
+  company: IWorkplaceCompany;
   position: string;
   startDate: string;
   endDate: string;
   description: string;
   keyRoles: string[];
+  technologies: string;
 }
